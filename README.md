@@ -18,6 +18,12 @@ https://michaelg-glitch.github.io/insurance-toolman/
 
 iPhone、Android 逐步操作與陪伴逐字稿，包含拍攝示意圖、PDF 傳送及送件前檢查。
 
+## 車禍現場處理 SOP
+
+[開啟車禍現場處理指南](https://michaelg-glitch.github.io/insurance-toolman/learn/car-accident/)
+
+包含傷勢分流、七步驟互動檢查表、現場拍照插圖、報警話術與理賠資料時間軸。僅提供通用流程，不包含客戶個案資料。
+
 ## 如何管理
 
 這個儲存庫存放的是網站「原始檔案」。修改並提交後，GitHub Pages 會自動重新發佈，約 1～2 分鐘後網站更新。
