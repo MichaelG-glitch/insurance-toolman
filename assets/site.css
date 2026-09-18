@@ -26,13 +26,15 @@ p{text-wrap:pretty}
 
 /* topbar */
 .topbar{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--divider)}
-.topbar-inner{min-height:4.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--text);font-weight:800;font-family:var(--font-display)}
-.logo{width:2rem;height:2rem;color:var(--primary)}
-.nav{display:flex;align-items:center;gap:.25rem}
+.topbar-inner{min-height:4.25rem;display:flex;align-items:center;justify-content:flex-start;gap:1rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--text);font-weight:800;font-family:var(--font-display)}.brand span{line-height:1.15}.brand small{display:block;font-family:var(--font-body);font-size:.64rem;font-weight:600;letter-spacing:.09em;color:var(--muted);line-height:1.25}
+.logo{width:2.375rem;height:2.375rem;color:var(--primary);flex:none}
+.nav{display:flex;align-items:center;gap:.25rem;margin-left:auto}
 .nav a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:600;padding:.6rem .8rem;border-radius:var(--r-sm)}
 .nav a:hover{color:var(--text);background:var(--surface-2)}
-.icon-btn{width:2.6rem;height:2.6rem;display:grid;place-items:center;border:1px solid var(--border);background:var(--surface);border-radius:var(--r-md);margin-left:.5rem}
+.nav a.icon-btn{padding:0;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md)}
+.nav a.icon-btn:hover{background:var(--surface-2);color:var(--primary)}
+.icon-btn{width:2.6rem;height:2.6rem;display:grid;place-items:center;border:1px solid var(--border);background:var(--surface);border-radius:var(--r-md);margin-left:.5rem;color:var(--text);text-decoration:none}
 .icon-btn:hover{background:var(--surface-2)}
 
 /* hero */
@@ -89,5 +91,5 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--divider);color:var(--muted
 .footer-grid .brand{color:var(--text)}
 
 /* responsive */
-@media(max-width:860px){.cards{grid-template-columns:1fr}.nav a{display:none}}
+@media(max-width:860px){.cards{grid-template-columns:1fr}.nav a:not(.icon-btn){display:none}.brand small{display:none}}
 @media(max-width:560px){body{font-size:1rem}.topbar-inner{min-height:4rem}.brand span{font-size:.95rem}.hero h1{font-size:2.1rem}.linkitem{flex-direction:column;align-items:flex-start}}
