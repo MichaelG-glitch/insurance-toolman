@@ -12,6 +12,12 @@ https://michaelg-glitch.github.io/insurance-toolman/
 - **保險觀念**（`learn/`）：車禍、汽車保險、人壽保險
 - **常見問答**（`qa/`）：客戶常見問題整理
 
+## 手機掃描不求人
+
+[開啟長輩友善掃描教學](https://michaelg-glitch.github.io/insurance-toolman/tools/mobile-scan/)
+
+iPhone、Android 逐步操作與陪伴逐字稿，包含拍攝示意圖、PDF 傳送及送件前檢查。
+
 ## 如何管理
 
 這個儲存庫存放的是網站「原始檔案」。修改並提交後，GitHub Pages 會自動重新發佈，約 1～2 分鐘後網站更新。
