@@ -12,6 +12,12 @@ https://michaelg-glitch.github.io/insurance-toolman/
 - **保險觀念**（`learn/`）：車禍、汽車保險、人壽保險
 - **常見問答**（`qa/`）：客戶常見問題整理
 
+## 道路救援自助指南
+
+[開啟道路救援自助指南](https://michaelg-glitch.github.io/insurance-toolman/tools/road-rescue/)
+
+故障或事故需要拖吊時的自助手冊：產險公司道路救援專線速查、一般道路與國道現場 SOP、撥打話術、拖吊檢查表與後續處理。僅列官方可確認的專線，無法確認者附官網連結，不含任何客戶個資。
+
 ## 手機掃描不求人
 
 [開啟長輩友善掃描教學](https://michaelg-glitch.github.io/insurance-toolman/tools/mobile-scan/)
