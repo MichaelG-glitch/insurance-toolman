@@ -1,0 +1,8 @@
+(()=>{
+      const search=document.querySelector('#company-search'),cards=[...document.querySelectorAll('.company-card')],filters=[...document.querySelectorAll('[data-filter]')],empty=document.querySelector('#no-results');let active='all';
+      const apply=()=>{const q=search.value.trim().toLowerCase();let shown=0;cards.forEach(card=>{const priority=card.dataset.priority==='true',groupOk=active==='all'||(active==='priority'&&priority)||(active==='other'&&!priority),queryOk=!q||card.dataset.company.toLowerCase().includes(q);card.classList.toggle('hidden',!(groupOk&&queryOk));if(groupOk&&queryOk)shown++;});document.querySelectorAll('[data-group-heading]').forEach(h=>{const group=h.dataset.groupHeading,any=[...document.querySelectorAll(`[data-group="${group}"] .company-card`)].some(c=>!c.classList.contains('hidden'));h.classList.toggle('hidden',!any);});empty.style.display=shown?'none':'block';};
+      search.addEventListener('input',apply);filters.forEach(btn=>btn.addEventListener('click',()=>{active=btn.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===btn)));apply();}));
+
+      const toast=document.querySelector('#toast');let timer;
+      document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{const text=document.querySelector(btn.dataset.copy).textContent.trim();try{await navigator.clipboard.writeText(text);}catch(e){const area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();}toast.classList.add('show');btn.textContent='已複製';clearTimeout(timer);timer=setTimeout(()=>{toast.classList.remove('show');btn.textContent='複製話術';},1800);}));
+    })();

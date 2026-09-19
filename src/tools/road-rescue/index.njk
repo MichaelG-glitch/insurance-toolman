@@ -1,0 +1,121 @@
+---
+layout: base.njk
+title: 保險工具人｜道路救援自助指南
+description: 保險工具人道路救援自助指南：快速查找主要汽車產險公司官方道路救援方式，依現場SOP完成報案、叫車、拖吊與留存單據。
+ogDescription: 先保安全，再找對專線。事故與故障現場可直接照著做。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/tools/road-rescue/
+header: road-rescue
+license: nd
+artDirected: True
+extraCss: assets/pages/tools-road-rescue.css
+extraJs: assets/pages/tools-road-rescue.js
+---
+<a class="skip" href="#main">跳到主要內容</a>
+  
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Roadside field guide</p>
+          <h1 id="hero-title">先保安全，再找對專線。</h1>
+          <p class="hero-lead">車輛故障或發生事故時，不必臨時求人。從報案、叫車到拖吊簽單，照著本頁一步一步處理。</p>
+          <div class="notice">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.4 2.2 17.5A2 2 0 0 0 4 20.5h16a2 2 0 0 0 1.8-3L13.7 3.4a2 2 0 0 0-3.4 0Z"/></svg>
+            <span><strong>先由承保公司專線完成申告，再接受拖吊。</strong>如果官方頁面無法確認道路救援電話，本頁只提供該公司的官方道路救援連結，不臆測、不代填。</span>
+          </div>
+        </div>
+        <aside class="urgent-panel" aria-label="緊急聯絡與三條鐵律">
+          <h2>現在有緊急狀況</h2>
+          <div class="emergency-grid">
+            <a class="emergency" href="tel:119"><strong>119</strong><span>受傷／起火</span></a>
+            <a class="emergency" href="tel:110"><strong>110</strong><span>事故報警</span></a>
+            <a class="emergency" href="tel:1968"><strong>1968</strong><span>國道求援</span></a>
+          </div>
+          <ol class="rules">
+            <li><span class="rule-no">1</span><div><strong>人先離開危險區</strong><span>開警示燈、放故障標誌，移到護欄外或安全處。</span></div></li>
+            <li><span class="rule-no">2</span><div><strong>先申告，再讓拖車作業</strong><span>只接受專線確認派遣的救援車。</span></div></li>
+            <li><span class="rule-no">3</span><div><strong>報價、里程、單據都確認</strong><span>加價要先同意；不簽空白文件。</span></div></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section finder-shell" id="insurers" aria-labelledby="insurer-title">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">官方聯絡入口</p><h2 id="insurer-title">找你的產險公司</h2><p>常用四家置頂。電話僅在產險公司官方道路救援頁面可明確確認時才列出；請仍以保單、救援卡或公司當次公告為準。</p></div>
+        <div class="finder-bar">
+          <label class="search-wrap"><span class="sr-only">搜尋產險公司</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input class="search" id="company-search" type="search" autocomplete="off" placeholder="輸入公司名稱，例如：國泰、臺產"></label>
+          <div class="filter-group" aria-label="公司篩選"><button class="filter" type="button" data-filter="all" aria-pressed="true">全部</button><button class="filter" type="button" data-filter="priority" aria-pressed="false">常用四家</button><button class="filter" type="button" data-filter="other" aria-pressed="false">其他公司</button></div>
+        </div>
+
+        <h3 class="subhead" data-group-heading="priority">常用四家</h3>
+        <div class="company-grid" data-group="priority">
+          <article class="company-card" data-company="富邦 富邦產物 fubon" data-priority="true"><div class="company-title"><h3>富邦產物</h3><span class="badge">常用</span></div><div class="phone-list"><div><p class="phone-label">道路救援｜行遍天下</p><div class="phone-row"><a class="phone" href="tel:0800071111">0800-071-111</a></div></div><div><p class="phone-label">道路救援｜全鋒</p><div class="phone-row"><a class="phone" href="tel:0800013013">0800-013-013</a></div></div></div><div class="card-actions"><a class="official" href="https://b2c.518fb.com/FubonCMS/page/19" target="_blank" rel="noopener noreferrer">官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="國泰 國泰世紀 cathay" data-priority="true"><div class="company-title"><h3>國泰世紀產物</h3><span class="badge">常用</span></div><div class="phone-list"><div><p class="phone-label">24小時道路救援</p><div class="phone-row"><a class="phone" href="tel:0800020345">0800-020-345</a></div></div><p class="phone-label">亦可由官方「智能助理阿發」線上申請。</p></div><div class="card-actions"><a class="official" href="https://www.cathay-ins.com.tw/cathayins/personal/services/roadside-assist/" target="_blank" rel="noopener noreferrer">官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="明台 明台產物 msig" data-priority="true"><div class="company-title"><h3>明台產物</h3><span class="badge">常用</span></div><div class="phone-list"><div><p class="phone-label">24小時道路救援／事故現場服務</p><div class="phone-row"><a class="phone" href="tel:0800078888">0800-078-888</a></div></div></div><div class="card-actions"><a class="official" href="https://www.msig-mingtai.com.tw/ec/road-assistance.html" target="_blank" rel="noopener noreferrer">官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="新光 新光產物 skinsurance" data-priority="true"><div class="company-title"><h3>新光產物</h3><span class="badge">常用</span></div><div class="phone-list"><div><p class="phone-label">官方頁面列示之道路救援專線</p><div class="phone-row"><a class="phone" href="tel:0800667866">0800-667-866</a><a class="phone" href="tel:0800212551">0800-212-551</a></div></div><p class="phone-label">新光提醒應優先撥打「保單登載」的道路救援專線。</p></div><div class="card-actions"><a class="official" href="https://www.skinsurance.com.tw/ski/Doc.aspx?uID=39&amp;sID=5835&amp;ST=" target="_blank" rel="noopener noreferrer">官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+
+        <h3 class="subhead" data-group-heading="other">其他主要汽車產險公司</h3>
+        <div class="company-grid" data-group="other">
+          <article class="company-card" data-company="新安東京海上 新安東京 tmnewa" data-priority="false"><div class="company-title"><h3>新安東京海上產物</h3></div><div class="phone-list"><div><p class="phone-label">24小時道路救援</p><div class="phone-row"><a class="phone" href="tel:0800050119">0800-050-119</a></div></div></div><div class="card-actions"><a class="official" href="https://www.tmnewa.com.tw/b2c_v2/commonweb/officialinfo/rescue.aspx" target="_blank" rel="noopener noreferrer">官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="中國信託 中信 中國信託產險 ctbc" data-priority="false"><div class="company-title"><h3>中國信託產險</h3></div><div class="phone-list"><div><p class="phone-label">24小時道路救援｜按 1</p><div class="phone-row"><a class="phone" href="tel:0800075777">0800-075-777 <small>按 1</small></a></div></div></div><div class="card-actions"><a class="official" href="https://www.ctbcins.com/publicize/%E9%81%93%E8%B7%AF%E6%95%91%E6%8F%B4%E6%9C%8D%E5%8B%99%E5%B0%88%E5%8D%80" target="_blank" rel="noopener noreferrer">官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="臺灣產物 台灣產物 臺產 台產 tfmi" data-priority="false"><div class="company-title"><h3>臺灣產物</h3></div><div class="phone-list"><div><p class="phone-label">網路投保道路救援｜按 2</p><div class="phone-row"><a class="phone" href="tel:0809068888">0809-068-888 <small>按 2</small></a></div></div><p class="phone-label">官方頁面明示此入口限臺產網路投保服務；其他保單請依保單登載辦理。</p></div><div class="card-actions"><a class="official" href="https://ec.tfmi.com.tw/Content/RoadAssist/Index.aspx" target="_blank" rel="noopener noreferrer">官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="兆豐 兆豐產物 兆豐保險 cki" data-priority="false"><div class="company-title"><h3>兆豐保險</h3></div><div class="phone-list"><div><p class="phone-label">24小時汽車險道路救援</p><div class="phone-row"><a class="phone" href="tel:0800005500">0800-005-500</a></div></div></div><div class="card-actions"><a class="official" href="https://www.cki.com.tw/Page/Index/20" target="_blank" rel="noopener noreferrer">官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="泰安 泰安產物 taian" data-priority="false"><div class="company-title"><h3>泰安產物</h3></div><div class="unverified"><strong>本頁不直接列電話</strong>官方汽車險頁面可確認有道路救援附加條款，但未在道路救援內容中明確標示專用派車電話，請依保單或官方頁面查找。</div><div class="card-actions"><a class="official" href="https://www.taian.com.tw/Vehicle/ThirdInsurance" target="_blank" rel="noopener noreferrer">開啟官方道路救援說明 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="第一產物 第一保 first insurance" data-priority="false"><div class="company-title"><h3>第一產物</h3></div><div class="phone-list"><div><p class="phone-label">24小時理賠／道路救援相關問題</p><div class="phone-row"><a class="phone" href="tel:0800288068">0800-288-068</a></div></div></div><div class="card-actions"><a class="official" href="https://www.firstins.com.tw/news/76rdkG" target="_blank" rel="noopener noreferrer">官方道路救援公告 <span aria-hidden="true">↗</span></a><a class="official" href="https://www.firstins.com.tw/service/road-help/road-help" target="_blank" rel="noopener noreferrer">服務說明 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="旺旺友聯 旺旺 友聯 wwunion" data-priority="false"><div class="company-title"><h3>旺旺友聯產物</h3></div><div class="unverified"><strong>本頁不直接列電話</strong>可確認官方道路救援服務頁面，但目前無法從該頁明確辨識專用派車電話，請由官方頁面或保單查找。</div><div class="card-actions"><a class="official" href="https://www.wwunion.com/?page_id=8145" target="_blank" rel="noopener noreferrer">開啟官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="南山 南山產物 nanshan" data-priority="false"><div class="company-title"><h3>南山產物</h3></div><div class="phone-list"><div><p class="phone-label">24小時道路救援／理賠</p><div class="phone-row"><a class="phone" href="tel:0800005678">0800-005-678</a></div></div></div><div class="card-actions"><a class="official" href="https://www.nanshangeneral.com.tw/claims-personal/" target="_blank" rel="noopener noreferrer">官方道路救援／理賠頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="華南 華南產物 south china" data-priority="false"><div class="company-title"><h3>華南產物</h3></div><div class="unverified"><strong>本頁不直接列電話</strong>目前無法從可讀取的官方道路救援頁面穩定確認專用派車電話，請由官方頁面取得最新聯繫方式。</div><div class="card-actions"><a class="official" href="https://www.south-china.com.tw/OfficialPub/claims/assistance/car" target="_blank" rel="noopener noreferrer">開啟官方道路救援頁面 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="company-card" data-company="和泰 和泰產物 hotai" data-priority="false"><div class="company-title"><h3>和泰產物</h3></div><div class="unverified"><strong>本頁不直接列電話</strong>官方汽車險頁面可確認有道路救援內容，但未在該頁明確顯示專用派車電話，請依保單或官方頁面查找。</div><div class="card-actions"><a class="official" href="https://www.hotains.com.tw/carrier/else" target="_blank" rel="noopener noreferrer">開啟官方道路救援說明 <span aria-hidden="true">↗</span></a><a class="official" href="https://www.hotains.com.tw/contact" target="_blank" rel="noopener noreferrer">官方聯絡頁面 <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+        <div class="no-results" id="no-results"><strong>找不到相符公司</strong><p>請確認公司名稱，或查看任意車險電子保單、保險證明及道路救援卡。</p></div>
+        <p class="source-note">資料最後核對：2026 年 9 月 18 日。名單聚焦臺灣主要個人汽車保險公司；未明確提供個人汽車道路救援入口的專業／外商產險公司不臆列電話。外部連結均前往各公司官方網站。</p>
+      </div>
+    </section>
+
+    <section class="section" id="road-sop" aria-labelledby="road-title">
+      <div class="container split">
+        <div class="sticky-copy"><p class="eyebrow">一般道路</p><div class="section-head"><h2 id="road-title">先判斷：故障還是事故？</h2><p>兩者都先確保安全；有碰撞、他人財物受損或人員受傷，就要把報警與蒐證排在拖吊前面。</p></div><div class="decision"><article class="decision-card"><h3>單純故障</h3><p>例如無法啟動、爆胎、過熱、機械異常。移到安全處後，聯絡承保公司的道路救援入口。</p></article><article class="decision-card"><h3>交通事故</h3><p>先確認傷者、撥 110／119、拍攝現場，再安排拖吊。道路救援通報不等於完成理賠報案。</p></article></div></div>
+        <ol class="steps">
+          <li><div><strong>開啟危險警告燈</strong><span>車輛仍能移動時，緩慢移至不妨礙交通的安全位置。</span></div></li>
+          <li><div><strong>放置故障標誌，人員離車</strong><span>依現場速限與視距放在車後適當距離；不要站在車道或車後方等待。</span></div></li>
+          <li><div><strong>事故先拍照</strong><span>拍全景、標線號誌、碰撞點、車損、散落物與雙方車牌；無人傷亡且車輛可動，拍完儘速移車。</span></div></li>
+          <li><div><strong>撥打承保公司官方入口</strong><span>告知位置、車況、車型與目的地；確認案件編號、派遣車號及預估到場時間。</span></div></li>
+          <li><div><strong>只接受確認派遣的拖車</strong><span>陌生拖車主動靠近時，先向原專線核對，不要直接簽名或讓對方起吊。</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section highway" aria-labelledby="highway-title">
+      <div class="container"><div class="section-head"><p class="eyebrow">國道／高架／快速道路</p><h2 id="highway-title">開、放、離、撥</h2><p>路肩仍是高風險區。不要在現場換胎、接電或維修，先把人移到安全處並求援。</p></div><div class="sop-strip"><div class="sop"><b>開</b><strong>開警示燈</strong><span>能滑行就緩慢移至路肩或避車彎。</span></div><div class="sop"><b>放</b><strong>放故障標誌</strong><span>沿護欄外移動，放在車後 50–100 公尺。</span></div><div class="sop"><b>離</b><strong>全部人員離車</strong><span>退至護欄外或安全處，面向來車警戒。</span></div><div class="sop"><b>撥</b><strong>撥 1968／110</strong><span>有人受傷或起火另撥 119，再聯絡產險公司。</span></div></div><div class="callout-row"><div class="callout"><strong>車輛無法滑離車道</strong><span>不要冒險穿越車流；立即離車到安全處並清楚回報所在車道與里程。</span></div><div class="callout"><strong>1968 派車不代表免費</strong><span>拖吊前仍要詢問費率、作業費與目的地，並索取國道拖救契約三聯單。</span></div><div class="callout"><strong>官方費率自己核對</strong><span><a href="https://www.freeway.gov.tw/BBsFiles%5C20240828%5C43979.PDF" target="_blank" rel="noopener noreferrer">查看高公局 114–115 年拖救契約與費率 ↗</a></span></div></div></div>
+    </section>
+
+    <section class="section" id="call" aria-labelledby="call-title">
+      <div class="container split"><div><p class="eyebrow">通報不漏講</p><div class="section-head"><h2 id="call-title">打電話照著念</h2><p>不用在本頁輸入任何資料。只需在與官方專線通話時，依序提供救援所需資訊。</p></div><div class="check-card"><h3>一定主動說明</h3><ul class="clean-list"><li>純電／油電車</li><li>四輪驅動／後輪驅動</li><li>低底盤、改裝或高價車</li><li>車輪鎖死、脫落、變形或後輪爆胎</li><li>地下室樓層、入口限高或立體停車場</li><li>翻覆、陷落、卡安全島、載貨或特殊尺寸</li></ul></div></div><div class="script-box"><div class="script-head"><h3>道路救援通報稿</h3><button class="copy-btn" type="button" data-copy="#call-script">複製話術</button></div><p class="script" id="call-script">我要申請道路救援。
+
+車牌是＿＿＿＿，聯絡電話是＿＿＿＿。
+目前位置是＿＿＿＿；如果在國道，是國道＿＿號、＿＿向、＿＿公里。
+車輛是＿＿廠牌＿＿車型，現在的狀況是＿＿＿＿，車輪是否可轉動：＿＿。
+
+這台車是：電動／油電／四驅／後驅／低底盤／其他＿＿＿＿。（不適用可略）
+現場環境是：平面道路／地下＿＿樓／限高＿＿公尺／其他＿＿＿＿。
+
+希望拖到＿＿修理廠，地址是＿＿＿＿。
+請告訴我案件編號、派遣車號、預估時間，以及可能自費的項目。</p></div></div>
+    </section>
+
+    <section class="section finder-shell" id="tow" aria-labelledby="tow-title">
+      <div class="container"><div class="section-head"><p class="eyebrow">拖車到場</p><h2 id="tow-title">起吊前，完成這些確認</h2><p>最容易產生爭議的不是叫車，而是現場臨時加價、拖錯地點、里程不清與文件空白。</p></div><div class="check-grid"><article class="check-card"><h3>先核對</h3><ul class="clean-list"><li>車號、公司與派遣簡訊相符</li><li>半拖、全載平台或輔助輪是否適合車型</li><li>起拖地點與送達地址正確</li><li>拖吊車計程里程表已歸零</li><li>車輛原有損傷已拍照</li></ul></article><article class="check-card"><h3>三句直接問</h3><ul class="quote-list"><li>「這次總共可能自費多少？」</li><li>「除了里程費，還有其他作業費嗎？」</li><li>「如果需要加價，請先告知，經我同意後再施工。」</li></ul></article><article class="check-card"><h3>修理廠先確認</h3><ul class="clean-list"><li>現在是否營業、願不願意收車</li><li>夜間是否可放車或有值班人員</li><li>能否修這個廠牌或電動車</li><li>事故車是否需等待保險公司勘車</li><li>避免隔天因無法維修而再次轉廠</li></ul></article><article class="check-card"><h3>簽名前確認</h3><ul class="clean-list"><li>起拖地、目的地、里程、項目與金額</li><li>所有空白欄位劃線，不簽空白單</li><li>索取客戶聯、契約、發票或收據</li><li>記下拖車車號、服務人員與案件編號</li><li>拍攝送達後車況</li></ul></article></div></div>
+    </section>
+
+    <section class="section" id="after" aria-labelledby="after-title">
+      <div class="container"><div class="section-head"><p class="eyebrow">拖吊完成</p><h2 id="after-title">把後續收好</h2><p>單純故障與交通事故分開處理；曾先自行付費拖吊者，所有正本單據都先保留。</p></div><div class="after-grid"><article class="after-card"><h3>單純故障</h3><ul class="clean-list"><li>確認修理廠已正式收車</li><li>取得檢修結果、報價及進廠證明</li><li>確認是否屬原廠保固</li><li>保留拖吊與維修單據</li><li>車輛過熱時勿立即打開水箱蓋</li></ul></article><article class="after-card"><h3>交通事故</h3><ul class="clean-list"><li>完成警方報案並保存事故資料</li><li>另行通知承保公司辦理理賠通報</li><li>備份行車紀錄器原始檔與現場照片</li><li>勘車確認前不要急著拆修</li><li>責任未釐清前不承諾負擔全部責任</li></ul></article><article class="after-card"><h3>先行自費拖吊</h3><ul class="clean-list"><li>保存拖吊契約／國道三聯單正本</li><li>保存發票或收據正本</li><li>記錄事前申告時間與案件編號</li><li>盡快向原專線確認申請期限</li><li>確認發票格式、抬頭與寄送方式</li></ul></article></div><div class="privacy"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><div><strong>本頁不蒐集個人資料，也不查詢道路救援額度。</strong><p>不要求輸入車牌、身分證、保單號碼或聯絡方式。道路救援資格、次數、里程與費用，請以保單、道路救援卡及官方專線當次說明為準。</p></div></div></div>
+    </section>
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <nav class="mobile-dock" aria-label="手機緊急工具列"><a href="tel:119"><strong>119</strong><span>救護</span></a><a href="tel:110"><strong>110</strong><span>報警</span></a><a href="tel:1968"><strong>1968</strong><span>國道</span></a><a href="#insurers"><strong>產險</strong><span>找專線</span></a></nav>
+  <div class="toast" id="toast" role="status" aria-live="polite">已複製通報話術</div>

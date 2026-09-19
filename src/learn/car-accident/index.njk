@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: 車禍處理 SOP｜保險工具人
+description: 車禍當下照著做：先顧安全、報警救護、拍照移車，再完成報案與理賠。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/learn/car-accident/
+header: accident
+artDirected: True
+extraCss: assets/pages/learn-car-accident.css
+extraJs: assets/pages/learn-car-accident.js
+---
+<a class="skip" href="#main">跳到主要內容</a>
+
+<main id="main">
+<section class="hero" id="top"><div class="container hero-grid">
+<div><span class="eyebrow">車禍現場求生指南</span><h1>先別急，照著做就好。</h1><p class="lead">先確保人安全，再報警、拍照、移車。這頁會依你的現場狀況，只顯示現在最需要做的事。</p><div class="hero-actions"><a class="btn btn-danger" href="tel:119">有人受傷・撥 119</a><a class="btn btn-primary" href="#decision">開始現場引導</a></div></div>
+<div class="hero-visual"><img src="./assets/accident-hero.webp" width="1200" height="670" alt="市區輕微車禍後，駕駛站在安全位置報警並放置故障標誌" decoding="async"><div class="hero-note">記住順序：<strong>安全 → 求援 → 蒐證 → 移車</strong></div></div>
+</div></section>
+<section class="quick-strip" aria-label="三個最重要步驟"><div class="container quick-grid"><div class="quick-item"><span class="quick-no">1</span><div><b>先顧人</b><span>開警示燈、離開危險車道</span></div></div><div class="quick-item"><span class="quick-no">2</span><div><b>再求援</b><span>有人受傷 119；事故報警 110</span></div></div><div class="quick-item"><span class="quick-no">3</span><div><b>後蒐證</b><span>全景、位置、碰撞點、車損</span></div></div></div></section>
+<section class="section decision" id="decision"><div class="container"><div class="section-head"><div><span class="eyebrow">先判斷現場</span><h2>現在有人受傷嗎？</h2></div><p>點選符合你現況的選項</p></div><div class="choice-grid"><button class="choice warn" data-branch="injured" aria-expanded="false"><strong>有，或不確定</strong><p>有疼痛、暈眩、流血，或機車騎士倒地，都先當作有人受傷。</p><span class="arrow">→</span></button><button class="choice" data-branch="safe" aria-expanded="false"><strong>確定沒有人受傷</strong><p>只有車損，而且雙方都能正常行動與溝通。</p><span class="arrow">→</span></button></div><div class="branch" id="injured"><h3>先救人，不要急著談責任</h3><ul><li>立即撥 119，說明事故地點、人數及傷勢。</li><li>再撥 110；除非救護或警方指示，先保留現場。</li><li>不要自行承諾賠償、不要請傷者放棄就醫。</li></ul><a class="btn btn-danger" href="tel:119">立即撥 119</a></div><div class="branch" id="safe"><h3>先拍照，再移到安全處</h3><ul><li>放置故障標誌，完整拍下車輛位置與現場跡證。</li><li>車輛還能行駛時，拍攝後移到不妨礙交通之處。</li><li>撥 110，等警方製作事故紀錄。</li></ul><a class="btn btn-primary" href="#sop">開始逐步處理</a></div></div></section>
+<section class="section" id="sop"><div class="container"><div class="section-head"><div><span class="eyebrow">互動檢查表</span><h2>現場七步驟</h2></div><p>完成一項就勾一項</p></div><div class="sop-layout"><aside><div class="progress-card"><div class="progress-top"><span>現場完成度</span><strong id="progress-text">0 / 7</strong></div><div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div><p style="margin-top:.75rem;font-size:.875rem;color:#dfe9e2">不用一次看完，先做眼前這一步。</p></div></aside><div class="checklist" id="checklist">
+<label class="check-card"><input type="checkbox"><span class="step-no">放</span><span><h3>開啟警示燈，放故障標誌</h3><p>先提醒後方來車。放置時沿路肩或安全區域移動，不要站在車道中央。</p></span><span class="tick"></span></label>
+<label class="check-card"><input type="checkbox"><span class="step-no">撥</span><span><h3>119 救護、110 報警</h3><p>有人受傷先 119；不論責任看起來多明顯，都建議報警留下正式紀錄。</p><div class="detail"><b>報案要說：</b>所在道路／路口、行進方向、幾輛車、是否有人受傷。</div></span><span class="tick"></span></label>
+<label class="check-card"><input type="checkbox"><span class="step-no">拍</span><span><h3>從遠到近拍完整</h3><p>先拍道路與兩車位置，再拍碰撞點、車損、地面痕跡及對方車牌。</p></span><span class="tick"></span></label>
+<label class="check-card"><input type="checkbox"><span class="step-no">移</span><span><h3>符合條件就移車</h3><p>無人傷亡、車還能開：完成拍攝後移到安全且不妨礙交通的地方。</p><div class="detail"><b>有人受傷時：</b>原則上保留現場；當事人都同意移置時，先標繪或完整拍攝。</div></span><span class="tick"></span></label>
+<label class="check-card"><input type="checkbox"><span class="step-no">等</span><span><h3>安全處等待警方</h3><p>不要在車道爭論。交換姓名、電話、車牌及保險公司即可，避免拍攝不必要的個資。</p></span><span class="tick"></span></label>
+<label class="check-card"><input type="checkbox"><span class="step-no">核</span><span><h3>核對警方紀錄</h3><p>確認姓名、車牌、時間、地點與行車方向正確；描述客觀事實，不猜測、不搶著認錯。</p></span><span class="tick"></span></label>
+<label class="check-card"><input type="checkbox"><span class="step-no">拿</span><span><h3>取得當事人登記聯單</h3><p>離開前拿到聯單或確認取得方式，並記下處理單位，後續申請事故資料會用到。</p></span><span class="tick"></span></label>
+</div></div></div></section>
+<section class="section-tight" id="photos"><div class="container photo-layout"><img src="./assets/photo-guide.webp" width="1200" height="805" alt="手機拍攝車禍全景、相對位置、碰撞點與地面跡證的四個視角" loading="lazy" decoding="async"><div><span class="eyebrow">蒐證不要漏</span><h2>拍照用「遠、四角、近、跡」</h2><ol class="photo-list" style="margin-top:1.5rem"><li><div><b>遠：道路全景</b><span>把路口、號誌、標線、兩車位置一起拍進去。</span></div></li><li><div><b>四角：兩車相對位置</b><span>從前後左右斜角拍，讓人看得懂行進方向。</span></div></li><li><div><b>近：碰撞點與車損</b><span>先拍碰撞關係，再各自拍清楚受損部位。</span></div></li><li><div><b>跡：地面與散落物</b><span>煞車痕、碎片、油漬、刮痕都要保留位置感。</span></div></li></ol><div class="notice"><span>提醒</span><p>先保存行車記錄器原始檔，避免循環錄影覆蓋；不要只用通訊軟體壓縮後的影片。</p></div></div></div></section>
+<section class="section toolbox"><div class="container"><div class="section-head"><div><span class="eyebrow">離開現場後</span><h2>理賠與資料時間軸</h2></div></div><div class="tool-grid"><div class="tool-card"><h3>接下來照時間做</h3><div class="timeline"><div class="time-item"><span class="time">事故當日</span><div><b>保存所有原始檔</b><p>照片、行車記錄器、對話、聯單、醫療與交通單據集中備份。</p></div></div><div class="time-item"><span class="time">5 日內</span><div><b>通知承保保險公司</b><p>先完成出險通知，依公司指示準備資料；修車前先確認是否需要勘車。</p></div></div><div class="time-item"><span class="time">7 日後</span><div><b>申請現場圖與照片</b><p>可向警察機關申請，核對警方保存的事故現場資料。</p></div></div><div class="time-item"><span class="time">30 日後</span><div><b>申請初步分析研判表</b><p>這是警方初步意見，不等於法院最終肇責判定。</p></div></div></div></div><div style="display:grid;gap:1rem"><div class="tool-card"><h3>報警話術</h3><p class="script" id="script">我要報交通事故。地點在＿＿＿，行進方向是＿＿＿，共有＿＿輛車，目前＿＿＿人受傷／無人受傷，車輛＿＿＿可以／無法移動。</p><button class="copy-btn" data-copy="#script">複製話術</button></div><div class="tool-card"><h3>官方事故資料申請</h3><p>有人員受傷或死亡的案件，可使用警政署線上系統；無人傷亡案件依系統說明洽原受理單位。</p><a href="https://tm2.npa.gov.tw/NM105-505ClientRWD2/TM01A01Q_01.jsp" target="_blank" rel="noopener noreferrer">前往警政署申請系統 ↗</a></div></div></div></div></section>
+</main>
+{% include "partials/footer.njk" %}
+<nav class="mobile-emergency" aria-label="緊急電話"><a class="btn btn-danger" href="tel:119">119 救護</a><a class="btn btn-primary" href="tel:110">110 報警</a></nav>

@@ -1,0 +1,56 @@
+name: Build and verify
+
+on:
+  push:
+    branches: ["main", "feature/**"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Verify output
+        run: |
+          set -euo pipefail
+          # 9 個既有網址都必須輸出
+          for p in index.html about/index.html learn/index.html learn/car-accident/index.html \
+                   qa/index.html tools/index.html tools/compulsory-insurance/index.html \
+                   tools/mobile-scan/index.html tools/road-rescue/index.html; do
+            test -f "_site/$p" || { echo "缺少輸出：$p"; exit 1; }
+          done
+          # 不得殘留 Nunjucks 語法
+          if grep -rInE "\{\{[#%/]?\s*" _site --include="*.html" | grep -qv "assets/"; then
+            echo "輸出含有未解析的模板語法"; exit 1
+          fi
+          # 不得內嵌 <style> 或 <script>（樣式與行為已外置）
+          if grep -rIl "<style" _site --include="*.html"; then
+            echo "頁面不應含有內嵌 <style>"; exit 1
+          fi
+          echo "驗證通過：9 頁輸出、無殘留模板語法、無內嵌樣式"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: insurance-toolman-site
+          path: _site/
+          retention-days: 14
