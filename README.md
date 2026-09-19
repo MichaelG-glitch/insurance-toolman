@@ -12,6 +12,25 @@ https://michaelg-glitch.github.io/insurance-toolman/
 - **保險觀念**（`learn/`）：車禍、汽車保險、人壽保險
 - **常見問答**（`qa/`）：客戶常見問題整理
 
+## 關於本站
+
+[開啟「關於保險工具人」](https://michaelg-glitch.github.io/insurance-toolman/about/)
+
+為什麼叫「工具人」、這裡有什麼與沒有什麼，以及那個關於「第四次死亡」的願望。
+
+---
+
+## 署名與授權
+
+本站由 [MichaelG](https://github.com/MichaelG-glitch) 建立。
+
+- 觀念文章與問答（`learn/`、`qa/`、`about/`）：CC BY-NC-SA 4.0
+- 工具頁（`tools/`）：CC BY-NC-ND 4.0
+- 「保險工具人」名稱與 Logo：保留一切權利，不開放使用
+- 網站程式碼（HTML/CSS/JS）：MIT License
+
+詳細授權與轉載（TASL）要求請見 [LICENSE](LICENSE)。
+
 ## 道路救援自助指南
 
 [開啟道路救援自助指南](https://michaelg-glitch.github.io/insurance-toolman/tools/road-rescue/)
@@ -38,6 +57,10 @@ iPhone、Android 逐步操作與陪伴逐字稿，包含拍攝示意圖、PDF �
 - 新增／更新觀念：把 HTML 放進 `learn/` 對應資料夾
 - 更新問答：編輯 `qa/index.html`
 
+## 回報管道
+
+發現錯字、過時資訊或失效連結，請到 [Issues](https://github.com/MichaelG-glitch/insurance-toolman/issues/new) 回報。這是公開頁面，請勿留下姓名、身分證、保單號、車牌等個資。
+
 ## 免責聲明
 
-本站內容僅供一般參考，不取代保險公司個案審核、醫師診斷或律師正式法律意見；法規與商品內容可能更新，請以主管機關及各公司最新公告為準。
+本站內容僅供一般參考，不構成保險招攬、要約或個案建議，也不取代保險公司個案審核、醫師診斷或律師正式法律意見；法規與商品內容可能更新，請以主管機關及各公司最新公告為準。
