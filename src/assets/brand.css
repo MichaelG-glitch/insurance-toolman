@@ -1,0 +1,38 @@
+/* ==========================================================================
+   保險工具人 · 共用品牌頁尾（byline / copyright / 授權 / 免責 / 回報）
+   全站一致，勿逐頁複製改動；要改請改這份母版。
+   色彩取自 assets/theme.css；此處 fallback 為咖啡土色。
+   ========================================================================== */
+
+.site-footer{
+  margin-top:2rem;
+  padding:2.5rem 0 4rem;
+  border-top:1px solid var(--divider,#E1D8C7);
+  color:var(--muted,#6E6257);
+  font-size:.84rem;
+  line-height:1.75;
+}
+.site-footer-inner{
+  width:min(100% - 2rem, 1120px);
+  margin-inline:auto;
+  display:grid;
+  gap:1rem;
+}
+.site-footer-brand{
+  display:inline-flex;align-items:center;gap:.7rem;text-decoration:none;
+  color:var(--text,#2B241E);font-weight:800;
+}
+.site-footer-brand .logo{width:1.9rem;height:1.9rem;color:var(--primary,#6B4A2F);flex:none}
+.site-footer-brand span{line-height:1.25}
+.site-footer-brand small{display:block;font-size:.72rem;font-weight:600;color:var(--muted,#6E6257)}
+.site-footer-copy{font-weight:700;color:var(--text,#2B241E)}
+.site-footer-quip{color:var(--muted,#6E6257)}
+.site-footer a{color:var(--primary,#6B4A2F);text-underline-offset:.18em}
+.site-footer-license,.site-footer-disclaimer{max-width:72ch}
+.site-footer-meta{font-size:.78rem;color:var(--faint,#8A7C6E)}
+.site-footer-meta a{font-weight:700}
+
+@media print{
+  .site-footer{border-top:1px solid #ccc;color:#333}
+  .site-footer a{color:#000}
+}

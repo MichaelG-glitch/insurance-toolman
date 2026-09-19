@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+{% if description %}<meta name="description" content="{{ description }}">{% endif %}
+<meta name="theme-color" content="#6B4A2F">
+<title>{{ title }}</title>
+<link rel="stylesheet" href="{{ page.url | relbase }}assets/theme.css">
+<link rel="icon" type="image/svg+xml" href="{{ page.url | relbase }}assets/favicon.svg">
+<link rel="stylesheet" href="{{ page.url | relbase }}assets/brand.css">
+<meta property="og:image" content="https://michaelg-glitch.github.io/insurance-toolman/assets/og-image.png">
+{% if ogUrl %}<meta property="og:url" content="{{ ogUrl }}">{% endif %}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }}">
+{% if ogDescription %}<meta property="og:description" content="{{ ogDescription }}">{% elif description %}<meta property="og:description" content="{{ description }}">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@600;700;800;900&display=swap" rel="stylesheet">
+{% if artDirected %}<link rel="stylesheet" href="{{ page.url | relbase }}{{ extraCss }}">
+{% else %}<link rel="stylesheet" href="{{ page.url | relbase }}assets/site.css">{% endif %}
+</head>
+<body>
+{% if header == 'accident' %}{% include "partials/header-accident.njk" %}
+{% elif header == 'compulsory' %}{% include "partials/header-compulsory.njk" %}
+{% elif header == 'road-rescue' %}{% include "partials/header-road-rescue.njk" %}
+{% else %}{% include "partials/header.njk" %}{% endif %}
+{{ content | safe }}
+<script src="{{ page.url | relbase }}assets/site.js"></script>
+{% if extraJs %}<script src="{{ page.url | relbase }}{{ extraJs }}"></script>{% endif %}
+</body>
+</html>
