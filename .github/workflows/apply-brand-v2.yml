@@ -1,0 +1,43 @@
+name: Apply approved brand v2 implementation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/apply-brand-v2.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/brand-v2
+          fetch-depth: 0
+      - name: Download validated implementation bundle
+        run: |
+          curl -fL --retry 3 -o /tmp/brand-v2.tar.gz https://tmpfiles.org/dl/wPwONNFUuVDJ/insurance-toolman-brand-v2.tar.gz
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          tar -xzf /tmp/brand-v2.tar.gz -C .
+      - name: Structural validation
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          bad=[]
+          pages=[p for p in Path('.').rglob('*.html') if 'partials' not in p.parts]
+          for p in pages:
+              s=p.read_text()
+              for token in ['/insurance-toolman/assets/site.css','MichaelG','og:image','data-copyright','M27.5 17.5']:
+                  if token not in s: bad.append(f'{p}: missing {token}')
+              if '<style' in s: bad.append(f'{p}: inline style remains')
+          if len(pages) != 9: bad.append(f'expected 9 pages, found {len(pages)}')
+          if bad: raise SystemExit('\n'.join(bad))
+          print('Validated',len(pages),'pages')
+          PY
+      - name: Commit to feature branch
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m "feat: apply brand v2 system, licensing, feedback and automation [skip ci]"
+          git push origin HEAD:feature/brand-v2 --force
