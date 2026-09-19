@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 網頁內容回報（錯字／過時／錯誤）
+    url: https://github.com/MichaelG-glitch/insurance-toolman/issues/new?template=content-report.md
+    about: 回報本站內容錯誤、連結失效或資訊過時。
+  - name: 隱私提醒
+    url: https://github.com/MichaelG-glitch/insurance-toolman
+    about: 這是公開頁面，請勿留下姓名、身分證字號、保單號碼或車牌等個資。
