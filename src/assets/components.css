@@ -1,0 +1,72 @@
+/* ==========================================================================
+   保險工具人 · 可重複使用元件（警示框／步驟／檢核清單）
+   由 theme.css 提供色彩、site.css 提供字型與圓角，跨頁共用。
+   需要這些元件的頁面，在 front matter 加 `components: true` 即可載入。
+   ========================================================================== */
+
+/* —— 警示／說明框 —— */
+.callout{
+  display:flex;gap:.9rem;
+  background:var(--surface);border:1px solid var(--border);
+  border-inline-start:.35rem solid var(--primary);
+  border-radius:var(--r-lg);padding:1.1rem 1.25rem;margin:1.25rem 0;
+}
+.callout .co-icon{
+  flex:none;width:1.5rem;height:1.5rem;margin-top:.15rem;
+  display:grid;place-items:center;font-weight:800;font-size:1rem;line-height:1;
+  color:var(--inverse);background:var(--primary);border-radius:999px;
+}
+.callout .co-body{font-size:.98rem;line-height:1.7}
+.callout .co-body strong{color:var(--text)}
+.callout .co-body p + p{margin-top:.5rem}
+.callout .co-body ul{margin:.45rem 0 0;padding-inline-start:1.1rem;list-style:square}
+.callout .co-body li{margin:.2rem 0}
+
+/* 警告（時間、張數等需要留神的事） */
+.callout--warn{border-inline-start-color:var(--warning);background:color-mix(in oklab,var(--warning-hi) 55%,var(--surface))}
+.callout--warn .co-icon{background:var(--warning)}
+.callout--warn .co-body strong{color:var(--warning)}
+
+/* 重要／禁止（非招攬、個資等法律警語） */
+.callout--danger{border-inline-start-color:var(--error);background:color-mix(in oklab,var(--error-hi) 55%,var(--surface))}
+.callout--danger .co-icon{background:var(--error)}
+.callout--danger .co-body strong{color:var(--error)}
+
+/* 一般說明（成功／正面） */
+.callout--info{border-inline-start-color:var(--success)}
+.callout--info .co-icon{background:var(--success)}
+
+/* —— 步驟清單（編號圓點） —— */
+ol.steps{list-style:none;counter-reset:step;display:grid;gap:.9rem;margin:1.25rem 0}
+ol.steps > li{
+  counter-increment:step;position:relative;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:1.1rem 1.25rem 1.1rem 3.4rem;
+}
+ol.steps > li::before{
+  content:counter(step);position:absolute;left:1.05rem;top:1.05rem;
+  width:1.9rem;height:1.9rem;display:grid;place-items:center;
+  background:var(--primary);color:var(--inverse);border-radius:999px;
+  font-weight:800;font-size:.95rem;line-height:1;font-family:var(--font-body);
+}
+ol.steps h3{margin-bottom:.3rem;font-size:1.12rem}
+ol.steps p{color:var(--muted);font-size:.98rem}
+ol.steps .muted{color:var(--faint);font-size:.9rem}
+
+/* —— 檢核清單（純視覺方框，非互動） —— */
+ul.checklist{list-style:none;display:grid;gap:.7rem;margin:1.25rem 0}
+ul.checklist > li{
+  position:relative;padding:.55rem 0 .55rem 2rem;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);
+}
+ul.checklist > li::before{
+  content:"";position:absolute;left:.9rem;top:50%;translate:0 -50%;
+  width:1.05rem;height:1.05rem;border:2px solid var(--primary);border-radius:.28rem;
+}
+ul.checklist > li.ok{background:color-mix(in oklab,var(--success-hi) 45%,var(--surface))}
+ul.checklist > li.ok::before{background:var(--success);border-color:var(--success)}
+ul.checklist > li.ok::after{
+  content:"";position:absolute;left:1.13rem;top:50%;translate:0 -62%;
+  width:.5rem;height:.3rem;border-left:2px solid var(--inverse);border-bottom:2px solid var(--inverse);
+  rotate:-45deg;
+}
