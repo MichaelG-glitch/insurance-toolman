@@ -1,18 +1,10 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
- --bg:#f5f3ed;--surface:#fffdf8;--surface-2:#eeeee7;--text:#202722;--muted:#56635b;--faint:#737e77;--inverse:#fffdf8;
- --primary:#006b5e;--primary-hover:#005448;--primary-hi:#d3e8e2;
- --warning:#9b4d1c;--warning-hi:#f2dfd0;--error:#9a3142;
- --border:#cbd1c9;--divider:#d9ddd6;
+ /* 色票已移至 assets/theme.css（咖啡＋土色），此檔只保留字型與圓角 */
  --font-display:'Noto Serif TC','PingFang TC',serif;--font-body:'Noto Sans TC','PingFang TC',sans-serif;
  --r-sm:.4rem;--r-md:.65rem;--r-lg:1rem;--r-xl:1.4rem;
- --shadow:0 14px 40px rgba(39,49,43,.10);--shadow-sm:0 4px 16px rgba(39,49,43,.07);
 }
-[data-theme="dark"]{
- --bg:#141a17;--surface:#1b2320;--surface-2:#242e2a;--text:#edf2ee;--muted:#b9c5be;--faint:#99a69e;--inverse:#10201b;
- --primary:#6cc4b5;--primary-hover:#8ad6ca;--primary-hi:#273f39;--warning-hi:#4a3528;
- --border:#445149;--divider:#313d37;--shadow:0 18px 50px rgba(0,0,0,.35);--shadow-sm:0 5px 18px rgba(0,0,0,.25)
-}
+/* 暗色模式的色彩由 theme.css 的 [data-theme="dark"] 提供 */
 html{scroll-behavior:smooth;-webkit-text-size-adjust:none}
 body{min-height:100dvh;background:var(--bg);color:var(--text);font:400 1.05rem/1.75 var(--font-body);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 a{color:var(--primary);text-underline-offset:.18em}
