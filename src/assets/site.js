@@ -1,5 +1,5 @@
 // 保險工具人 · 全站共用前端腳本
-// 明暗模式（localStorage 記憶）＋ 切換圖示 ＋ 自動年份
+// 明暗模式＋切換圖示＋自動年份
 (function () {
   var root = document.documentElement;
   var toggle = document.querySelector('[data-theme-toggle]');
@@ -25,7 +25,6 @@
     toggle.addEventListener('click', function () {
       theme = theme === 'dark' ? 'light' : 'dark';
       paint(theme);
-      try { localStorage.setItem('insurance-toolman-theme', theme); } catch (e) {}
     });
   }
 

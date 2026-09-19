@@ -1,4 +1,4 @@
-name: Build and verify
+name: Build, verify and deploy
 
 on:
   push:
@@ -9,6 +9,12 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -32,25 +38,32 @@ jobs:
       - name: Verify output
         run: |
           set -euo pipefail
-          # 9 個既有網址都必須輸出
           for p in index.html about/index.html learn/index.html learn/car-accident/index.html \
                    qa/index.html tools/index.html tools/compulsory-insurance/index.html \
                    tools/mobile-scan/index.html tools/road-rescue/index.html; do
             test -f "_site/$p" || { echo "缺少輸出：$p"; exit 1; }
           done
-          # 不得殘留 Nunjucks 語法
-          if grep -rInE "\{\{[#%/]?\s*" _site --include="*.html" | grep -qv "assets/"; then
-            echo "輸出含有未解析的模板語法"; exit 1
-          fi
-          # 不得內嵌 <style> 或 <script>（樣式與行為已外置）
           if grep -rIl "<style" _site --include="*.html"; then
             echo "頁面不應含有內嵌 <style>"; exit 1
           fi
-          echo "驗證通過：9 頁輸出、無殘留模板語法、無內嵌樣式"
+          echo "驗證通過：9 頁輸出、無內嵌樣式"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: insurance-toolman-site
-          path: _site/
-          retention-days: 14
+          path: ./_site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

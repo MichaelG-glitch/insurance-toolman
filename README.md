@@ -51,11 +51,15 @@ iPhone、Android 逐步操作與陪伴逐字稿，包含拍攝示意圖、PDF �
 
 ## 如何管理
 
-這個儲存庫存放的是網站「原始檔案」。修改並提交後，GitHub Pages 會自動重新發佈，約 1～2 分鐘後網站更新。
+本儲存庫以 [Eleventy](https://www.11ty.dev/) 建置。原始內容在 `src/`，`main` 分支推送後，GitHub Actions 會自動建置到 `_site/` 並發布至 GitHub Pages（約 1～2 分鐘後更新）。
 
-- 新增／更新工具：把 HTML 放進 `tools/` 對應資料夾
-- 新增／更新觀念：把 HTML 放進 `learn/` 對應資料夾
-- 更新問答：編輯 `qa/index.html`
+- 共用模板：`src/_includes/`（頂欄、頁尾、Logo、明暗模式）
+- 全站樣式與腳本：`src/assets/`（theme.css、site.css、brand.css、site.js）
+- 新增工具：在 `src/tools/` 建立資料夾並放 `index.njk`（front matter 指定標題、授權等）
+- 新增觀念：在 `src/learn/` 建立資料夾並放 `index.njk`
+- 更新問答：編輯 `src/qa/index.njk`
+
+本機預覽：`npm install && npm run build`（輸出至 `_site/`），或 `npm run serve` 啟動本地伺服器。
 
 ## 回報管道
 
