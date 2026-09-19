@@ -1,5 +1,8 @@
 name: Apply approved brand v2 implementation
 on:
+  push:
+    branches: [feature/brand-v2]
+    paths: [.github/workflows/apply-brand-v2.yml]
   workflow_dispatch:
 permissions:
   contents: write
@@ -20,7 +23,6 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          from html.parser import HTMLParser
           bad=[]
           pages=[p for p in Path('.').rglob('*.html') if 'partials' not in p.parts]
           for p in pages:
