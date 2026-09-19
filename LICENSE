@@ -1,0 +1,54 @@
+保險工具人（Insurance Toolman）授權說明
+======================================
+
+本站由 MichaelG 建立。全文「保險工具人」名稱與盾牌扳手 Logo 之商標／品牌識別
+一律保留一切權利，不屬於以下任何授權範圍——未經事前書面同意，不得將名稱或
+Logo 用於衍生作品、背書或誤導性加註。
+
+文字內容（觀念文章、問答、關於頁）
+----------------------------------
+「保險觀念（learn/）」與「常見問答（qa/）」及「關於（about/）」頁面之文字內容，
+依 創用 CC「姓名標示—非商業性—相同方式分享 4.0 國際」授權釋出：
+
+  https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW
+
+工具頁（tools/）
+---------------
+「實用工具（tools/）」頁面含有道路救援專線、強制險法定時效與文件清單等
+容易被誤傳之資訊，為避免內容被改錯後仍掛名本品牌，依
+創用 CC「姓名標示—非商業性—禁止改作 4.0 國際」授權釋出：
+
+  https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh_TW
+
+轉載（TASL）要求
+----------------
+無論採用何種授權，轉載時請保留：
+  1. 作品名稱（保險工具人／Insurance Toolman）
+  2. 作者　　　MichaelG
+  3. 原始網址　（本頁原始 URL）
+  4. 授權條款　（上述對應之 CC 連結）
+
+程式碼
+------
+網站之 HTML／CSS／JavaScript 源碼以 MIT License 釋出；與上述文字內容授權分開。
+```
+
+Copyright (c) 2026 MichaelG
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
