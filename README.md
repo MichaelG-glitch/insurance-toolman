@@ -61,6 +61,8 @@ iPhone、Android 逐步操作與陪伴逐字稿，包含拍攝示意圖、PDF �
 
 本機預覽：`npm install && npm run build`（輸出至 `_site/`），或 `npm run serve` 啟動本地伺服器。
 
+完整的架構、網站地圖、front matter 欄位與歸檔規則見 [ARCHITECTURE.md](ARCHITECTURE.md)。
+
 ## 回報管道
 
 發現錯字、過時資訊或失效連結，請到 [Issues](https://github.com/MichaelG-glitch/insurance-toolman/issues/new) 回報。這是公開頁面，請勿留下姓名、身分證、保單號、車牌等個資。
