@@ -26,15 +26,15 @@ p{text-wrap:pretty}
 
 /* topbar */
 .topbar{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--divider)}
-.topbar-inner{min-height:4.25rem;display:flex;align-items:center;justify-content:flex-start;gap:1rem}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--text);font-weight:800;font-family:var(--font-display)}.brand span{line-height:1.15}.brand small{display:block;font-family:var(--font-body);font-size:.64rem;font-weight:600;letter-spacing:.09em;color:var(--muted);line-height:1.25}
+.topbar-inner{min-height:4.5rem;display:flex;align-items:center;justify-content:flex-start;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--text);font-weight:800;font-family:var(--font-body)}.brand span{line-height:1.1}.brand small{display:block;font-family:var(--font-body);font-size:.875rem;font-weight:600;color:var(--muted);line-height:1.2}
 .logo{width:2.375rem;height:2.375rem;color:var(--primary);flex:none}
 .nav{display:flex;align-items:center;gap:.25rem;margin-left:auto}
 .nav a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:600;padding:.6rem .8rem;border-radius:var(--r-sm)}
 .nav a:hover{color:var(--text);background:var(--surface-2)}
-.nav a.icon-btn{padding:0;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md)}
+.nav a.icon-btn{padding:0;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:999px}
 .nav a.icon-btn:hover{background:var(--surface-2);color:var(--primary)}
-.icon-btn{width:2.6rem;height:2.6rem;display:grid;place-items:center;border:1px solid var(--border);background:var(--surface);border-radius:var(--r-md);margin-left:.5rem;color:var(--text);text-decoration:none}
+.icon-btn{width:2.75rem;height:2.75rem;display:grid;place-items:center;border:1px solid var(--border);background:var(--surface);border-radius:999px;margin-left:.5rem;color:var(--text);text-decoration:none}
 .icon-btn:hover{background:var(--surface-2)}
 
 /* hero */
