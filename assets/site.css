@@ -27,7 +27,7 @@ p{text-wrap:pretty}
 /* topbar */
 .topbar{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--divider)}
 .topbar-inner{min-height:4.5rem;display:flex;align-items:center;justify-content:flex-start;gap:1rem}
-.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--text);font-weight:800;font-family:var(--font-body)}.brand span{line-height:1.1}.brand small{display:block;font-family:var(--font-body);font-size:.875rem;font-weight:600;color:var(--muted);line-height:1.2}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--text);font-weight:800;font-family:var(--font-body);font-size:1.125rem}.brand span{line-height:1.1}.brand small{display:block;font-family:var(--font-body);font-size:.875rem;font-weight:600;color:var(--muted);line-height:1.2}
 .logo{width:2.375rem;height:2.375rem;color:var(--primary);flex:none}
 .nav{display:flex;align-items:center;gap:.25rem;margin-left:auto}
 .nav a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:600;padding:.6rem .8rem;border-radius:var(--r-sm)}
