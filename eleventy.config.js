@@ -15,6 +15,14 @@ module.exports = function (eleventyConfig) {
     return parts.length === 0 ? "" : "../".repeat(parts.length);
   });
 
+  // 分類頁自動收集：葉子頁面在 front matter 加 tags: toolItem／learnItem，並以 order 排序
+  eleventyConfig.addCollection("toolsList", function (api) {
+    return api.getFilteredByTag("toolItem").sort((a, b) => (a.data.order || 99) - (b.data.order || 99));
+  });
+  eleventyConfig.addCollection("learnList", function (api) {
+    return api.getFilteredByTag("learnItem").sort((a, b) => (a.data.order || 99) - (b.data.order || 99));
+  });
+
   return {
     dir: {
       input: "src",

@@ -38,15 +38,17 @@ jobs:
       - name: Verify output
         run: |
           set -euo pipefail
-          for p in index.html about/index.html learn/index.html learn/car-accident/index.html \
-                   qa/index.html tools/index.html tools/compulsory-insurance/index.html \
-                   tools/mobile-scan/index.html tools/road-rescue/index.html; do
-            test -f "_site/$p" || { echo "缺少輸出：$p"; exit 1; }
-          done
+          # 每個 src/**/index.njk 都要有對應的 _site 產出（新頁面自動納入驗證，無需改此清單）
+          fail=0
+          while IFS= read -r f; do
+            rel="${f#src/}"; out="${rel%.njk}.html"
+            test -f "_site/$out" || { echo "缺少輸出：$out"; fail=1; }
+          done < <(find src -name 'index.njk' | sort)
+          [ "$fail" -eq 0 ] || exit 1
           if grep -rIl "<style" _site --include="*.html"; then
             echo "頁面不應含有內嵌 <style>"; exit 1
           fi
-          echo "驗證通過：9 頁輸出、無內嵌樣式"
+          echo "驗證通過：全部頁面有產出、無內嵌樣式"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
