@@ -18,12 +18,39 @@ cardCta: 看懂保費計算
 <span class="eyebrow">Learn · 車體險</span>
 <h1>車子變舊了，保費怎麼沒有跟著降？</h1>
 <p class="lead">車體險保費不是拿「今年保額」直接乘上一個百分比。想看懂續保保費，要把車輛因素、被保險人因素，以及過去三年的賠款紀錄一起看。</p>
+<figure class="figure" style="margin-top:1.5rem"><img src="{{ page.url | relbase }}assets/premium-hero.webp" width="1200" height="670" alt="車主站在自己的老車旁，看著保費續保通知，頭上冒出問號，疑惑保費為何沒有跟著車齡下降" loading="eager" decoding="async"><figcaption>車子變舊，保額會降；但車體險保費的算法，從來不是「拿保額乘上一個數字」。</figcaption></figure>
 </div></section>
 
 <section class="section"><div class="narrow">
 <div class="section-head"><span class="kicker">先建立全貌</span><h2>一條公式，看懂保費從哪裡來</h2><p>以下用公開規章的通用結構解釋計算邏輯；實際基本保費、核保條件與最終報價，仍由各公司依其費率與承保規範決定。</p></div>
 
 <div class="formula"><div class="line">車體險保費 ＝ <mark>基本保費</mark> × <mark>製造年度及費率代號係數</mark> ×（<mark>年齡性別係數</mark> ＋ <mark>賠款紀錄係數</mark>）</div><p class="note">兩個重點：保額不是直接出現在這條乘法式裡；括號內的年齡性別係數與賠款紀錄係數是「相加」，不是相乘。</p></div>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 215" role="img" aria-label="車體險保費由三個乘數組成，保額不在其中">
+<g font-family="var(--font-body)">
+<rect x="16" y="40" width="150" height="80" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="91" y="75" text-anchor="middle" font-size="17" font-weight="800" fill="var(--text)">基本保費</text>
+<text x="91" y="99" text-anchor="middle" font-size="12.5" fill="var(--muted)">各公司自訂</text>
+<text x="176" y="85" text-anchor="middle" font-size="22" font-weight="800" fill="var(--primary)">×</text>
+<rect x="196" y="40" width="220" height="80" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="306" y="54" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--primary)">從車因素</text>
+<text x="306" y="84" text-anchor="middle" font-size="16" font-weight="800" fill="var(--text)">製造年度及</text>
+<text x="306" y="105" text-anchor="middle" font-size="16" font-weight="800" fill="var(--text)">費率代號係數</text>
+<text x="426" y="85" text-anchor="middle" font-size="22" font-weight="800" fill="var(--primary)">×</text>
+<rect x="446" y="40" width="260" height="80" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="576" y="54" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--primary)">從人因素</text>
+<text x="576" y="80" text-anchor="middle" font-size="15.5" font-weight="800" fill="var(--text)">年齡性別係數</text>
+<text x="576" y="103" text-anchor="middle" font-size="15.5" font-weight="800" fill="var(--text)">＋ 賠款紀錄係數</text>
+<text x="716" y="85" text-anchor="middle" font-size="22" font-weight="800" fill="var(--primary)">＝</text>
+<rect x="736" y="40" width="148" height="80" rx="10" fill="var(--primary)" stroke="var(--primary)" stroke-width="1.5"/>
+<text x="810" y="85" text-anchor="middle" font-size="17" font-weight="800" fill="var(--inverse)">車體險保費</text>
+<rect x="16" y="156" width="868" height="46" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="450" y="184" text-anchor="middle" font-size="15" font-weight="700" fill="var(--muted)">✗ 保額（車子的重置價值）—— 只決定理賠上限，不在這條算式裡</text>
+</g>
+</svg>
+<figcaption>三個乘數都跟「車型、被保險人」有關；唯一沒出現在算式裡的，就是大家最常盯著的「保額」。</figcaption>
+</figure>
 
 <p style="margin-top:1.25rem">拆開看，保費由兩大類因素組成：</p>
 <ul class="checklist" style="margin-top:.75rem">
@@ -69,9 +96,68 @@ cardCta: 看懂保費計算
 
 <div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><strong>增加 0.2 的是「賠款紀錄係數」，不是直接把去年實繳保費增加 20%。</strong><p>實際增加多少，仍要把當年度基本保費、製造年度及費率代號，以及其他計價條件一起帶入計算。這次賠款只要還留在三年計算期間內，就可能影響後續續保；持續投保且沒有新增賠款，等該筆紀錄退出三年範圍後，才有機會回到 −0.6。</p></div></div>
 
+<figure class="diagram">
+<svg viewBox="0 0 900 200" role="img" aria-label="出險一次後，賠款紀錄係數在接下來幾次續保的變化時間軸">
+<g font-family="var(--font-body)">
+<rect x="178" y="22" width="474" height="62" rx="12" fill="var(--warning-hi)" opacity="0.6"/>
+<text x="415" y="44" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--warning)">這筆賠款仍留在「三年窗口」內</text>
+<line x1="55" y1="112" x2="845" y2="112" stroke="var(--border)" stroke-width="2"/>
+<text x="80" y="78" text-anchor="middle" font-size="24" font-weight="800" fill="var(--success)">−0.6</text>
+<circle cx="80" cy="112" r="8" fill="var(--success)"/>
+<text x="80" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">出險前</text>
+<text x="80" y="168" text-anchor="middle" font-size="12.5" fill="var(--muted)">三年無賠款</text>
+<text x="255" y="78" text-anchor="middle" font-size="24" font-weight="800" fill="var(--warning)">−0.4</text>
+<circle cx="255" cy="112" r="8" fill="var(--warning)"/>
+<text x="255" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">第 1 次續保</text>
+<text x="415" y="78" text-anchor="middle" font-size="24" font-weight="800" fill="var(--warning)">−0.4</text>
+<circle cx="415" cy="112" r="8" fill="var(--warning)"/>
+<text x="415" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">第 2 次續保</text>
+<text x="575" y="78" text-anchor="middle" font-size="24" font-weight="800" fill="var(--warning)">−0.4</text>
+<circle cx="575" cy="112" r="8" fill="var(--warning)"/>
+<text x="575" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">第 3 次續保</text>
+<text x="790" y="78" text-anchor="middle" font-size="24" font-weight="800" fill="var(--success)">−0.6</text>
+<circle cx="790" cy="112" r="8" fill="var(--success)"/>
+<text x="790" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">第 4 次續保</text>
+<text x="790" y="168" text-anchor="middle" font-size="12.5" fill="var(--muted)">紀錄退出窗口，回復原點</text>
+</g>
+</svg>
+<figcaption>出險一次要影響三次續保；到第四次，那筆紀錄滾出「三年窗口」，係數才有機會回到原本的 −0.6。</figcaption>
+</figure>
+
 <div class="callout callout--danger"><span class="co-icon">!</span><div class="co-body"><strong>該修還是要修。</strong><p>了解係數，是為了判斷小額損失是否值得申請理賠，不是叫車主遇到事故都不要出險。若維修費用較高、涉及行車安全或車體結構，或責任與求償關係複雜，仍應優先處理安全與合理權益。</p></div></div>
 
 <div class="callout"><span class="co-icon">歪</span><div class="co-body"><strong>有時候，倒楣也看「保險年度」。</strong><p>假設過去三年同樣發生兩次賠款：如果兩次都集中在同一個保險年度，仍保有兩個無賠款年度；如果分散在兩個保險年度，就只剩一個無賠款年度。於是，一年內連續倒楣兩次的人，係數反而比「分兩年各倒楣一次」低 0.2。</p></div></div>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 225" role="img" aria-label="同樣兩次賠款，集中在同一年度與分散兩年度的差別">
+<g font-family="var(--font-body)">
+<text x="30" y="34" font-size="17" font-weight="800" fill="var(--text)">兩次集中在同一保險年度</text>
+<rect x="30" y="52" width="96" height="60" rx="8" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+<circle cx="60" cy="74" r="9" fill="var(--gold)"/>
+<circle cx="96" cy="74" r="9" fill="var(--gold)"/>
+<text x="78" y="134" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--text)">年度 1</text>
+<rect x="132" y="52" width="96" height="60" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="180" y="134" text-anchor="middle" font-size="12.5" fill="var(--muted)">年度 2</text>
+<rect x="234" y="52" width="96" height="60" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="282" y="134" text-anchor="middle" font-size="12.5" fill="var(--muted)">年度 3</text>
+<text x="30" y="176" font-size="14" fill="var(--muted)">無賠款年度 2 年 → 合計 −1</text>
+<text x="30" y="200" font-size="17" font-weight="800" fill="var(--success)">→ 賠款紀錄係數 −0.2（反而較有利）</text>
+<line x1="432" y1="24" x2="432" y2="212" stroke="var(--divider)" stroke-width="1.5"/>
+<text x="472" y="34" font-size="17" font-weight="800" fill="var(--text)">分散在兩個保險年度各一次</text>
+<rect x="472" y="52" width="96" height="60" rx="8" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+<circle cx="520" cy="74" r="9" fill="var(--gold)"/>
+<text x="520" y="134" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--text)">年度 1</text>
+<rect x="574" y="52" width="96" height="60" rx="8" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+<circle cx="622" cy="74" r="9" fill="var(--gold)"/>
+<text x="622" y="134" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--text)">年度 2</text>
+<rect x="676" y="52" width="96" height="60" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="724" y="134" text-anchor="middle" font-size="12.5" fill="var(--muted)">年度 3</text>
+<text x="472" y="176" font-size="14" fill="var(--muted)">無賠款年度 1 年 → 合計 0</text>
+<text x="472" y="200" font-size="17" font-weight="800" fill="var(--text)">→ 賠款紀錄係數 0</text>
+</g>
+</svg>
+<figcaption>關鍵是「無賠款年度」有幾個：集中在同一年只少一個，分散兩年就少兩個。這只是說明規則，不是建議操作出險時點。</figcaption>
+</figure>
 
 <div class="table-wrap"><table><caption>同樣兩次賠款，時間分布不同</caption><thead><tr><th>賠款分布</th><th class="num">無賠款年度點數</th><th class="num">兩次賠款點數</th><th class="num">合計點數</th><th class="num">賠款紀錄係數</th></tr></thead><tbody><tr><td>集中在同一保險年度</td><td class="num">−2</td><td class="num">＋1</td><td class="num">−1</td><td class="num em">−0.2</td></tr><tr><td>分散在兩個保險年度</td><td class="num">−1</td><td class="num">＋1</td><td class="num">0</td><td class="num em">0</td></tr></tbody></table></div>
 
@@ -128,7 +214,7 @@ cardCta: 看懂保費計算
 <div class="section-head"><span class="kicker">可查證，也要留日期</span><h2>資料來源與使用說明</h2><p>本頁以公開規章、產險公會及保發中心資料說明通用計算結構，不代表任何一家保險公司的實際報價。</p></div>
 <div class="linklist">
 <a class="linkitem" href="https://www.nlia.org.tw/wp-content/uploads/doc/auto/95.7.14%E6%B1%BD%E8%BB%8A%E9%9A%AA%E8%A6%8F%E7%AB%A0%E8%B2%BB%E7%8E%87(%E6%A0%B8%E5%AE%9A%E6%9C%AC).pdf" target="_blank" rel="noopener noreferrer"><div><div class="t">汽車保險規章費率核定本（產險公會）</div><div class="d">公式、年齡性別係數、賠款紀錄點數與係數表的規章依據。</div></div><span class="go">查閱 →</span></a>
-<a class="linkitem" href="https://www.nlia.org.tw/office/div_car/car_02_line/%E6%B1%BD%E8%BB%8A%E4%BF%9D%E9%9A%AA%E8%B2%BB%E7%8E%87%E8%A6%8F%E7%AB%A0/" target="_blank" rel="noopener noreferrer"><div><div class="t">產物保險商業同業公會｜汽車保險費率規章</div><div class="d">費率自由化與汽車保險規章資料入口。</div></div><span class="go">查閱 →</span></a>
+<a class="linkitem" href="https://law.fsc.gov.tw/Download.ashx?FileID=15090&id=GL001905&type=LAW" target="_blank" rel="noopener noreferrer"><div><div class="t">金管會｜實施產險費率自由化第三階段監理配套措施</div><div class="d">各保險公司得依損失經驗自行訂定費率、不再統一售價的法規依據。</div></div><span class="go">查閱 →</span></a>
 <a class="linkitem" href="https://www.tii.org.tw/tii/insurance/insurance5/" target="_blank" rel="noopener noreferrer"><div><div class="t">保險事業發展中心｜汽車重置價格查詢</div><div class="d">查詢車型、重置價格及費率代號的官方參考入口。</div></div><span class="go">查閱 →</span></a>
 </div>
 

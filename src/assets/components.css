@@ -87,3 +87,12 @@ table caption{caption-side:top;text-align:left;padding:1rem 1rem .5rem;font-weig
 .formula .line{font-family:var(--font-display);font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:800;line-height:1.6}
 .formula .line mark{background:var(--gold-soft);color:var(--text);padding:.05em .2em;border-radius:.2em}
 .formula .note{margin-top:.7rem;color:var(--muted);font-size:.95rem}
+
+/* —— 插圖／圖解（示意圖框） —— */
+.figure{margin:1.5rem 0}
+.figure img{width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:var(--r-lg)}
+.figure figcaption{margin-top:.6rem;font-size:.85rem;color:var(--muted);line-height:1.6}
+
+.diagram{margin:1.5rem 0;padding:1.25rem 1rem;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface);overflow-x:auto}
+.diagram svg{width:100%;height:auto;display:block;min-width:520px}
+.diagram figcaption{margin-top:.75rem;font-size:.85rem;color:var(--muted);line-height:1.6}
