@@ -102,6 +102,8 @@ src/
 | `artDirected: True` + `extraCss`/`extraJs` | 選 | 複雜頁才加 |
 | `tags` + `order` | 是※ | ※工具/觀念葉子頁：`tags: toolItem`／`learnItem`，`order` 控制分類頁排序 |
 | `cardTitle`/`cardBlurb`/`cardTag`/`cardCta`/`icon` | 是※ | ※葉子頁在分類頁顯示的卡片文字資訊 |
+| `thumb` | 選 | 葉子頁縮圖路徑（如 `assets/thumbs/<slug>.webp`），供分類頁與「延伸閱讀」卡片用；無縮圖時退回 `icon` SVG |
+| `related` | 選 | 相關頁面的 slug 清單，頁尾自動產生「你可能也會想了解」延伸閱讀卡片，建立站內內部連結 |
 
 ## 歸檔（自動）
 
@@ -111,6 +113,15 @@ src/
 - 觀念：`tags: learnItem` + `order` + `cardTitle` + `cardBlurb`（+ 選用 `cardCta`、`icon`）
 
 `src/tools/index.njk` 與 `src/learn/index.njk` 會經由 Eleventy collection 自動列出，依 `order` 排序。「建置中」的預告卡仍是手動維護（尚未有實體頁）。
+
+## 延伸閱讀（站內內部連結）
+
+相關主題彼此互連，是增加可讀性與停留時間的關鍵。做法：
+
+- 在葉子頁 front matter 加 `related:`（列出相關頁面的 `fileSlug`），頁尾就會自動出現「你可能也會想了解」區塊。
+- 這個區塊由 `_includes/partials/related.njk` 產生，樣式在 `assets/pages/related.css`（在 `base.njk` 依 `related` 是否存在而載入），卡片依 `order` 順序、用 `thumb` 縮圖（無則退回 `icon`）呈現。
+- 因為卡片靠 `collections` 抓取其他頁面的 front matter（`cardTitle`、`cardBlurb`、`thumb`、`icon`），新增或改成對方頁面時，連結會自動更新，不需手動改每一處。
+- 縮圖請用「卡通手繪、線條簡單」的 AI 生成圖，統一放在 `src/assets/thumbs/`、`src/assets/illustrations/`，尺寸縮小後存成 `.webp`。
 
 ## 命名與授權規則
 
