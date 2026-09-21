@@ -1,0 +1,9 @@
+{%- if analytics.measurementId and analytics.measurementId != "G-XXXXXXXXXX" -%}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics.measurementId }}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '{{ analytics.measurementId }}');
+</script>
+{%- endif -%}
