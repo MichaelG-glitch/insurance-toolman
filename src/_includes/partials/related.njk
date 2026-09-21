@@ -7,7 +7,7 @@
   {% for p in collections.all %}
     {% if p.fileSlug == slug and p.data.cardTitle %}
 <a class="rel-card" href="{{ page.url | relbase }}{{ p.data.activeNav }}/{{ p.fileSlug }}/">
-<span class="rel-icon">{% if p.data.icon %}{{ (icons[p.data.icon] or icons.default) | safe }}{% else %}{{ icons.default | safe }}{% endif %}</span>
+{% if p.data.thumb %}<span class="rel-thumb"><img src="{{ page.url | relbase }}{{ p.data.thumb }}" alt="" width="512" height="512" loading="lazy" decoding="async"></span>{% else %}<span class="rel-icon">{% if p.data.icon %}{{ (icons[p.data.icon] or icons.default) | safe }}{% else %}{{ icons.default | safe }}{% endif %}</span>{% endif %}
 <h3>{{ p.data.cardTitle }}</h3>
 <p>{{ p.data.cardBlurb }}</p>
 <span class="rel-go">{{ p.data.cardCta | default('閱讀全文') }} →</span>
