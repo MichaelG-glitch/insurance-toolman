@@ -3,6 +3,7 @@ layout: base.njk
 title: 車禍處理 SOP｜保險工具人
 description: 車禍當下照著做：先顧安全、報警救護、拍照移車，再完成報案與理賠。
 ogUrl: https://michaelg-glitch.github.io/insurance-toolman/learn/car-accident/
+activeNav: learn
 header: accident
 artDirected: True
 extraCss: assets/pages/learn-car-accident.css
@@ -13,6 +14,9 @@ cardTitle: 車禍現場處理 SOP
 cardBlurb: 先顧安全、報警求援，再拍照與依條件移車。搭配插圖、現場七步驟及理賠資料時間軸。
 icon: accident
 cardCta: 開啟現場引導
+related:
+  - preliminary-analysis-report
+  - accident-consultation-checklist
 ---
 <a class="skip" href="#main">跳到主要內容</a>
 
@@ -35,5 +39,8 @@ cardCta: 開啟現場引導
 <section class="section-tight" id="photos"><div class="container photo-layout"><img src="./assets/photo-guide.webp" width="1200" height="805" alt="手機拍攝車禍全景、相對位置、碰撞點與地面跡證的四個視角" loading="lazy" decoding="async"><div><span class="eyebrow">蒐證不要漏</span><h2>拍照用「遠、四角、近、跡」</h2><ol class="photo-list" style="margin-top:1.5rem"><li><div><b>遠：道路全景</b><span>把路口、號誌、標線、兩車位置一起拍進去。</span></div></li><li><div><b>四角：兩車相對位置</b><span>從前後左右斜角拍，讓人看得懂行進方向。</span></div></li><li><div><b>近：碰撞點與車損</b><span>先拍碰撞關係，再各自拍清楚受損部位。</span></div></li><li><div><b>跡：地面與散落物</b><span>煞車痕、碎片、油漬、刮痕都要保留位置感。</span></div></li></ol><div class="notice"><span>提醒</span><p>先保存行車記錄器原始檔，避免循環錄影覆蓋；不要只用通訊軟體壓縮後的影片。</p></div></div></div></section>
 <section class="section toolbox"><div class="container"><div class="section-head"><div><span class="eyebrow">離開現場後</span><h2>理賠與資料時間軸</h2></div></div><div class="tool-grid"><div class="tool-card"><h3>接下來照時間做</h3><div class="timeline"><div class="time-item"><span class="time">事故當日</span><div><b>保存所有原始檔</b><p>照片、行車記錄器、對話、聯單、醫療與交通單據集中備份。</p></div></div><div class="time-item"><span class="time">5 日內</span><div><b>通知承保保險公司</b><p>先完成出險通知，依公司指示準備資料；修車前先確認是否需要勘車。</p></div></div><div class="time-item"><span class="time">7 日後</span><div><b>申請現場圖與照片</b><p>可向警察機關申請，核對警方保存的事故現場資料。</p></div></div><div class="time-item"><span class="time">30 日後</span><div><b>申請初步分析研判表</b><p>這是警方初步意見，不等於法院最終肇責判定。</p></div></div></div></div><div style="display:grid;gap:1rem"><div class="tool-card"><h3>報警話術</h3><p class="script" id="script">我要報交通事故。地點在＿＿＿，行進方向是＿＿＿，共有＿＿輛車，目前＿＿＿人受傷／無人受傷，車輛＿＿＿可以／無法移動。</p><button class="copy-btn" data-copy="#script">複製話術</button></div><div class="tool-card"><h3>官方事故資料申請</h3><p>有人員受傷或死亡的案件，可使用警政署線上系統；無人傷亡案件依系統說明洽原受理單位。</p><a href="https://tm2.npa.gov.tw/NM105-505ClientRWD2/TM01A01Q_01.jsp" target="_blank" rel="noopener noreferrer">前往警政署申請系統 ↗</a></div></div></div></div></section>
 </main>
+
+{% include "partials/related.njk" %}
+
 {% include "partials/footer.njk" %}
 <nav class="mobile-emergency" aria-label="緊急電話"><a class="btn btn-danger" href="tel:119">119 救護</a><a class="btn btn-primary" href="tel:110">110 報警</a></nav>

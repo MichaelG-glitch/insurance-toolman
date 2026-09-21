@@ -1,0 +1,16 @@
+/* ============================================
+   延伸閱讀（跨頁共用）——「你可能也會想了解」
+   只依賴 theme.css 的顏色變數，明暗模式自動適應。
+   ============================================ */
+.rel-section{border-top:1px solid var(--divider);padding:3.25rem 0 3.5rem}
+.rel-inner{max-width:960px;margin:0 auto;padding:0 1.25rem}
+.rel-kicker{display:block;font-size:.8rem;font-weight:800;letter-spacing:.12em;color:var(--primary);margin:0 0 .55rem}
+.rel-title{font-size:1.55rem;font-weight:800;line-height:1.3;color:var(--text);margin:0 0 1.5rem}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem}
+.rel-card{display:flex;flex-direction:column;gap:.85rem;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.4rem 1.25rem;text-decoration:none;color:var(--text);transition:transform .18s,box-shadow .18s,border-color .18s}
+.rel-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--primary)}
+.rel-icon{width:2.6rem;height:2.6rem;display:grid;place-items:center;border-radius:10px;background:var(--primary-hi);color:var(--primary);flex:none}
+.rel-icon svg{display:block}
+.rel-card h3{font-size:1.12rem;font-weight:800;line-height:1.45;color:var(--text);margin:0}
+.rel-card p{font-size:.94rem;line-height:1.65;color:var(--muted);margin:0}
+.rel-go{margin-top:auto;display:inline-flex;align-items:center;gap:.35rem;font-weight:800;font-size:.92rem;color:var(--primary)}

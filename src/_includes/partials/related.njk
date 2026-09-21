@@ -1,0 +1,20 @@
+{% if related %}
+<section class="rel-section"><div class="rel-inner">
+<span class="rel-kicker">延伸閱讀</span>
+<h2 class="rel-title">你可能也會想了解</h2>
+<div class="rel-grid">
+{% for slug in related %}
+  {% for p in collections.all %}
+    {% if p.fileSlug == slug and p.data.cardTitle %}
+<a class="rel-card" href="{{ page.url | relbase }}{{ p.data.activeNav }}/{{ p.fileSlug }}/">
+<span class="rel-icon">{% if p.data.icon %}{{ (icons[p.data.icon] or icons.default) | safe }}{% else %}{{ icons.default | safe }}{% endif %}</span>
+<h3>{{ p.data.cardTitle }}</h3>
+<p>{{ p.data.cardBlurb }}</p>
+<span class="rel-go">{{ p.data.cardCta | default('閱讀全文') }} →</span>
+</a>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</div>
+</div></section>
+{% endif %}
