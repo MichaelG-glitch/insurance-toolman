@@ -29,4 +29,21 @@
   }
 
   yearEls.forEach(function (e) { e.textContent = new Date().getFullYear(); });
+
+  // GA4：追蹤「實用工具」與「保險觀念」卡片點擊
+  function trackContentClick(link) {
+    if (typeof gtag !== 'function') return;
+    var isTool = link.classList.contains('linkitem');
+    var titleEl = link.querySelector('.t') || link.querySelector('h3');
+    var title = titleEl ? (titleEl.textContent || '').trim() : '';
+    gtag('event', isTool ? 'tool_click' : 'learn_click', {
+      content_title: title,
+      link_url: link.getAttribute('href')
+    });
+  }
+  document.addEventListener('click', function (e) {
+    var el = e.target && e.target.closest ? e.target.closest('a.linkitem, a.card') : null;
+    if (!el) return;
+    trackContentClick(el);
+  });
 })();

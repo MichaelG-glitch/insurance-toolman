@@ -21,6 +21,7 @@
 {% else %}<link rel="stylesheet" href="{{ page.url | relbase }}assets/site.css">{% endif %}
 {% if components %}<link rel="stylesheet" href="{{ page.url | relbase }}assets/components.css">{% endif %}
 {% if related %}<link rel="stylesheet" href="{{ page.url | relbase }}assets/pages/related.css">{% endif %}
+{% include "partials/analytics.njk" %}
 </head>
 <body>
 {% if header == 'accident' %}{% include "partials/header-accident.njk" %}
