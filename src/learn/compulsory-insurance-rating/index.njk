@@ -1,0 +1,191 @@
+---
+layout: base.njk
+title: 強制險從人係數怎麼算？小白從第 4 級開始｜保險工具人
+description: 強制險保費由「年齡性別係數＋違規肇事等級係數」決定。第一次投保從第 4 級起算、沒出險一年降一級、出險一次跳三級，一次看懂這套從人係數。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/learn/compulsory-insurance-rating/
+activeNav: learn
+components: true
+reviewed: "2026-09-21"
+tags: learnItem
+order: 9
+cardTitle: 強制險從人係數，怎麼算？
+cardBlurb: 第一次投保從第 4 級起；沒出險降一級、出險一次跳三級，再加上年齡性別係數，一篇看懂強制險到底怎麼計價。
+icon: calculator
+cardCta: 看懂強制險計價
+thumb: assets/thumbs/compulsory-rating.webp
+related:
+  - liability-claim-grade
+  - premium-increase-no-claim
+  - compulsory-insurance
+---
+<main>
+<section class="hero"><div class="container">
+<span class="eyebrow">Learn · 強制險</span>
+<h1>強制險的「從人係數」，看一個「人」</h1>
+<p class="lead">同樣一輛車、同一支險種，為什麼你繳的強制險跟隔壁老王不一樣？秘密就藏在兩個「從人係數」——你幾歲、是男是女，以及你過去有沒有出險。第一次投保的人，一律從「第 4 級」開始。</p>
+<figure class="figure" style="margin-top:1.5rem"><img src="{{ page.url | relbase }}assets/illustrations/compulsory-rating-hero.webp" width="1400" height="788" alt="一位新手駕駛站在石階樓梯前，身旁飄著代表年齡性別與肇事紀錄的兩張卡片，一支橘色箭往上跳三階、一支綠色箭往下走一階" loading="eager" decoding="async"><figcaption>強制險的加減費像一道樓梯：起點是第 4 級，平安一年往下走一階、出險一次直接往上跳三階。</figcaption></figure>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">先建立全貌</span><h2>強制險，是一張「跟著人」不算「跟著車」的帳單</h2><p>強制險是政策性保險，基本費率由主管機關公告、全國統一；真正會跟著「你是誰、你有沒有出險」變動的，是括號裡那兩個「從人係數」。以下用公告費率表的通用結構說明計算邏輯。</p></div>
+
+<div class="formula"><div class="line">強制險純保費 ＝ <mark>基本純保費</mark> ×（<mark>年齡性別係數</mark> ＋ <mark>違規肇事紀錄等級係數</mark> − 1）</div><p class="note">括號裡是「相加再減 1」。基本純保費由車種決定；業務費用等固定項目也全國一致。真正因「人」而變的，就是那兩個係數。</p></div>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 240" role="img" aria-label="強制險純保費由基本純保費乘以年齡性別係數加違規肇事紀錄等級係數再減一，兩個係數都跟被保險人這個人有關">
+<g font-family="var(--font-body)">
+<rect x="14" y="50" width="150" height="80" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="89" y="85" text-anchor="middle" font-size="16.5" font-weight="800" fill="var(--text)">基本純保費</text>
+<text x="89" y="108" text-anchor="middle" font-size="12" fill="var(--muted)">由車種決定</text>
+<text x="174" y="95" text-anchor="middle" font-size="22" font-weight="800" fill="var(--primary)">×</text>
+<rect x="194" y="34" width="462" height="112" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="425" y="52" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--primary)">從人係數（相加再減 1）</text>
+<rect x="216" y="66" width="202" height="56" rx="8" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="317" y="90" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--text)">年齡性別係數</text>
+<text x="317" y="109" text-anchor="middle" font-size="11" fill="var(--muted)">幾歲、男或女，幾乎不動</text>
+<text x="428" y="98" text-anchor="middle" font-size="20" font-weight="800" fill="var(--primary)">＋</text>
+<rect x="444" y="66" width="190" height="56" rx="8" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+<text x="539" y="90" text-anchor="middle" font-size="13" font-weight="800" fill="var(--text)">違規肇事等級係數</text>
+<text x="539" y="109" text-anchor="middle" font-size="11" fill="var(--muted)">看你有沒有出險，年年變</text>
+<text x="674" y="95" text-anchor="middle" font-size="22" font-weight="800" fill="var(--primary)">＝</text>
+<rect x="700" y="50" width="182" height="80" rx="10" fill="var(--primary)" stroke="var(--primary)" stroke-width="1.5"/>
+<text x="791" y="95" text-anchor="middle" font-size="16" font-weight="800" fill="var(--inverse)">強制險純保費</text>
+<rect x="194" y="176" width="688" height="40" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="538" y="201" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--muted)">年齡性別係數是「底」；肇事等級係數（從 0.70 到 1.60）才是會隨你每年的紀錄上上下下的那一塊</text>
+</g>
+</svg>
+<figcaption>左邊是「跟你無關」的基本價，右邊才是「跟你有關」的兩個係數。討論強制險漲跌，永遠從右邊說起。</figcaption>
+</figure>
+
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><strong>強制險的「等級」跟任意險是兩套表，別搞混。</strong><p>強制險最高到第 10 級、第一次投保從第 4 級起；任意第三人責任險是 19 級制（第 4 級中位、上下各延展）、車體險又是一套「點數」制。三者的「級」長得不一樣，看自己的保單時要拿對表。</p></div></div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">第一個係數</span><h2>年齡＋性別，決定你的「起價」</h2><p>這是整套係數裡最「看天」的一塊：你幾歲、是男是女，基本上已被統計數字寫死。多數中壯年駕駛落在 30–60 歲這級，係數相對穩定，但跨過 60 歲或很年輕的駕駛，起價就明顯不同。</p></div>
+
+<div class="table-wrap"><table><caption>強制險年齡性別係數（自用小客車／小貨車）</caption><thead><tr><th>年齡級距</th><th class="num">男性係數</th><th class="num">女性係數</th></tr></thead><tbody>
+<tr><td>20 歲（含）以下</td><td class="num em">2.50</td><td class="num em">1.66</td></tr>
+<tr><td>20 歲以上～25 歲（含）以下</td><td class="num em">2.30</td><td class="num em">1.53</td></tr>
+<tr><td>25 歲以上～30 歲（含）以下</td><td class="num em">1.47</td><td class="num em">1.06</td></tr>
+<tr><td><strong>30 歲以上～60 歲（含）以下</strong></td><td class="num em">1.00</td><td class="num em">0.92</td></tr>
+<tr><td>60 歲以上</td><td class="num em">1.05</td><td class="num em">0.79</td></tr>
+</tbody></table></div>
+<p style="margin-top:.75rem;color:var(--muted)">係數以四捨五入取至小數點後第二位；30–60 歲這一級是相對穩定帶。同一個「人」只要跨越級距門檻（例如滿 60 歲），這個係數就會跳動，所以它也不是永遠不變。</p>
+
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body"><strong>性別差距來自大數統計，不是對誰偏心。</strong><p>這套表是主管機關依多年事故與理賠資料訂定，反映的是「群體風險」的平均差異，不是針對某個人的評價。金管會也持續研議是否取消性別差異，未來表可能再改，投保時仍以當時生效的公告費率表為準。</p></div></div>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">第二個係數</span><h2>肇事等級：你唯一能透過行為改變的那塊</h2><p>這是從人係數裡最「看表現」的一塊。強制險把違規肇事紀錄分成 10 個等級，你第一次投保一律從第 4 級開始，之後每年依你前一年的紀錄往上或往下搬。</p></div>
+
+<div class="table-wrap"><table><caption>強制險違規肇事紀錄等級係數（10 級）</caption><thead><tr><th>等級</th><th class="num">係數</th><th class="num">加減費</th><th>等級</th><th class="num">係數</th><th class="num">加減費</th></tr></thead><tbody>
+<tr><td>第 1 級</td><td class="num em">0.70</td><td class="num em">−30%</td><td>第 6 級</td><td class="num em">1.20</td><td class="num em">＋20%</td></tr>
+<tr><td>第 2 級</td><td class="num em">0.74</td><td class="num em">−26%</td><td>第 7 級</td><td class="num em">1.30</td><td class="num em">＋30%</td></tr>
+<tr><td>第 3 級</td><td class="num em">0.82</td><td class="num em">−18%</td><td>第 8 級</td><td class="num em">1.40</td><td class="num em">＋40%</td></tr>
+<tr><td><strong>第 4 級（基準）</strong></td><td class="num em">1.00</td><td class="num em">0%</td><td>第 9 級</td><td class="num em">1.50</td><td class="num em">＋50%</td></tr>
+<tr><td>第 5 級</td><td class="num em">1.10</td><td class="num em">＋10%</td><td>第 10 級</td><td class="num em">1.60</td><td class="num em">＋60%</td></tr>
+</tbody></table></div>
+<p style="margin-top:.75rem;color:var(--muted)">留意：這套表的間距不是平均的。從第 4 級降到第 3 級是省 18%，但第 3 級再降到第 2 級只再省 8%、第 2 到第 1 級又只省 4%。「降一級」不等於「固定省 10%」，這是強制險跟任意責任險最大的不同。</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 360" role="img" aria-label="違規肇事紀錄等級共十級，第4級為基準，沒出險往下降一級，出險一次往上跳三級">
+<g font-family="var(--font-body)">
+<text x="450" y="24" text-anchor="middle" font-size="15" font-weight="800" fill="var(--text)">違規肇事紀錄等級（10 級）＝ 一道 10 階的樓梯</text>
+<line x1="130" y1="42" x2="130" y2="330" stroke="var(--border)" stroke-width="2"/>
+<rect x="130" y="302" width="640" height="26" rx="6" fill="var(--success)" opacity="0.15"/>
+<text x="770" y="320" text-anchor="middle" font-size="12" font-weight="700" fill="var(--success)">第 1 級 · 0.70（−30%，觸底）</text>
+<rect x="130" y="158" width="640" height="24" rx="6" fill="var(--surface-2)"/>
+<text x="770" y="174" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--text)">第 4 級 · 1.00（基準·小白起點）</text>
+<rect x="130" y="42" width="640" height="24" rx="6" fill="var(--error-hi)" opacity="0.4"/>
+<text x="770" y="58" text-anchor="middle" font-size="12" font-weight="800" fill="var(--error)">第 10 級 · 1.60（＋60%，到頂）</text>
+<rect x="130" y="216" width="640" height="82" rx="8" fill="var(--success-hi)" opacity="0.4"/>
+<text x="450" y="244" text-anchor="middle" font-size="14" font-weight="800" fill="var(--success)">沒出險＝往下一階</text>
+<text x="450" y="266" text-anchor="middle" font-size="13" fill="var(--text)">第 4 級 → 第 3 級 → 第 2 級 → 第 1 級（每平安一年降一級）</text>
+<text x="450" y="285" text-anchor="middle" font-size="12" fill="var(--muted)">連續三年平安，才走到最省的第 1 級（省 30%）</text>
+<rect x="130" y="92" width="640" height="60" rx="8" fill="var(--error-hi)" opacity="0.35"/>
+<text x="450" y="117" text-anchor="middle" font-size="14" font-weight="800" fill="var(--error)">出險＝往上跳三階</text>
+<text x="450" y="138" text-anchor="middle" font-size="13" fill="var(--text)">出險 1 次 ＋3 級、2 次 ＋6 級，依此類推，最高到第 10 級</text>
+<text x="116" y="66" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--muted)">↑ 出險往上跳</text>
+<text x="116" y="250" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--muted)">↓ 平安往下走</text>
+</g>
+</svg>
+<figcaption>起點在中央的第 4 級，往上加費到第 10 級（＋60%）、往下減費到第 1 級（−30%）。走得慢、跳得快，出險的代價一次就跳三階。</figcaption>
+</figure>
+
+<ul class="checklist" style="margin-top:1rem">
+<li><strong>第一次投保（小白）＝ 第 4 級</strong>：係數 1.00，不加不減，就是基準價。</li>
+<li><strong>每平安一年（沒出險）＝ 降 1 級</strong>：最低降到第 1 級（0.70，省 30% 觸底）。</li>
+<li class="ok"><strong>有理賠（出險）＝ 每 1 次加 3 級</strong>：1 次 +3 級、2 次 +6 級，最高到第 10 級（1.60，加費 60%）。</li>
+</ul>
+
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><strong>「酒駕」是另外加錢，不是升等級。</strong><p>等級只看「有沒有肇事（出險理賠）」來加減。前一年有酒駕紀錄的話，是另外加收固定金額——汽車每次 3,600 元、不設上限（N 次就 N×3,600 元），這筆錢加在應繳保費之上，與等級係數無關。</p></div></div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">小白的一年 vs 三年</span><h2>一個例子，看懂「走一階」和「跳三階」的差別</h2><p>假設小白是 30–60 歲男性（年齡性別係數 1.00），強制險基本純保費簡化為 1,000 元（數字只為方便看比例，非實際報價）。看看他接下來幾年的帳單怎麼變。</p></div>
+
+<div class="callout"><span class="co-icon">小白</span><div class="co-body"><strong>路線 A：乖乖開、連續三年沒出險。</strong><p>第一次投保第 4 級（係數 1.00）→ 第二年沒出險降到第 3 級（0.82）→ 第三年再平安到第 2 級（0.74）→ 第四年到第 1 級（0.70），觸底。</p></div></div>
+
+<div class="table-wrap"><table><caption>路線 A：連續三年沒出險</caption><thead><tr><th>保險年度</th><th>發生什麼</th><th class="num">等級</th><th class="num">係數</th><th class="num">強制險純保費</th></tr></thead><tbody>
+<tr><td>第 1 年</td><td>第一次投保</td><td class="num">4</td><td class="num">1.00</td><td class="num em">1,000</td></tr>
+<tr><td>第 2 年</td><td>平安一年</td><td class="num">3</td><td class="num">0.82</td><td class="num em">820</td></tr>
+<tr><td>第 3 年</td><td>又平安</td><td class="num">2</td><td class="num">0.74</td><td class="num em">740</td></tr>
+<tr><td>第 4 年</td><td>三連平安</td><td class="num">1</td><td class="num">0.70</td><td class="num em">700</td></tr>
+</tbody></table></div>
+
+<div class="callout callout--warn" style="margin-top:1.5rem"><span class="co-icon">!</span><div class="co-body"><strong>路線 B：第二年不小心出險一次。</strong><p>第二年不是降到第 3 級，而是從第 4 級「坐電梯」直接跳到第 <strong>7</strong> 級（4＋3），係數變成 <strong>1.30</strong>，同一份基本純保費直接變成 <strong>1,300 元</strong>。</p></div></div>
+
+<div class="formula"><div class="line">同樣只過一年：乖乖開 <mark>1,000 → 820</mark>；出險一次 <mark>1,000 → 1,300</mark></div><p class="note">一個省 180 元、一個反而多 300 元。這就是「走一階」與「跳三階」在強制險身上的真實差距——而且跳上去之後，要連著平安三年、一階一階走回來。</p></div>
+
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body"><strong>等級是「累進」，不是「一年後歸零」。</strong><p>跳到第 7 級後，之後每平安一年就往下走一級（7→6→5…），沒有年限一到自動歸零這回事。中間任何一年再出險，又會再往上跳三階。</p></div></div>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">一段你得知道的故事</span><h2>這筆保費，是一位媽媽用八年換來的</h2><p>談完冷冰冰的係數，回頭看一下：你每年乖乖繳的這筆強制險，其實不是天上掉下來的，而是一位平凡母親用一個兒子的命、加上八年抗爭，才替所有台灣人爭來的。</p></div>
+
+<p>民國 78 年（1989 年）6 月，台南一位小學畢業的家庭主婦柯蔡玉瓊，接到東海大學教官的電話——她即將從研究所畢業的長子柯重宇，在台中東海別墅附近一條禁止大車進入的產業道路上，被違規闖入的聯結車從後方追撞，當場死亡。</p>
+
+<div class="callout callout--warn" style="margin-top:1rem"><span class="co-icon">!</span><div class="co-body"><strong>肇事車行老闆的冷血回應。</strong><p>「我們經營二、三十年的車行，常常在撞死人好像在吃飯一樣。一個大學生賠二十萬，妳兒子是研究生，三十萬要不要拿？不然就去告——妳去告也是拿雞蛋碰石頭。」</p></div></div>
+
+<p style="margin-top:1rem">那一年，一條人命被開價三十萬，而且完全無過失的一方，可能一毛錢都要不到。柯媽媽一度想跟對方同歸於盡。後來她說，是兒子託夢點醒她：台灣像她一樣的家屬多得是，要改的不是她一個人身上的冤屈，而是制度。於是她拿起三十多年沒握過的筆，一邊查字典、一邊寫下數百封陳情信，從台南一路走到台北，在立法院絕食、抬棺、駐守抗爭，整整走了<strong>八年</strong>。</p>
+
+<p>她爭的是三件事：強制險要<strong>「無盈無虧」</strong>（保險公司不能靠這筆保命錢賺錢）；不管責任在誰，受害者都能<strong>迅速拿到基本理賠</strong>（無過失理賠）；萬一肇事逃逸、找不到人或對方沒投保，受害人也能靠<strong>「特別補償基金」</strong>拿到錢。</p>
+
+<p><strong>民國 85 年（1996 年）12 月 13 日，《強制汽車責任保險法》三讀通過。</strong>一個月前，李登輝總統接見她時說：「我的心被妳無私的愛感動。」從此台灣每一部車才必須投保強制險。</p>
+
+<p>所以，下次看到保單上那些「年齡性別係數」「肇事等級」的數字，別急著嫌煩——它們的背後，是一位媽媽失去兒子後，不想再讓任何一個陌生爸媽重蹈覆轍的八年。</p>
+
+<div class="linklist" style="margin-top:1.25rem">
+<a class="linkitem" href="https://zh.wikipedia.org/zh-tw/%E6%9F%AF%E8%94%A1%E7%8E%89%E7%93%8A" target="_blank" rel="noopener noreferrer"><div><div class="t">維基百科｜柯蔡玉瓊（柯媽媽）</div><div class="d">柯媽媽的生平、柯重宇車禍始末、八年推動立法與時間表。</div></div><span class="go">閱讀 →</span></a>
+<a class="linkitem" href="https://www.cali.org.tw/Consumer4" target="_blank" rel="noopener noreferrer"><div><div class="t">強制險基金｜柯媽媽的感人故事</div><div class="d">柯媽媽親筆自述，從喪子到立法的完整心路歷程。</div></div><span class="go">閱讀 →</span></a>
+<a class="linkitem" href="https://www.youtube.com/watch?v=om3xqt6m60Y" target="_blank" rel="noopener noreferrer"><div><div class="t">台灣啟示錄｜巨輪下的冤魂（影片）</div><div class="d">柯媽媽八年抗戰逆轉勝的紀錄片，約 46 分鐘完整故事。</div></div><span class="go">觀看 →</span></a>
+</div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">客戶最常問</span><h2>三個問題，一次說清楚</h2></div>
+
+<h3 style="margin-top:.25rem">Q1｜我第一次保強制險，為什麼沒有折扣？</h3>
+<p>因為你還沒有「肇事紀錄」可以參考，主管機關一律從第 4 級（係數 1.00）開始算，也就是不加不減的基準價。要降到第 1 級（省 30%），得靠往後每年平安累積，最快也要連續三年才觸底。</p>
+
+<h3 style="margin-top:1.75rem">Q2｜出險一次，到底影響多久？</h3>
+<p>等級一旦跳上去，就停在新位置，靠之後的平安年度一階一階往下走，沒有「年限一到自動歸零」。出險加的級數越多，要補回來的平安年數也越久；中間任一年再出險，又會再往上跳三階，最高卡在第 10 級（＋60%）。</p>
+
+<h3 style="margin-top:1.75rem">Q3｜那強制險跟任意第三人責任險的等級，是同一套嗎？</h3>
+<p>不是。兩者都是「第一次從第 4 級起、沒出險降一級、出險一次加三級」的外觀，但級數範圍不同（強制險 10 級、任意責任險 19 級），係數表也不同（強制險級距不平均、任意責任險每級差 0.10）。看自己保單時，務必拿對表、別混在一起解釋。</p>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">可查證，也要留日期</span><h2>資料來源與使用說明</h2><p>本頁以主管機關及強制汽車責任保險費率資訊說明通用計算結構，不代表任何一家公司的個別報價。</p></div>
+<div class="linklist">
+<a class="linkitem" href="https://www.cali.org.tw/Rate/Default" target="_blank" rel="noopener noreferrer"><div><div class="t">強制汽車責任保險｜費率資訊（CALI）</div><div class="d">違規肇事紀錄等級係數（10 級）、年齡性別係數表與加減級規則的官方公告。</div></div><span class="go">查閱 →</span></a>
+<a class="linkitem" href="https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=201409030003&aplistdn=ou=news,ou=multisite,ou=chinese,ou=ap_root,o=fsc,c=tw&toolsflag=Y&dtable=News" target="_blank" rel="noopener noreferrer"><div><div class="t">金管會｜強制險無肇事理賠減費說明</div><div class="d">第 1 次投保以第 4 級計費、降級／加級規則與 10 級係數表的官方說明。</div></div><span class="go">查閱 →</span></a>
+</div>
+
+<div class="callout callout--warn" style="margin-top:1.5rem"><span class="co-icon">!</span><div class="co-body"><strong>免責聲明。</strong><p>本頁為一般保險觀念整理，不構成特定商品推薦或個案報價。文中「1,000 元」等數字僅為方便說明計算邏輯的假設值。實際保費受投保年度、車種、年齡性別、肇事紀錄、酒駕加費及各年度公告費率表影響；要確認自己的等級與係數，應以續保明細逐項核對，並以主管機關及各產險公司最新公告為準。強制險的給付範圍與申請方式，另見〈強制險申請不求人〉。</p></div></div>
+</div></section>
+</main>
+
+{% include "partials/related.njk" %}
+
+{% include "partials/footer.njk" %}
