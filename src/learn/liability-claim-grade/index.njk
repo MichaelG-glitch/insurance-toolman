@@ -1,0 +1,176 @@
+---
+layout: base.njk
+title: 責任險肇事等級怎麼算？出險一次跳三級｜保險工具人
+description: 第一次保第三人責任險從第 4 級開始，之後每平安一年往下走一級、出險一次卻直接跳三級。用一棟樓的比喻，一次看懂這套 19 級制。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/learn/liability-claim-grade/
+activeNav: learn
+components: true
+reviewed: "2026-09-21"
+tags: learnItem
+order: 8
+cardTitle: 責任險肇事等級，怎麼算？
+cardBlurb: 第一次投保從第 4 級開始；沒出險降一級、出險一次跳三級，一篇看懂 19 級制。
+icon: calculator
+cardCta: 看懂肇事等級
+thumb: assets/thumbs/liability-claim-grade.webp
+related:
+  - premium-increase-no-claim
+  - car-damage-premium
+---
+<main>
+<section class="hero"><div class="container">
+<span class="eyebrow">Learn · 第三人責任險</span>
+<h1>責任險的「肇事等級」，其實是一棟樓</h1>
+<p class="lead">第一次保第三人責任險，你被安排在「第 4 樓」。之後每平安一年，往下搬一層；但只要出險一次，就坐電梯一口氣往上跳三層。這就是責任險從人係數的 19 級制。</p>
+<figure class="figure" style="margin-top:1.5rem"><img src="{{ page.url | relbase }}assets/illustrations/liability-claim-grade-hero.webp" width="1400" height="788" alt="一台車停在階梯上，旁邊站著一位新手駕駛往外看，一支橘色箭頭跨越三階往上跳" loading="eager" decoding="async"><figcaption>平安一年，慢慢往下走一階；出險一次，直接往上跳三階。這套階梯，就是責任險的「肇事紀錄等級」。</figcaption></figure>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">先建立全貌</span><h2>第三人責任險，保費由兩塊「從人係數」組成</h2><p>想懂肇事等級，先看它站在哪條公式裡。以下用公開規章的通用結構說明計算邏輯；實際基本保費仍由各公司自訂。</p></div>
+
+<div class="formula"><div class="line">第三人責任險保費 ＝ <mark>基本保費</mark> ×（<mark>年齡性別係數</mark> ＋ <mark>賠款紀錄係數</mark>）</div><p class="note">括號裡是「相加」，不是相乘。「肇事紀錄等級」就是右邊那個「賠款紀錄係數」，它的起算與加減級，就是本文的主角。</p></div>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 215" role="img" aria-label="第三人責任險保費由基本保費乘以年齡性別係數加賠款紀錄係數，肇事等級就是賠款紀錄係數">
+<g font-family="var(--font-body)">
+<rect x="16" y="40" width="170" height="80" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="101" y="75" text-anchor="middle" font-size="17" font-weight="800" fill="var(--text)">基本保費</text>
+<text x="101" y="99" text-anchor="middle" font-size="12.5" fill="var(--muted)">各公司自訂</text>
+<text x="196" y="85" text-anchor="middle" font-size="22" font-weight="800" fill="var(--primary)">×</text>
+<rect x="216" y="30" width="360" height="100" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="396" y="48" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--primary)">從人因素（相加）</text>
+<rect x="240" y="60" width="152" height="52" rx="8" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="316" y="82" text-anchor="middle" font-size="14" font-weight="800" fill="var(--text)">年齡性別係數</text>
+<text x="316" y="101" text-anchor="middle" font-size="11.5" fill="var(--muted)">基本固定，跨級距才變</text>
+<text x="404" y="90" text-anchor="middle" font-size="20" font-weight="800" fill="var(--primary)">＋</text>
+<rect x="424" y="60" width="148" height="52" rx="8" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+<text x="498" y="80" text-anchor="middle" font-size="13.5" font-weight="800" fill="var(--text)">賠款紀錄係數</text>
+<text x="498" y="99" text-anchor="middle" font-size="11.5" fill="var(--muted)">肇事等級 19 級制</text>
+<text x="586" y="85" text-anchor="middle" font-size="22" font-weight="800" fill="var(--primary)">＝</text>
+<rect x="606" y="40" width="180" height="80" rx="10" fill="var(--primary)" stroke="var(--primary)" stroke-width="1.5"/>
+<text x="696" y="85" text-anchor="middle" font-size="16" font-weight="800" fill="var(--inverse)">責任險保費</text>
+<rect x="16" y="158" width="868" height="42" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="450" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="var(--muted)">肇事等級決定的，就是黃金框框裡那個「賠款紀錄係數」——從 −0.30 到 ＋1.50</text>
+</g>
+</svg>
+<figcaption>年齡性別係數通常不太動；真正會隨你每年駕駛紀錄上上下下的，是右邊那塊「賠款紀錄係數」。</figcaption>
+</figure>
+
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body"><strong>這裡的 19 級制，專指「任意第三人責任險」。</strong><p>強制險是另一套（最高到第 10 級），車體險又是另一套（用「無賠款年度點數＋賠款次數點數」）。三種算法的「級」長得不一樣，別拿錯表對照。</p></div></div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">一棟 19 層的樓</span><h2>小白從第 4 樓，開始他的住戶生涯</h2><p>把「肇事紀錄等級」想成一棟 19 層的大樓，每一層代表一個「賠款紀錄係數」。你第一次保責任險，會被安排住進第 4 樓。</p></div>
+
+<figure class="diagram">
+<svg viewBox="0 0 900 620" role="img" aria-label="19級制就像一棟樓，第4級是基準，平安往下走、出險往上跳三級">
+<g font-family="var(--font-body)">
+<text x="450" y="24" text-anchor="middle" font-size="15" font-weight="800" fill="var(--text)">肇事紀錄等級（19 級制）＝ 一棟樓，你住第幾層？</text>
+<line x1="180" y1="44" x2="180" y2="594" stroke="var(--border)" stroke-width="2"/>
+<line x1="720" y1="44" x2="720" y2="594" stroke="var(--border)" stroke-width="2"/>
+<rect x="180" y="574" width="540" height="20" rx="6" fill="var(--success)" opacity="0.15"/>
+<text x="720" y="589" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--success)">第 1 級 · −0.30 · 最省（觸底）</text>
+<rect x="180" y="230" width="540" height="22" rx="6" fill="var(--surface-2)"/>
+<text x="720" y="245" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--text)">第 4 級 · 0.00 · 基準 —— 小白第一次投保就住這</text>
+<rect x="180" y="44" width="540" height="22" rx="6" fill="var(--error-hi)" opacity="0.4"/>
+<text x="720" y="59" text-anchor="middle" font-size="11.5" font-weight="800" fill="var(--error)">第 19 級 · ＋1.50 · 最高（加費 150%）</text>
+<text x="166" y="470" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--muted)">↓ 平安一年，往下搬一層</text>
+<rect x="180" y="480" width="540" height="94" rx="8" fill="var(--success-hi)" opacity="0.4"/>
+<text x="450" y="512" text-anchor="middle" font-size="14" font-weight="800" fill="var(--success)">平安（沒出險）＝ 往下一層</text>
+<text x="450" y="536" text-anchor="middle" font-size="13" fill="var(--text)">第 4 級 → 第 3 級 → 第 2 級 → 第 1 級</text>
+<text x="450" y="558" text-anchor="middle" font-size="12" fill="var(--muted)">每降一級少 10%，最低降到第 1 級（省 30%）就到底了</text>
+<rect x="180" y="122" width="540" height="82" rx="8" fill="var(--error-hi)" opacity="0.35"/>
+<text x="450" y="150" text-anchor="middle" font-size="14" font-weight="800" fill="var(--error)">出險（有理賠）＝ 坐電梯往上跳三層</text>
+<text x="450" y="176" text-anchor="middle" font-size="13" fill="var(--text)">出險一次 ＋3 級，出險兩次 ＋6 級，依此類推</text>
+<text x="450" y="196" text-anchor="middle" font-size="12" fill="var(--muted)">第 4 級出險一次 → 直接到第 7 級（＋0.30）</text>
+<text x="166" y="102" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--muted)">↑ 出險一次，直接跳三層</text>
+<g fill="var(--primary)">
+<path d="M172 316 L172 360 L152 360 L182 390 L212 360 L192 360 L192 316 Z"/>
+</g>
+<text x="166" y="410" text-anchor="middle" font-size="12.5" font-weight="800" fill="var(--primary)">住戶搬遷規則</text>
+</g>
+</svg>
+<figcaption>地面樓是「第 4 級」，往上沒有天花板（最高第 19 級）、往下只有三層可以住。平安走得慢，出險跳得快。</figcaption>
+</figure>
+
+<ul class="checklist" style="margin-top:1rem">
+<li><strong>第一次投保（小白）＝ 第 4 級</strong>：賠款紀錄係數為 0，不加不減，就是基準價。</li>
+<li><strong>每平安一年（沒出險）＝ 降 1 級</strong>：每降一級，賠款紀錄係數少 0.10，最多降到第 1 級（−0.30，省 30% 觸底）。</li>
+<li class="ok"><strong>有理賠（出險）＝ 每 1 次加 3 級</strong>：出險 1 次 +3 級、2 次 +6 級，依此類推，最高到第 19 級（＋1.50，加費 150%）。</li>
+</ul>
+
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><strong>「−0.30」不是直接打七折。</strong><p>−0.30 是「加到年齡性別係數上的減項」。只有當你的年齡性別係數正好是 1.00 時，相加後才是 0.70（打七折）；係數不同，乘出來的比例也不同。往下舉例時我們先用 1.00 簡化，方便你一眼看懂。</p></div></div>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">小白的一年 vs 三年</span><h2>一個例子，看懂「走樓梯」和「坐電梯」的差別</h2><p>假設小白的基本保費是 3,000 元、年齡性別係數是 1.00（數字只為方便說明，非實際報價）。看看他接下來幾年的帳單怎麼變。</p></div>
+
+<div class="callout"><span class="co-icon">小白</span><div class="co-body"><strong>路線 A：乖乖開三年，一路往下走。</strong><p>第一年住第 4 級（係數 0）→ 第二年沒出險、搬到第 3 級（−0.10）→ 第三年又平安、到第 2 級（−0.20）→ 第四年到第 1 級（−0.30），觸底。</p></div></div>
+
+<div class="table-wrap"><table><caption>路線 A：連續三年沒出險</caption><thead><tr><th>保險年度</th><th>發生什麼</th><th class="num">等級</th><th class="num">賠款紀錄係數</th><th class="num">從人係數（1.00＋）</th><th class="num">責任險保費</th></tr></thead><tbody>
+<tr><td>第 1 年</td><td>第一次投保</td><td class="num">4</td><td class="num">0</td><td class="num">1.00</td><td class="num em">3,000</td></tr>
+<tr><td>第 2 年</td><td>平安一年</td><td class="num">3</td><td class="num">−0.10</td><td class="num">0.90</td><td class="num em">2,700</td></tr>
+<tr><td>第 3 年</td><td>又平安</td><td class="num">2</td><td class="num">−0.20</td><td class="num">0.80</td><td class="num em">2,400</td></tr>
+<tr><td>第 4 年</td><td>三連平安</td><td class="num">1</td><td class="num">−0.30</td><td class="num">0.70</td><td class="num em">2,100</td></tr>
+</tbody></table></div>
+
+<div class="callout callout--warn" style="margin-top:1.5rem"><span class="co-icon">!</span><div class="co-body"><strong>路線 B：第二年不小心出險一次。</strong><p>第二年不是搬到第 3 級，而是從第 4 級「坐電梯」直接到第 <strong>7</strong> 級（4＋3），賠款紀錄係數變成 <strong>＋0.30</strong>，從人係數 1.30，同一份基本保費變成 <strong>3,900 元</strong>。</p></div></div>
+
+<div class="formula"><div class="line">一次出險 ＝ 等級 <mark>4 → 7</mark>，係數 <mark>0 → ＋0.30</mark>，保費 <mark>3,000 → 3,900</mark></div><p class="note">同樣是過一年：乖乖開省 300 元；出險一次反而多 900 元。這就是「走一階」與「跳三層」的差距。</p></div>
+
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body"><strong>記得，等級是「累進」不是「歸零重來」。</strong><p>你從第 4 級出險跳到第 7 級後，搬遷規則照舊：之後每平安一年，從第 7 級往下走一級（7→6→5…）；想回到第 4 級以下，得持續平安把之前跳的三層慢慢補回來。</p></div></div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">客戶最常問</span><h2>四個問題，一次說清楚</h2></div>
+
+<h3 style="margin-top:.25rem">Q1｜我第一次保責任險，為什麼沒有折扣？</h3>
+<p>因為你還沒有「肇事紀錄」可以參考，保險公司一律從第 4 級（係數 0）開始算，也就是不加不減的基準價。要降到第 3、2、1 級，得靠往後每年平安累積，最快也要連續三年才到最省的第 1 級。</p>
+
+<h3 style="margin-top:1.75rem">Q2｜出險一次，到底影響多久？</h3>
+<p>等級一旦跳上去，就停在新的樓層，靠之後的平安年度一級一級往下走，沒有「年限一到自動歸零」這回事。出險加的級數越多，要補回來的平安年數也越久——而且中間任一年再出險，又會再往上跳三層。</p>
+
+<h3 style="margin-top:1.75rem">Q3｜是不是出險就一定加費？</h3>
+<p>責任險看的是「有理賠紀錄」，而且加減級以「保險年度」內有沒有賠款為準。實務上，小額或肇責不明的情況，很多人會先評估「自付維修」和「之後保費上漲」哪個划算；但涉及他人體傷、財損或肇責有爭議時，該走理賠還是要走，別為了省係數因小失大。</p>
+
+<h3 style="margin-top:1.75rem">Q4｜那「去年沒出險、保費還漲」又是怎麼回事？</h3>
+<p>肇事等級只決定「個人折扣」這一塊。就算你已經在最省的第 1 級，只要保險公司的基本保費、強制險或附加險定價被調高，續保總額照樣可能貴個幾十、幾百元。這兩個問題別混在一起，詳細可以看另兩篇。</p>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">留給想自己查的人</span><h2>19 級完整對照表</h2><p>每差一級，賠款紀錄係數差 0.10。第 4 級是基準（0），往下最多到第 1 級（−0.30），往上最高到第 19 級（＋1.50）。</p></div>
+
+<details open><summary>肇事紀錄等級 → 賠款紀錄係數</summary><div class="a">
+<div class="table-wrap"><table><thead><tr><th>等級</th><th class="num">賠款紀錄係數</th><th>等級</th><th class="num">賠款紀錄係數</th></tr></thead><tbody>
+<tr><td>第 1 級</td><td class="num em">−0.30</td><td>第 11 級</td><td class="num em">＋0.70</td></tr>
+<tr><td>第 2 級</td><td class="num em">−0.20</td><td>第 12 級</td><td class="num em">＋0.80</td></tr>
+<tr><td>第 3 級</td><td class="num em">−0.10</td><td>第 13 級</td><td class="num em">＋0.90</td></tr>
+<tr><td><strong>第 4 級（基準）</strong></td><td class="num em">0.00</td><td>第 14 級</td><td class="num em">＋1.00</td></tr>
+<tr><td>第 5 級</td><td class="num em">＋0.10</td><td>第 15 級</td><td class="num em">＋1.10</td></tr>
+<tr><td>第 6 級</td><td class="num em">＋0.20</td><td>第 16 級</td><td class="num em">＋1.20</td></tr>
+<tr><td>第 7 級</td><td class="num em">＋0.30</td><td>第 17 級</td><td class="num em">＋1.30</td></tr>
+<tr><td>第 8 級</td><td class="num em">＋0.40</td><td>第 18 級</td><td class="num em">＋1.40</td></tr>
+<tr><td>第 9 級</td><td class="num em">＋0.50</td><td>第 19 級</td><td class="num em">＋1.50</td></tr>
+<tr><td>第 10 級</td><td class="num em">＋0.60</td><td>—</td><td class="num em">—</td></tr>
+</tbody></table></div>
+<p style="margin-top:.75rem;color:var(--muted)">數值為換算「比例」的係數；實際保費仍要乘回當年度基本保費，並非直接多收或少收這個百分比。對照官方規章時，留意你手上的是「任意第三人責任險」的 19 級表，不是強制險或車體險的表。</p>
+</div></details>
+
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><strong>規章是計算結構，不是各公司的統一售價。</strong><p>任意汽車保險費率已自由化，各公司會依自身損失經驗、通路成本與核保政策訂價。因此等級與係數的「規則」大致一致，但同樣一級，不同公司的基本保費仍可能不同。</p></div></div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">可查證，也要留日期</span><h2>資料來源與使用說明</h2><p>本頁以公開規章、產險公會及主管機關資料說明通用計算結構，不代表任何一家公司的實際報價。</p></div>
+<div class="linklist">
+<a class="linkitem" href="https://www.nlia.org.tw/wp-content/uploads/doc/auto/95.7.14%E6%B1%BD%E8%BB%8A%E9%9A%AA%E8%A6%8F%E7%AB%A0%E8%B2%BB%E7%8E%87(%E6%A0%B8%E5%AE%9A%E6%9C%AC).pdf" target="_blank" rel="noopener noreferrer"><div><div class="t">汽車保險規章費率核定本（產險公會）</div><div class="d">19 級制、第四次投保起算、加減級規則與係數表的規章依據。</div></div><span class="go">查閱 →</span></a>
+<a class="linkitem" href="https://www.cali.org.tw/Rate/Default?t=4&y=107" target="_blank" rel="noopener noreferrer"><div><div class="t">中華民國產物保險商業同業公會｜費率等級說明</div><div class="d">第 4 級起算、無肇事減一級、有理賠每次加三級的官方說明。</div></div><span class="go">查閱 →</span></a>
+<a class="linkitem" href="https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=201210300004&aplistdn=ou=news,ou=multisite,ou=chinese,ou=ap_root,o=fsc,c=tw&toolsflag=Y&dtable=News" target="_blank" rel="noopener noreferrer"><div><div class="t">金管會｜車險費率與肇事加減費說明</div><div class="d">主管機關對第 4 級起算、加減級規則的公開說明入口。</div></div><span class="go">查閱 →</span></a>
+</div>
+
+<div class="callout callout--warn" style="margin-top:1.5rem"><span class="co-icon">!</span><div class="co-body"><strong>免責聲明。</strong><p>本頁為一般保險觀念整理，不構成特定商品推薦或個案報價。文中「3,000 元」等數字僅為方便說明計算邏輯的假設值。實際保費受投保年度、保險公司、基本保費、年齡性別係數、核保條件與加減費等影響；要確認自己的等級與係數，應以續保報價明細逐項核對，並以主管機關及各保險公司最新公告為準。</p></div></div>
+</div></section>
+</main>
+
+{% include "partials/related.njk" %}
+
+{% include "partials/footer.njk" %}
