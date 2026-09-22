@@ -1,0 +1,194 @@
+---
+layout: base.njk
+title: iPhone 建立簽名檔不求人｜保險工具人
+description: 教你在 iPhone 上建立手寫簽名檔，簽一次永久存，以後簽名點一下就出來。附新舊 iOS 版本（預覽程式 vs 檔案標示）對照與機型說明。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/tools/ios-signature/
+activeNav: tools
+license: nd
+components: true
+reviewed: 2026-09-22
+tags: toolItem
+order: 6
+cardTitle: iPhone 建立簽名檔
+cardTag: 長輩友善
+cardBlurb: 簽一次永久存。教你把手寫簽名存進 iPhone，以後簽名點一下就出來，不用每份文件重畫。
+thumb: assets/thumbs/ios-signature.webp
+related:
+  - mobile-pdf-sign
+---
+<main>
+<section class="hero"><div class="container">
+<span class="eyebrow">Signature</span>
+<h1>iPhone 建立簽名檔不求人</h1>
+<p class="lead">簽名這種事，簽一次就夠了。iPhone 有內建功能，能把你的手寫簽名存進手機，以後要簽名時直接點一下就出來，不用每份文件都重畫。</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#version">先看我是哪一版 iOS</a>
+<a class="btn" href="#mantra">直接看核心口訣</a>
+</div>
+
+<figure class="figure" style="margin-top:1.75rem"><img src="{{ page.url | relbase }}assets/illustrations/ios-signature-hero.webp" width="1400" height="788" alt="一位長者坐在桌前，單手拿 iPhone、另一手手指在螢幕上劃出簽名曲線，上方有打勾與鋼筆圖示" loading="eager" decoding="async"><figcaption>簽名存進手機後，就變成你的「電子印章」，下次直接拿來蓋，不用再畫。</figcaption></figure>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">先懂一件事</span><h2>簽名是存進「簽名庫」，不是綁在某份文件</h2></div>
+<p>很多人以為簽名是畫在「這一份 PDF」上、下次換一份又要重畫。其實不是。iPhone 把你的手寫簽名存進手機的<strong>系統簽名庫</strong>，簽一次之後，<strong>任何文件、照片、備忘錄</strong>都能直接拿這組簽名來用。</p>
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body">
+<strong>所以第一步只要做一次。</strong>
+<p>建立簽名檔是「一次性的設定」，之後每次簽名都是「點現有的簽名 → 拖到位置上 → 完成」，幾秒鐘就結束。</p>
+</div></div>
+</div></section>
+
+<section class="section alt" id="version"><div class="narrow">
+<div class="section-head"><span class="kicker">第一步</span><h2>先看你用的是哪一版 iOS</h2><p>iPhone 版本跨了很多代，建立簽名檔的入口略有不同，但觀念完全一樣。先花 10 秒查一下版本，就知道該看哪一段。</p></div>
+
+<h3>怎麼查版本</h3>
+<ol class="steps">
+<li><h3>點「設定」</h3><p>灰底齒輪圖示。</p></li>
+<li><h3>點「一般」</h3><p>往下捲一點就看得到。</p></li>
+<li><h3>點「關於本機」</h3><p>開頭就是「軟體版本」，看它寫的是 iOS 幾。</p></li>
+</ol>
+
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body">
+<strong>查完對照下面這張表。</strong>
+<p><strong>iOS 26／27</strong>：手機有內建「預覽程式」App，走「路線一」。<br><strong>iOS 18 以下</strong>：沒有「預覽程式」，用「檔案」App 的「標示」，走「路線二」。<br>兩條路建立出的簽名完全相同，可以安心。</p>
+</div></div>
+
+<figure class="diagram">
+<svg viewBox="0 0 640 270" role="img" aria-label="版本分叉：先查 iOS 版本，iOS 26 或 27 用內建預覽程式，iOS 18 以下用檔案 App 的標示">
+<g font-family="var(--font-body)">
+<rect x="170" y="20" width="300" height="56" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="320" y="42" text-anchor="middle" font-size="15" font-weight="800" fill="var(--text)">先查你的 iOS 版本</text>
+<text x="320" y="63" text-anchor="middle" font-size="12" fill="var(--muted)">設定 → 一般 → 關於本機</text>
+
+<line x1="320" y1="76" x2="320" y2="106" stroke="var(--muted)" stroke-width="2"/>
+<line x1="160" y1="106" x2="480" y2="106" stroke="var(--muted)" stroke-width="2"/>
+<line x1="160" y1="106" x2="160" y2="140" stroke="var(--muted)" stroke-width="2"/>
+<line x1="480" y1="106" x2="480" y2="140" stroke="var(--muted)" stroke-width="2"/>
+
+<rect x="20" y="140" width="280" height="104" rx="10" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+<text x="160" y="166" text-anchor="middle" font-size="14" font-weight="800" fill="var(--text)">iOS 26／27</text>
+<text x="160" y="190" text-anchor="middle" font-size="13" font-weight="700" fill="var(--text)">有「預覽程式」App</text>
+<text x="160" y="212" text-anchor="middle" font-size="12" fill="var(--muted)">直接開「預覽程式」建立簽名</text>
+<text x="160" y="232" text-anchor="middle" font-size="12" fill="var(--muted)">（走路線一）</text>
+
+<rect x="340" y="140" width="280" height="104" rx="10" fill="var(--surface-2)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="480" y="166" text-anchor="middle" font-size="14" font-weight="800" fill="var(--text)">iOS 18 以下</text>
+<text x="480" y="190" text-anchor="middle" font-size="13" font-weight="700" fill="var(--text)">沒有「預覽程式」</text>
+<text x="480" y="212" text-anchor="middle" font-size="12" fill="var(--muted)">用「檔案」App 的「標示」簽名</text>
+<text x="480" y="232" text-anchor="middle" font-size="12" fill="var(--muted)">（走路線二）</text>
+</g>
+</svg>
+<figcaption>版本只是入口不同，建出來的簽名檔功能完全相同。</figcaption>
+</figure>
+
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body">
+<strong>最老的那幾支不用緊張。</strong>
+<p>iPhone XR、XS、XS Max 最高只能升級到 iOS 18，永遠不會有「預覽程式」，但只要走「路線二：檔案標示」，一樣能用同一套功能建立簽名檔。</p>
+</div></div>
+</div></section>
+
+<section class="section" id="mantra"><div class="narrow">
+<div class="section-head"><span class="kicker">核心口訣</span><h2>整件事就這五步</h2><p>不管哪一版 iOS，核心口訣都一樣，背起來就好。</p></div>
+
+<figure class="diagram">
+<svg viewBox="0 0 640 420" role="img" aria-label="核心口訣五步：打開要簽名的文件，點標示，點加入後選加入簽名檔，第一次點加入或移除簽名檔再用手寫簽名，完成後拖到位置自動存好">
+<g font-family="var(--font-body)">
+<rect x="120" y="20" width="400" height="56" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="320" y="42" text-anchor="middle" font-size="15" font-weight="800" fill="var(--text)">打開要簽名的文件</text>
+<text x="320" y="63" text-anchor="middle" font-size="12" fill="var(--muted)">檔案、郵件、照片、備忘錄都行</text>
+<line x1="320" y1="76" x2="320" y2="94" stroke="var(--muted)" stroke-width="2"/>
+
+<rect x="120" y="94" width="400" height="56" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="320" y="116" text-anchor="middle" font-size="15" font-weight="800" fill="var(--text)">點「標示」</text>
+<text x="320" y="137" text-anchor="middle" font-size="12" fill="var(--muted)">鉛筆形狀的那個按鈕</text>
+<line x1="320" y1="150" x2="320" y2="168" stroke="var(--muted)" stroke-width="2"/>
+
+<rect x="120" y="168" width="400" height="56" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+<text x="320" y="190" text-anchor="middle" font-size="15" font-weight="800" fill="var(--text)">點「＋／加入」→「加入簽名檔」</text>
+<text x="320" y="211" text-anchor="middle" font-size="12" fill="var(--muted)">就是「新增一個簽名」的地方</text>
+<line x1="320" y1="224" x2="320" y2="242" stroke="var(--muted)" stroke-width="2"/>
+
+<rect x="120" y="242" width="400" height="74" rx="10" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+<text x="320" y="265" text-anchor="middle" font-size="14" font-weight="800" fill="var(--text)">第一次：點「加入或移除簽名檔」</text>
+<text x="320" y="288" text-anchor="middle" font-size="13" fill="var(--text)">再點「＋」，用手指在框內寫名字</text>
+<text x="320" y="305" text-anchor="middle" font-size="12" fill="var(--muted)">之後有存過，直接點現成的就好</text>
+<line x1="320" y1="316" x2="320" y2="334" stroke="var(--muted)" stroke-width="2"/>
+
+<rect x="120" y="334" width="400" height="66" rx="10" fill="var(--primary)" stroke="var(--primary)" stroke-width="1.5"/>
+<text x="320" y="358" text-anchor="middle" font-size="15" font-weight="800" fill="var(--inverse)">點「完成」，拖到要簽的位置</text>
+<text x="320" y="380" text-anchor="middle" font-size="12.5" fill="var(--inverse)">簽名已自動存進手機，之後隨時能用</text>
+</g>
+</svg>
+<figcaption>關鍵是「加入或移除簽名檔」這一步：走過一次，簽名就永久存在手機裡。</figcaption>
+</figure>
+</div></section>
+
+<section class="section alt" id="route-preview"><div class="narrow">
+<div class="section-head"><span class="kicker">路線一</span><h2>iOS 26／27：用「預覽程式」建立簽名檔</h2><p>更新到 iOS 26 後，手機多出一個內建 App「預覽程式」，可以直接填寫、簽署 PDF，簽名也會記住。</p></div>
+<ol class="steps">
+<li><h3>打開「預覽程式」App</h3><p>在桌面找到「預覽程式」（英文名「Preview」）。它可以用來寫 PDF、掃描文件、上鎖 PDF。</p></li>
+<li><h3>開啟要簽名的 PDF</h3><p>在「預覽程式」裡打開那份文件；也可以先在 LINE 或郵件點開檔案，選用「預覽程式」打開。</p></li>
+<li><h3>點「標示」</h3><p>點畫面下方鉛筆形狀的「標示」按鈕，編輯工具就出來了。</p></li>
+<li><h3>點「＋」→「加入簽名檔」</h3><p>點「加入」按鈕，再選「加入簽名檔」。第一次用，就在框內用手指寫下姓名。</p></li>
+<li><h3>確認是純黑、中等粗細</h3><p>簽名用「純黑色」，粗細選中等，不要最細，也不要彩色或螢光筆，縮小、列印才看得清楚。</p></li>
+<li><h3>點「完成」，拖到位置</h3><p>把簽名拖到要簽的欄位，拉角落的藍點放大縮小到剛好。簽名檔就此建立，下次直接點現成的簽名即可。</p></li>
+</ol>
+</div></section>
+
+<section class="section" id="route-files"><div class="narrow">
+<div class="section-head"><span class="kicker">路線二</span><h2>iOS 18 以下：用「檔案」App 的「標示」</h2><p>找不到「預覽程式」，就是手機還沒到 iOS 26。用內建的「檔案」App，一樣能建立簽名檔。</p></div>
+<ol class="steps">
+<li><h3>把文件存進「檔案」</h3><p>先在 LINE 或郵件點開文件，點「分享」（方框加向上箭頭），選「儲存到檔案」。</p></li>
+<li><h3>在「檔案」App 打開</h3><p>打開藍色資料夾的「檔案」，找到剛存的檔案點開。</p></li>
+<li><h3>點「標示」</h3><p>點畫面下方鉛筆形狀的「標示」按鈕，進入編輯工具。</p></li>
+<li><h3>點「＋」→「加入簽名檔」</h3><p>點「加入」按鈕，選「加入簽名檔」。第一次用就點「加入或移除簽名檔」→「＋」，用手指寫下姓名。</p></li>
+<li><h3>點「完成」，拖到位置</h3><p>把簽名拖到要簽的欄位，拉藍點調整大小。簽名要是純黑色、中等粗細。</p></li>
+<li><h3>點「完成」儲存</h3><p>點「完成」，簽名就存好、也放上文件了。之後要用同一組簽名，直接點現成的即可。</p></li>
+</ol>
+</div></section>
+
+<section class="section alt" id="manage"><div class="narrow">
+<div class="section-head"><span class="kicker">進階</span><h2>多組簽名、加標籤、刪除</h2><p>簽名庫不只放一組。你可以一次存好幾個，分門別類。</p></div>
+<ul class="checklist">
+<li>可存<strong>多組簽名</strong>，例如正式姓名、暱稱、姓名縮寫各一組。</li>
+<li>建立簽名時，可點「新增簽名檔」旁邊的「更多」，替它加個標籤（名字／暱稱／姓名縮寫）。</li>
+<li>想刪掉某一組，就進「加入或移除簽名檔」，點那組簽名旁的「刪除」。</li>
+<li>簽名放錯位置隨時可拖走、重擺、縮放，不影響已存的簽名檔本身。</li>
+</ul>
+</div></section>
+
+<section class="section" id="tips"><div class="narrow">
+<div class="section-head"><span class="kicker">三個小提醒</span><h2>讓簽名更好看、更安全</h2></div>
+<ol class="steps">
+<li><h3>把手機轉橫</h3><p>簽名時把手機轉成橫向，官方說能得到更多書寫空間，簽出來的筆跡比較自然、不會擠成一團。</p></li>
+<li><h3>簽名等同電子印章，記得設 Face ID</h3><p>簽名檔會一直存在手機裡，等於你的電子印章。請務必替手機設 Face ID 或密碼，避免手機借人時被拿去亂簽。</p></li>
+<li><h3>升級系統前，先把簽名備份一份</h3><p>曾有使用者回報 iOS 升級後簽名檔消失。成本很低：把簽名寫在紙上、或存一張清楚的簽名圖片備用，升級後若不見，重簽一次就好。</p></li>
+</ol>
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body">
+<strong>簽名檔是「手寫影像」，不是有政府憑證背書的數位簽章。</strong>
+<p>手機手繪簽名方便又有效，屬廣義的電子簽章，但和「憑證機構簽發的數位簽章」效力等級不同。日常行政表單、初步文件很好用；碰到要保書、切結書這類重要契約，仍要依保險公司或法院的要求辦理，該親簽正本的就親簽。</p>
+</div></div>
+</div></section>
+
+<section class="section alt" id="faq"><div class="narrow">
+<div class="section-head"><span class="kicker">常見問題</span><h2>遇到這些狀況</h2></div>
+<details><summary>找不到「預覽程式」App，怎麼辦？</summary><div class="a">表示這支 iPhone 還沒更新到 iOS 26（或是最老的 XR／XS／XS Max）。改走「路線二：檔案 App 標示」，建立出來的簽名檔完全相同。</div></details>
+<details><summary>簽名畫歪了，想重來？</summary><div class="a">簽名框下方可點「清除」再簽一次，多試幾遍都行，還不會影響其他已存的簽名。</div></details>
+<details><summary>可以存幾個簽名？</summary><div class="a">不只一個。可以先存正式姓名、暱稱、姓名縮寫各一組，還可用「更多」加標籤分類，簽名時挑對的那一組用。</div></details>
+<details><summary>簽名會自動同步到 iPad 或 Mac 嗎？</summary><div class="a">Apple 官方只保證「iPhone 會儲存它」，沒有承諾跨裝置同步。實務上時好時壞，建議當成各台手機各自獨立——換機器沒看到簽名，重畫一次就好。</div></details>
+<details><summary>升級 iOS 後簽名不見了？</summary><div class="a">先別慌。重走一次「加入或移除簽名檔 → ＋ → 手指簽名」即可找回；也建議平時就把簽名存成一張清楚的圖片當備份。</div></details>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">功能依據</span><h2>本頁怎麼來的</h2></div>
+<p>本頁建立簽名檔的步驟，依 Apple 官方支援文件整理，兩條路線（預覽程式、檔案標示）都是 iPhone 內建功能，不需下載額外 App。不同 iOS 版本的按鈕名稱或位置可能略有差異，原則不變：<strong>標示 → 加入簽名檔 → 第一次經「加入或移除簽名檔」簽名 → 完成</strong>，簽名即永久存入手機。</p>
+<div class="linklist">
+<a class="linkitem" href="https://support.apple.com/zh-tw/guide/iphone/iph1d3607e5c/ios" target="_blank" rel="noopener noreferrer"><div><div class="t">Apple：填寫表單、簽署文件和製作簽名檔</div><div class="d">官方完整步驟與「簽名會被儲存供下次使用」的說明。</div></div><span class="go">開啟 →</span></a>
+<a class="linkitem" href="https://support.apple.com/zh-tw/guide/iphone/iph7239ea3b5/ios" target="_blank" rel="noopener noreferrer"><div><div class="t">Apple：在 iPhone 上開始使用「預覽程式」</div><div class="d">iOS 26 起新增的內建 App 功能說明。</div></div><span class="go">開啟 →</span></a>
+<a class="linkitem" href="https://www.macrumors.com/2025/06/09/ios-26-supports-iphone-11-and-newer/" target="_blank" rel="noopener noreferrer"><div><div class="t">iOS 26 支援機型（iPhone 11 以上）</div><div class="d">哪些機型能升 iOS 26、哪些停在 iOS 18 的說明。</div></div><span class="go">開啟 →</span></a>
+</div>
+</div></section>
+</main>
+
+{% include "partials/related.njk" %}
+{% include "partials/footer.njk" %}
