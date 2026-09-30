@@ -1,0 +1,145 @@
+---
+layout: base.njk
+title: 保險年齡計算器｜保險工具人
+description: 只輸入生日，就幫你算出「保險年齡」：以足歲計算、未滿一歲的零數超過六個月才加一歲。也支援制定任意一天，看這一天投保時是幾歲。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/tools/insurance-age/
+activeNav: tools
+license: nd
+components: true
+artDirected: True
+extraCss: assets/pages/tools-insurance-age.css
+extraJs: assets/pages/tools-insurance-age.js
+reviewed: "2026-10-01"
+tags: toolItem
+order: 8
+cardTitle: 保險年齡計算器
+cardBlurb: 輸入生日，立刻算出保險年齡：足歲之外，零數超過六個月才加一歲，差一歲可能差一級保費。
+thumb: assets/thumbs/insurance-age.webp
+related:
+  - compulsory-insurance-rating
+  - premium-increase-no-claim
+---
+<main>
+<section class="hero"><div class="container">
+<span class="eyebrow">Tool · 年齡計算</span>
+<h1>保險年齡計算器</h1>
+<p class="lead">保險費的年齡級距，看的是「保險年齡」，跟身分證上的歲數不一定一樣。這一頁不用你翻條款，輸入生日就算給你看。</p>
+<figure class="figure hero-fig"><img src="{{ page.url | relbase }}assets/illustrations/insurance-age-hero.webp" width="1400" height="788" alt="一個人捧著插蠟燭的蛋糕，望向牆上月曆，頭頂畫著連接兩只時鐘的虛線直到半年的中點" loading="eager" decoding="async"><figcaption>保險年齡的祕密只在一條線：距離上次生日有沒有「超過半年」。</figcaption></figure>
+</div></section>
+
+<section class="section"><div class="container">
+<div class="section-head"><span class="kicker">兩種用法</span><h2>挑一種開始算</h2><p>先決定你要算「今天」現在幾歲，還是「未來某一天」投保時會是幾歲。所有計算都在你自己的瀏覽器裡完成，不會上傳或儲存任何資料。</p></div>
+
+<div class="mode-switch" role="tablist" aria-label="計算模式">
+<button type="button" id="modeToday" class="mode-btn active" role="tab" aria-selected="true">算今天</button>
+<button type="button" id="modeDate" class="mode-btn" role="tab" aria-selected="false">指定日期</button>
+</div>
+
+<div class="calc">
+<div id="panelToday">
+<div class="calc-inputs">
+<div class="field">
+<label for="birthToday">你的生日（西元）</label>
+<input type="date" id="birthToday" autocomplete="off">
+</div>
+</div>
+</div>
+
+<div id="panelDate" hidden>
+<div class="calc-inputs">
+<div class="field">
+<label for="birthDate">你的生日（西元）</label>
+<input type="date" id="birthDate" autocomplete="off">
+</div>
+<div class="field">
+<label for="atDate">要計算的日期（例如投保生效日）</label>
+<input type="date" id="atDate" autocomplete="off">
+</div>
+</div>
+</div>
+
+<div class="calc-results" aria-live="polite">
+<div class="result-card result-age">
+<span class="result-tag">計算結果</span>
+<h3>保險年齡</h3>
+<div class="age" id="resultAge">—</div>
+<p class="hint" id="resultHint">輸入生日後顯示</p>
+</div>
+</div>
+
+<div class="calc-steps" id="detail">
+<div class="step-row"><span class="step-num">1</span><div class="step-body"><span class="step-label">足歲（已經過完幾次生日）</span><span class="step-val" id="detailExact">—</span></div></div>
+<div class="step-row"><span class="step-num">2</span><div class="step-body"><span class="step-label">距上次生日的零數</span><span class="step-val" id="detailZero">—</span></div></div>
+<div class="step-row"><span class="step-num">3</span><div class="step-body"><span class="step-label">零數是否超過六個月</span><span class="step-val" id="detailPlus">—</span></div></div>
+</div>
+
+<div class="calc-note">
+<strong>這個計算器怎麼算的？</strong>
+<p>依《人壽保險單示範條款》第 24 條：保險年齡以足歲計算，但「未滿一歲的零數超過六個月者」加算一歲。所以先算已經過完幾次生日（足歲），再看距離上一次生日過了幾個月又幾天；<strong>超過</strong>六個月才加一歲，剛好滿六個月當天還不算超過。月數按月曆逐月累進，非一律 30 天概算；實際投保年齡仍以保單條款與保險公司結算為準。</p>
+</div>
+</div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">為什麼要算</span><h2>「保險年齡」跟身分證歲數差在哪</h2><p>同一張身分證，兩個算法可能換來兩種歲數。差那一歲，往往就是差一個保費級距。</p></div>
+
+<div class="table-wrap"><table><caption>「足歲」與「保險年齡」逐月對照（以 5 月 10 日生日為例）</caption><thead><tr><th>要計算的日期</th><th class="num">足歲</th><th class="num">保險年齡</th></tr></thead><tbody>
+<tr><td>5 月 10 日當天</td><td class="num">剛過完生日</td><td class="num em">不加（同足歲）</td></tr>
+<tr><td>8 月 10 日（＋3 個月）</td><td class="num">同年</td><td class="num em">不加（同足歲）</td></tr>
+<tr><td>11 月 10 日（剛好＋6 個月）</td><td class="num">同年</td><td class="num em">還沒「超過」，不加</td></tr>
+<tr><td>11 月 11 日（＋6 個月又 1 天）</td><td class="num">同年</td><td class="num em">超過 6 個月 → 加一歲</td></tr>
+<tr><td>12 月 10 日（＋7 個月）</td><td class="num">同年</td><td class="num em">超過 6 個月 → 加一歲</td></tr>
+</tbody></table></div>
+
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body">
+<strong>差一天，就差一歲。</strong>
+<p>條款的用字是「超過」六個月。所以生日後「剛好滿六個月」那一天（例如 5 月 10 日生日的人，到了 11 月 10 日）保險年齡還不會進位，要隔天 11 月 11 日才加一歲。那天剛好卡在生日後半年的人，別自己多報一年。</p>
+</div></div>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">原理拆解</span><h2>一句條款，切成三步算</h2><p>示範條款原文是「以足歲計算，但未滿一歲的零數超過六個月者，加算一歲」。掰開來看就三步，跟猜拳差不多簡單。</p></div>
+
+<ol class="steps">
+<li><h3>先算「足歲」——已經完完整整過完幾次生日</h3><p>生日的週年日都要過完了，那一年才真的入帳。還沒過生日，就不算滿一歲。</p></li>
+<li><h3>再量「零數」——距離上一次生日，過了幾個月又幾天</h3><p>上次生日到要計算日期之間，這一段「不滿一年的尾巴」就是條款講的零數。</p></li>
+<li><h3>看零數有沒有「超過六個月」——超過就加一歲</h3><p>超過六個月，足歲加一，這就是保險年齡；沒超過（含剛好半年），就維持足歲。</p></li>
+</ol>
+
+<div class="formula"><div class="line">保險年齡 ＝ <mark>足歲</mark> ＋（未滿一歲零數 <mark>超過 6 個月</mark> 時加算 <mark>1</mark>）</div><p class="note">「超過」是關鍵字：剛好滿六個月當天還不算，要隔天才進位。</p></div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">常見誤會</span><h2>別把「虛歲」和「保險年齡」混在一起</h2><p>過年時長輩最愛多報的那一歲，跟保險要的不是同一回事。</p></div>
+
+<div class="table-wrap"><table><caption>三種「歲數」的差別</caption><thead><tr><th>算法</th><th>規則</th><th class="num">舉例（1990 年生，2026/10/1 算）</th></tr></thead><tbody>
+<tr><td>虛歲</td><td>出生即 1 歲，每過一個農曆／西曆年加一歲</td><td class="num em">約 37 歲</td></tr>
+<tr><td>足歲（實歲）</td><td>過完幾次生日就是幾歲</td><td class="num em">36 歲</td></tr>
+<tr><td>保險年齡</td><td>足歲 + 零數超過六個月加一歲</td><td class="num em">視 1990 年生日月份而定：36 或 37 歲</td></tr>
+</tbody></table></div>
+
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body">
+<strong>要看的，是保險年齡這一欄。</strong>
+<p>保費級距、可投保年齡上限（例如某些險種到 65 歲、75 歲）看的都是「保險年齡」。用虛歲去估，容易把自己算老一歲，以為被卡住；用實歲去估，又可能在生日過半後少算一歲。</p>
+</div></div>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">參考資料</span><h2>來源與免責說明</h2></div>
+
+<div class="linklist">
+<a class="linkitem" href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006853" target="_blank" rel="noopener noreferrer"><div><div class="t">人壽保險單示範條款（第 24 條）</div><div class="d">保險相關法規查詢系統，投保年齡計算的原始依據。</div></div><span class="go">開啟 →</span></a>
+<a class="linkitem" href="https://law.lia-roc.org.tw/Law/Article?lsid=FL006852&lawno=23" target="_blank" rel="noopener noreferrer"><div><div class="t">團體一年定期人壽保險單示範條款（第 23 條）</div><div class="d">同項規則在團險示範條款中的對應條文。</div></div><span class="go">開啟 →</span></a>
+<a class="linkitem" href="https://www.taib.com.tw/News.aspx?ID=102911" target="_blank" rel="noopener noreferrer"><div><div class="t">台銀保經：保險年齡怎麼算</div><div class="d">說明「超過六個月才加一歲、剛好滿六個月不加」的白話對照。</div></div><span class="go">開啟 →</span></a>
+</div>
+
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body">
+<strong>免責聲明。</strong>
+<p>本計算器為一般保險年齡估算工具，結果僅供參考，不構成要保、招攬或個案建議。多數商品採「足歲 + 超過六個月加一歲」，但實際投保年齡仍以各保單條款約定與保險公司認定為準；少數舊保單或特殊商品可能有不同約定，投保前請以該張保單條款為準。</p>
+</div></div>
+</div></section>
+</main>
+
+{% include "partials/related.njk" %}
+
+{% include "partials/footer.njk" %}

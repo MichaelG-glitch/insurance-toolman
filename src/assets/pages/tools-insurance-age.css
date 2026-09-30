@@ -1,0 +1,87 @@
+/* 保險年齡計算器 · art-directed 樣式
+   基礎版型沿用 site.css 結構，另加計算器專屬樣式。
+   色票由 theme.css 提供；.callout/.table-wrap/.formula/.steps 由 components.css 提供。 */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--font-display:'Noto Serif TC','PingFang TC',serif;--font-body:'Noto Sans TC','PingFang TC',sans-serif;--r-sm:.4rem;--r-md:.65rem;--r-lg:1rem;--r-xl:1.4rem}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:none}
+body{min-height:100dvh;background:var(--bg);color:var(--text);font:400 1.05rem/1.75 var(--font-body);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+a{color:var(--primary);text-underline-offset:.18em}
+button{font:inherit;color:inherit;cursor:pointer}
+img,svg{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:var(--r-sm)}
+h1,h2,h3{font-family:var(--font-display);line-height:1.2;text-wrap:balance}
+p{text-wrap:pretty}
+.container{width:min(calc(100% - 2rem),1120px);margin-inline:auto}
+.narrow{width:min(calc(100% - 2rem),760px);margin-inline:auto}
+
+/* topbar */
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--divider)}
+.topbar-inner{min-height:4.5rem;display:flex;align-items:center;justify-content:flex-start;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--text);font-weight:800;font-family:var(--font-body);font-size:1.125rem}.brand span{line-height:1.1}.brand small{display:block;font-family:var(--font-body);font-size:.875rem;font-weight:600;color:var(--muted);line-height:1.2}
+.logo{width:2.375rem;height:2.375rem;color:var(--primary);flex:none}
+.nav{display:flex;align-items:center;gap:.25rem;margin-left:auto}
+.nav a{color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:600;padding:.6rem .8rem;border-radius:var(--r-sm)}
+.nav a:hover{color:var(--text);background:var(--surface-2)}
+.nav a.icon-btn{padding:0;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:999px}
+.nav a.icon-btn:hover{background:var(--surface-2);color:var(--primary)}
+.icon-btn{width:2.75rem;height:2.75rem;display:grid;place-items:center;border:1px solid var(--border);background:var(--surface);border-radius:999px;margin-left:.5rem;color:var(--text);text-decoration:none}
+.icon-btn:hover{background:var(--surface-2)}
+
+/* hero */
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2.5rem,6vw,5rem)}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:.55rem;color:var(--primary);font-size:.85rem;font-weight:800;letter-spacing:.12em;margin-bottom:1.25rem;text-transform:uppercase}
+.hero .eyebrow::before{content:"";width:2rem;height:2px;background:currentColor}
+.hero h1{font-size:clamp(2.3rem,5vw,4rem);font-weight:900;letter-spacing:-.02em;margin-bottom:1.25rem}
+.hero .lead{font-size:1.2rem;color:var(--muted);max-width:44ch}
+.hero-fig{margin-top:2rem}
+
+/* sections */
+.section{padding:clamp(2.5rem,6vw,4.5rem) 0}
+.section.alt{background:var(--surface-2);border-block:1px solid var(--divider)}
+.section-head{margin-bottom:2.25rem}
+.section-head h2{font-size:clamp(1.6rem,3.5vw,2.3rem);letter-spacing:-.01em}
+.section-head p{color:var(--muted);margin-top:.6rem;max-width:60ch}
+.kicker{display:block;font-size:.8rem;font-weight:800;letter-spacing:.12em;color:var(--primary);margin-bottom:.5rem;text-transform:uppercase}
+
+/* footer */
+footer{padding:3rem 0 4rem;border-top:1px solid var(--divider);color:var(--muted);font-size:.85rem}
+.footer-grid{display:flex;justify-content:space-between;gap:1.5rem;align-items:flex-start;flex-wrap:wrap}
+.footer-grid .brand{color:var(--text)}
+
+/* ===== 計算器專屬 ===== */
+.mode-switch{display:inline-flex;gap:.4rem;padding:.4rem;border-radius:var(--r-lg);background:var(--surface-2);border:1px solid var(--border);margin-bottom:1.25rem}
+.mode-btn{min-height:2.5rem;padding:.5rem 1.15rem;border:1px solid transparent;border-radius:var(--r-md);background:transparent;color:var(--muted);font-weight:700;font-size:.95rem}
+.mode-btn:hover{color:var(--text)}
+.mode-btn.active{background:var(--surface);color:var(--text);border-color:var(--border);box-shadow:var(--shadow-sm)}
+
+.calc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:clamp(1.5rem,4vw,2.25rem);box-shadow:var(--shadow-sm)}
+.calc-inputs{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.field{display:grid;gap:.45rem}
+.field label{font-weight:800;font-size:.95rem;color:var(--text)}
+.field input{min-height:3.25rem;width:100%;padding:.7rem 1rem;font:600 1.15rem/1.4 var(--font-body);color:var(--text);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-md);font-variant-numeric:tabular-nums}
+.field input:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-hi);outline:none}
+.field input:invalid{box-shadow:none}
+
+.calc-results{margin-top:1.5rem}
+.result-card{position:relative;border-radius:var(--r-lg);padding:1.5rem 1.5rem 1.25rem;border:1px solid var(--border);background:var(--surface)}
+.result-age{border-top:.35rem solid var(--primary)}
+.result-tag{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.04em;padding:.15rem .55rem;border-radius:999px;margin-bottom:.75rem;background:var(--primary-hi);color:var(--primary)}
+.result-card h3{font-size:1.05rem;font-weight:800;font-family:var(--font-body);color:var(--muted);margin-bottom:.5rem}
+.result-card .age{font:900 clamp(2.4rem,5vw,3.4rem)/1.15 var(--font-display);color:var(--primary);font-variant-numeric:tabular-nums}
+.result-card .hint{font-size:.9rem;color:var(--muted);margin-top:.5rem}
+
+.calc-steps{display:grid;gap:.7rem;margin-top:1.25rem}
+.step-row{display:flex;align-items:center;gap:1rem;padding:.9rem 1.1rem;border-radius:var(--r-md);background:var(--surface-2);border:1px solid var(--divider)}
+.step-num{flex:none;width:1.7rem;height:1.7rem;display:grid;place-items:center;border-radius:999px;background:var(--primary);color:var(--inverse);font-weight:800;font-size:.85rem;line-height:1}
+.step-body{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1rem;min-width:0}
+.step-label{color:var(--muted);font-size:.92rem}
+.step-val{font-weight:800;font-variant-numeric:tabular-nums;color:var(--text)}
+
+.calc-note{margin-top:1.25rem;padding:1.1rem 1.25rem;border-radius:var(--r-lg);background:var(--surface-2);border:1px solid var(--divider)}
+.calc-note strong{color:var(--text)}
+.calc-note p{color:var(--muted);font-size:.92rem;margin-top:.3rem}
+
+/* responsive */
+@media(max-width:860px){.nav a:not(.icon-btn){display:none}.brand small{display:none}}
+@media(max-width:640px){.calc-inputs{grid-template-columns:1fr}}
+@media(max-width:560px){body{font-size:1rem}.topbar-inner{min-height:4rem}.brand span{font-size:.95rem}.hero h1{font-size:2.1rem}.mode-switch{display:grid;grid-template-columns:1fr 1fr;width:100%}.step-body{flex-direction:column;gap:0}}
