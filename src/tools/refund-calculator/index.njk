@@ -1,0 +1,113 @@
+---
+layout: base.njk
+title: 車險退保保費計算器｜保險工具人
+description: 輸入全年保費與已過天數，立刻算出任意車險退保能退多少。同時對照「短期費率表」與「日數比例」兩種算法，看懂主動退保與牌照異動的退費差異。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/tools/refund-calculator/
+activeNav: tools
+license: nd
+components: true
+artDirected: True
+extraCss: assets/pages/tools-refund-calculator.css
+extraJs: assets/pages/tools-refund-calculator.js
+reviewed: "2026-09-30"
+tags: toolItem
+order: 7
+cardTitle: 車險退保保費計算器
+cardBlurb: 輸入全年保費與已過天數，立刻算出短期費率表與日數比例的退費金額，一眼看懂差多少。
+thumb: assets/thumbs/refund-calculator.webp
+related:
+  - refund-premium
+---
+<main>
+<section class="hero"><div class="container">
+<span class="eyebrow">Tool · 退保退費</span>
+<h1>車險退保保費計算器</h1>
+<p class="lead">輸入全年保費和已經過的天數，一次算給你看：走「短期費率表」退多少、走「日數比例」又退多少。</p>
+</div></section>
+
+<section class="section"><div class="container">
+<div class="section-head"><span class="kicker">開始計算</span><h2>填兩個數字，立刻知道退多少</h2><p>金額與天數都只在本頁計算，不會上傳或儲存任何資料。</p></div>
+
+<div class="calc">
+<div class="calc-inputs">
+<div class="field">
+<label for="premium">全年總保費（元）</label>
+<input type="number" id="premium" inputmode="numeric" min="0" step="1" placeholder="例如 10000" autocomplete="off">
+</div>
+<div class="field">
+<label for="days">已經過的天數（0～365）</label>
+<input type="number" id="days" inputmode="numeric" min="0" max="365" step="1" placeholder="例如 120" autocomplete="off">
+</div>
+</div>
+
+<div class="calc-results" aria-live="polite">
+<div class="result-card result-short">
+<span class="result-tag">一般主動退保</span>
+<h3>短期費率表</h3>
+<div class="rate" id="shortRate">—</div>
+<div class="amount" id="shortAmount">—</div>
+<p class="hint" id="shortHint">輸入保費與天數後顯示</p>
+</div>
+<div class="result-card result-day">
+<span class="result-tag">牌照異動・換車・公司終止</span>
+<h3>日數比例</h3>
+<div class="rate" id="dayRate">—</div>
+<div class="amount" id="dayAmount">—</div>
+<p class="hint" id="dayHint">輸入保費與天數後顯示</p>
+</div>
+</div>
+
+<div class="diff" id="diff" hidden>
+<div class="diff-label">兩種算法相差</div>
+<div class="diff-amount" id="diffAmount">—</div>
+<p class="diff-note" id="diffNote"></p>
+</div>
+</div>
+
+<div class="calc-note">
+<strong>這個計算器怎麼算的？</strong>
+<p>「短期費率表」依《自用汽車保險定型化契約範本》的短期費率表，把已過天數換算成月數後，對照「已滿期保費比例」再退還剩餘部分。「日數比例」則直接以「剩餘天數 ÷ 365」精算。天數換算月數採 30 天為一個月概算，實際退費以保險公司依起保、退保日期結算為準。</p>
+</div>
+</div></section>
+
+<section class="section alt"><div class="narrow">
+<div class="section-head"><span class="kicker">兩種算法差在哪</span><h2>先搞清楚你是哪一種退保</h2><p>退費方式由「退保原因」決定，不是隨你挑。對照下面這張表，先確認自己屬於哪一類。</p></div>
+
+<div class="table-wrap"><table><caption>退保情境 vs 退費方式</caption><thead><tr><th>退保情境</th><th class="num">退費方式</th></tr></thead><tbody>
+<tr><td>要保人主動申請退保</td><td class="num em">短期費率表</td></tr>
+<tr><td>牌照異動（報廢、繳銷、吊銷、註銷、停駛）</td><td class="num em">日數比例</td></tr>
+<tr><td>換車銜接投保（同車續簽或換車）</td><td class="num em">日數比例</td></tr>
+<tr><td>保險公司依約終止</td><td class="num em">日數比例</td></tr>
+<tr><td>全損賠付後（未賠付險種）</td><td class="num em">日數比例</td></tr>
+</tbody></table></div>
+
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><strong>換車、報廢，記得主張「日數比例」。</strong><p>同樣退保，日數比例通常比短期費率表多退好幾千元。若你是換車銜接或牌照異動，退費本就該按日數比例，別讓自己吃虧。</p></div></div>
+
+<p style="margin-top:1.25rem">想完整看懂兩種算法的來龍去脈、短期費率表的完整數字與法源，請看：<a href="{{ page.url | relbase }}learn/refund-premium/">車險退保退費全攻略：短期費率 vs 日數比例 →</a></p>
+</div></section>
+
+<section class="section"><div class="narrow">
+<div class="section-head"><span class="kicker">參考資料</span><h2>短期費率表（完整）</h2><p>一般主動退保時，保險公司依「已經過的保險期間」收走對應比例的保費，其餘退還。</p></div>
+
+<div class="table-wrap"><table><caption>短期費率表</caption><thead><tr><th>已經過的保險期間</th><th class="num">已滿期保費比例</th><th class="num">退還比例</th></tr></thead><tbody>
+<tr><td>未滿 1 個月</td><td class="num">15%</td><td class="num em">85%</td></tr>
+<tr><td>1 個月以上未滿 2 個月</td><td class="num">25%</td><td class="num em">75%</td></tr>
+<tr><td>2 個月以上未滿 3 個月</td><td class="num">35%</td><td class="num em">65%</td></tr>
+<tr><td>3 個月以上未滿 4 個月</td><td class="num">45%</td><td class="num em">55%</td></tr>
+<tr><td>4 個月以上未滿 5 個月</td><td class="num">55%</td><td class="num em">45%</td></tr>
+<tr><td>5 個月以上未滿 6 個月</td><td class="num">65%</td><td class="num em">35%</td></tr>
+<tr><td>6 個月以上未滿 7 個月</td><td class="num">75%</td><td class="num em">25%</td></tr>
+<tr><td>7 個月以上未滿 8 個月</td><td class="num">80%</td><td class="num em">20%</td></tr>
+<tr><td>8 個月以上未滿 9 個月</td><td class="num">85%</td><td class="num em">15%</td></tr>
+<tr><td>9 個月以上未滿 10 個月</td><td class="num">90%</td><td class="num em">10%</td></tr>
+<tr><td>10 個月以上未滿 11 個月</td><td class="num">95%</td><td class="num em">5%</td></tr>
+<tr><td>11 個月以上至 12 個月</td><td class="num">100%</td><td class="num em">0%</td></tr>
+</tbody></table></div>
+
+<div class="callout callout--warn" style="margin-top:1.5rem"><span class="co-icon">!</span><div class="co-body"><strong>免責聲明。</strong><p>本計算器為一般退費估算工具，結果僅供參考，不構成個案退費承諾。實際退費受契約條款、起保／退保日期、各公司結算方式影響，應以保險公司正式結算為準。短期費率表依《自用汽車保險定型化契約範本》；天數換算月數採 30 天概算。</p></div></div>
+</div></section>
+</main>
+
+{% include "partials/related.njk" %}
+
+{% include "partials/footer.njk" %}
