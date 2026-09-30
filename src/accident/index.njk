@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: 車禍實務｜保險工具人
+description: 保險工具人｜車禍實務。出事時該怎麼做，從現場處理到和解調解，一步步帶你走。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/accident/
+activeNav: accident
+---
+<main>
+<section class="hero"><div class="container">
+<span class="eyebrow">Accident</span>
+<h1>車禍實務</h1>
+<p class="lead">出事時該怎麼做，不靠運氣、不靠聽說。從現場處理到和解調解，一步步帶你走。</p>
+</div></section>
+
+<section class="section"><div class="container">
+<div class="section-head"><span class="kicker">實務庫</span><h2>主題分類</h2><p>內容會一篇篇累積。先從事故當下到後續處理，把最常卡關的環節一步步補齊。</p></div>
+<div class="cards">
+{% for p in collections.accidentList %}
+<a class="card" href="{{ p.fileSlug }}/"><span class="icon">{{ (icons[p.data.icon] or icons.default) | safe }}</span><h3>{{ p.data.cardTitle }}</h3><p>{{ p.data.cardBlurb }}</p><span class="arrow">{{ p.data.cardCta | default('閱讀全文') }} →</span></a>
+{% endfor %}
+</div>
+</div></section>
+
+<section class="section alt"><div class="container">
+<div class="section-head"><span class="kicker">方向</span><h2>我們怎麼寫車禍實務</h2></div>
+<p style="max-width:72ch;color:var(--muted)">每篇都固定長這樣：先講結論 → 為什麼重要 → 白話舉例 → 常見誤解 → 一張對照表 → 可查證的法源或資料來源。你看熟了，出事時就知道下一步該怎麼走。</p>
+</div></section>
+</main>
+
+{% include "partials/footer.njk" %}

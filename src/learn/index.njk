@@ -13,7 +13,7 @@ activeNav: learn
 </div></section>
 
 <section class="section"><div class="container">
-<div class="section-head"><span class="kicker">觀念庫</span><h2>主題分類</h2><p>內容會一篇篇累積。先從這三個你最常接觸的方向開始建置。</p></div>
+<div class="section-head"><span class="kicker">觀念庫</span><h2>主題分類</h2><p>內容會一篇篇累積。先從汽車險、人壽險這兩個方向開始建置。</p></div>
 <div class="cards">
 {% for p in collections.learnList %}
 <a class="card" href="{{ p.fileSlug }}/"><span class="icon">{{ (icons[p.data.icon] or icons.default) | safe }}</span><h3>{{ p.data.cardTitle }}</h3><p>{{ p.data.cardBlurb }}</p><span class="arrow">{{ p.data.cardCta | default('閱讀全文') }} →</span></a>

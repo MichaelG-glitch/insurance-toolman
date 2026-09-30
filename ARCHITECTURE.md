@@ -2,12 +2,12 @@
 
 本文件的「真相」是這個 Git 儲存庫。當 AI 技能、文件或對話與本檔不一致時，以本檔與實際程式碼為準。
 
-## 網站地圖（10 頁）
+## 網站地圖（22 頁）
 
 ```
 保險工具人 insurance-toolman
 │
-├── /                                        首頁（三入口：工具 / 觀念 / 問答）
+├── /                                        首頁（四入口：工具 / 車禍實務 / 觀念 / 問答）
 │
 ├── /tools/                                  實用工具分類（自動收集）
 │   ├── /tools/travel-card/                  快樂旅平卡投保備忘  〔元件頁 · 富邦商品〕
@@ -17,8 +17,22 @@
 │   ├── /tools/mobile-pdf-sign/              手機 PDF 簽名不求人 〔元件頁〕
 │   └── /tools/ios-signature/                iPhone 建立簽名檔   〔元件頁〕
 │
+├── /accident/                               車禍實務分類（自動收集）
+│   ├── /accident/car-accident/              車禍現場處理 SOP     〔art-directed〕
+│   ├── /accident/preliminary-analysis-report/ 車禍初判表完全指南 〔元件頁〕
+│   ├── /accident/accident-evidence-trio/    現場圖、照片、初判表分工 〔元件頁〕
+│   ├── /accident/accident-consultation-checklist/ 車禍諮詢準備資料 〔元件頁〕
+│   ├── /accident/no-signal-right-of-way/    無號誌路口路權       〔元件頁〕
+│   ├── /accident/prove-speeding-no-video/   沒有影像證明超速     〔元件頁〕
+│   ├── /accident/settlement-vs-mediation/   警察局和解書效力     〔元件頁〕
+│   └── /accident/traffic-mediation/         車禍調解申請指南     〔元件頁〕
+│
 ├── /learn/                                  保險觀念分類（自動收集）
-│   └── /learn/car-accident/                 車禍處理 SOP        〔art-directed〕
+│   ├── /learn/risk-financing/               保險在財務工具的位置 〔元件頁〕
+│   ├── /learn/car-damage-premium/           車體險保費為何沒降   〔元件頁〕
+│   ├── /learn/premium-increase-no-claim/    沒出險保費為何漲     〔元件頁〕
+│   ├── /learn/liability-claim-grade/        責任險肇事等級       〔元件頁〕
+│   └── /learn/compulsory-insurance-rating/  強制險從人係數       〔元件頁〕
 │
 ├── /qa/                                     常見問答            〔純文字 + 手風琴〕
 │
@@ -30,7 +44,7 @@
 ```mermaid
 flowchart TB
   subgraph src["src/ —— 唯一手動編輯處"]
-    content["內容頁（10 頁）<br/>*/index.njk ＋ front matter"]
+    content["內容頁（22 頁）<br/>*/index.njk ＋ front matter"]
     tmpl["模板與共用片段<br/>_includes/layouts/base.njk（骨架）<br/>_includes/partials/（頂欄·頁尾·Logo·4 種頂欄）"]
     css["全域樣式（單一來源）<br/>theme.css 色票 · site.css 排版<br/>brand.css 品牌 · components.css 元件"]
     pagecss["複雜頁獨立資源<br/>assets/pages/*.css/.js（4 頁）"]
@@ -66,6 +80,9 @@ src/
 ├── learn/                         觀念分類頁 + 各觀念子資料夾
 │   ├── index.njk                  分類頁（由 collection 自動列出）
 │   └── <slug>/index.njk           一篇觀念一頁
+├── accident/                      車禍實務分類頁 + 各實務子資料夾
+│   ├── index.njk                  分類頁（由 collection 自動列出）
+│   └── <slug>/index.njk           一篇實務一頁
 ├── _includes/
 │   ├── layouts/base.njk           頁面骨架
 │   └── partials/                  共用片段（頂欄、頁尾、Logo、4 種頂欄）
@@ -97,7 +114,7 @@ src/
 | `title` | 是 | 標題＋`｜保險工具人` |
 | `description` | 是 | meta description |
 | `ogUrl` | 建議 | 加 og:url，提升分享預覽 |
-| `activeNav` | 是 | `tools`／`learn`／`qa`／`home` |
+| `activeNav` | 是 | `tools`／`accident`／`learn`／`qa`／`home` |
 | `license` | 是 | `nd`（工具頁）或省略（預設 SA） |
 | `header` | 選 | `accident`／`compulsory`／`road-rescue`，否則標準頂欄 |
 | `components: true` | 選 | 元件頁才加 |
@@ -109,12 +126,13 @@ src/
 
 ## 歸檔（自動）
 
-新增工具或觀念頁**不用手改分類頁**。只要在該頁 front matter 加上：
+新增工具、車禍實務或觀念頁**不用手改分類頁**。只要在該頁 front matter 加上：
 
 - 工具：`tags: toolItem` + `order` + `cardTitle` + `cardBlurb`（+ 選用 `cardTag`）
+- 車禍實務：`tags: accidentItem` + `order` + `cardTitle` + `cardBlurb`（+ 選用 `cardCta`、`icon`）
 - 觀念：`tags: learnItem` + `order` + `cardTitle` + `cardBlurb`（+ 選用 `cardCta`、`icon`）
 
-`src/tools/index.njk` 與 `src/learn/index.njk` 會經由 Eleventy collection 自動列出，依 `order` 排序。「建置中」的預告卡仍是手動維護（尚未有實體頁）。
+`src/tools/index.njk`、`src/accident/index.njk` 與 `src/learn/index.njk` 會經由 Eleventy collection 自動列出，依 `order` 排序。「建置中」的預告卡仍是手動維護（尚未有實體頁）。
 
 ## 延伸閱讀（站內內部連結）
 
@@ -129,7 +147,7 @@ src/
 
 - 資料夾／檔名一律**英文小寫連字號**（例如 `travel-card`），中文會破壞 GitHub 連結。
 - 頁面「標題與內文」可用中文，不受影響。
-- `tools/` 頁一律 `license: nd`（禁止改作，因為含電話、時效等不可改動資訊）；`learn/`、`qa/`、`about/` 預設 SA。
+- `tools/` 頁一律 `license: nd`（禁止改作，因為含電話、時效等不可改動資訊）；`accident/`、`learn/`、`qa/`、`about/` 預設 SA。
 - 文案白話、舉例、可查證，移除 AI 提示語；不得使用數字 emoji 編號。
 
 ## 部署
