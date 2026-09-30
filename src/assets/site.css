@@ -53,6 +53,7 @@ p{text-wrap:pretty}
 
 /* entry cards (home) */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.cards--home{grid-template-columns:repeat(2,1fr)}
 .card{position:relative;display:flex;flex-direction:column;gap:.9rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem 1.75rem;text-decoration:none;color:var(--text);transition:transform .2s,box-shadow .2s,border-color .2s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--primary)}
 .card .icon{width:2.9rem;height:2.9rem;display:grid;place-items:center;border-radius:var(--r-md);background:var(--primary-hi);color:var(--primary)}

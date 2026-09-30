@@ -3,7 +3,7 @@
 module.exports = function (eleventyConfig) {
   // 直接複製到輸出的靜態資產
   eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("src/learn/car-accident/assets");
+  eleventyConfig.addPassthroughCopy("src/accident/car-accident/assets");
   eleventyConfig.addPassthroughCopy("src/tools/mobile-scan/assets");
 
   // 計算相對路徑前綴：根目錄 ""、一層 "../"、兩層 "../../"
@@ -21,6 +21,9 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("learnList", function (api) {
     return api.getFilteredByTag("learnItem").sort((a, b) => (a.data.order || 99) - (b.data.order || 99));
+  });
+  eleventyConfig.addCollection("accidentList", function (api) {
+    return api.getFilteredByTag("accidentItem").sort((a, b) => (a.data.order || 99) - (b.data.order || 99));
   });
 
   return {
