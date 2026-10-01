@@ -81,6 +81,12 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--divider);color:var(--muted
 .calc-note strong{color:var(--text)}
 .calc-note p{color:var(--muted);font-size:.92rem;margin-top:.3rem}
 
+/* 資料來源（編號連結清單，與其他工具頁一致的格式） */
+.sources{font-size:.95rem;color:var(--muted)}
+.sources ol{padding-left:1.35rem;display:grid;gap:.55rem}
+.sources li{line-height:1.7}
+.sources li a{font-weight:600}
+
 /* responsive */
 @media(max-width:860px){.nav a:not(.icon-btn){display:none}.brand small{display:none}}
 @media(max-width:640px){.calc-inputs{grid-template-columns:1fr}}
