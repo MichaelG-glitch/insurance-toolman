@@ -96,3 +96,12 @@ table caption{caption-side:top;text-align:left;padding:1rem 1rem .5rem;font-weig
 .diagram{margin:1.5rem 0;padding:1.25rem 1rem;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface);overflow-x:auto}
 .diagram svg{width:100%;height:auto;display:block;min-width:520px}
 .diagram figcaption{margin-top:.75rem;font-size:.85rem;color:var(--muted);line-height:1.6}
+
+/* —— 長文閱讀（沿用全站字級與色票） —— */
+.prose > p + p,.prose > ul + p,.prose > ol + p{margin-top:1rem}
+.prose > ul:not(.checklist),.prose > ol:not(.steps){padding-inline-start:1.5rem;margin-block:1.25rem}
+.source-ref{font-size:.7em;line-height:0;white-space:normal;margin-inline-start:.2em}
+.source-ref a{white-space:nowrap;text-decoration:none}
+.source-ref a:hover,.source-ref a:focus-visible{text-decoration:underline}
+.source-list{font-size:.95rem;line-height:1.75}
+.source-list li + li{margin-top:.7rem}

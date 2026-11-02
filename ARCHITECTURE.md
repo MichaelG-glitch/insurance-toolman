@@ -25,7 +25,8 @@
 │   ├── /accident/no-signal-right-of-way/    無號誌路口路權       〔元件頁〕
 │   ├── /accident/prove-speeding-no-video/   沒有影像證明超速     〔元件頁〕
 │   ├── /accident/settlement-vs-mediation/   警察局和解書效力     〔元件頁〕
-│   └── /accident/traffic-mediation/         車禍調解申請指南     〔元件頁〕
+│   ├── /accident/traffic-mediation/         車禍調解申請指南     〔元件頁〕
+│   └── /accident/parking-lot-accident/      停車場車禍與保險理賠 〔元件頁〕
 │
 ├── /learn/                                  保險觀念分類（自動收集）
 │   ├── /learn/risk-financing/               保險在財務工具的位置 〔元件頁〕
