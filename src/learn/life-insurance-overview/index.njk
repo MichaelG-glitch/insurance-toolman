@@ -1,0 +1,256 @@
+---
+layout: base.njk
+title: 人壽保險總覽：一張保險圓餅圖看懂人身保障｜保險工具人
+description: 壽險、意外險、實支實付、住院日額、重大傷病、癌症險、長照與豁免，各管哪一塊？用保險圓餅圖和醫療前中後，看懂人身保險的整體架構，以及什麼時候可以風險自留。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/learn/life-insurance-overview/
+activeNav: learn
+components: true
+reviewed: "2026-11-14"
+tags: learnItem
+order: 8
+thumb: assets/thumbs/life-insurance-overview.webp
+cardTitle: 人壽保險總覽：一張圓餅圖看懂
+cardBlurb: 壽險、意外、實支實付、日額、重大傷病、癌症、長照，各管哪一塊？先看地圖，再決定哪塊要補、哪塊自己扛。
+icon: life
+cardCta: 打開保險地圖
+related:
+  - risk-financing
+  - underwriting-outcomes
+---
+<main>
+<section class="hero"><div class="container"><span class="eyebrow">Learn · 人壽保險總覽</span><h1>保險不是買越多越好，是缺哪塊補哪塊。</h1><p class="lead">壽險、意外險、實支實付、住院日額、重大傷病、癌症險、長照……名字一大串，聽完只記得「好像都要買」。這篇不推商品，只給你一張地圖：用一個圓餅圖把人身保險切成「生病」和「意外」兩半，每一塊各管一種麻煩。看懂地圖，再決定哪塊要補、哪塊可以自己扛。</p>
+<figure class="figure"><img src="{{ page.url | relbase }}assets/illustrations/life-insurance-overview.webp" width="1400" height="788" alt="一對夫妻和孩子圍著木桌，桌上擺著一個切成七種顏色扇形的圓盤，中間有一顆圓鈕" loading="eager" decoding="async"><figcaption>人身保險像一盤切好的披薩：每一塊口味不同，重點是全家需要的那幾塊有沒有拿到。情境插圖。</figcaption></figure>
+</div></section>
+
+<section class="section alt"><div class="narrow prose"><div class="section-head"><span class="kicker">一張圖看懂</span><h2>保險圓餅圖：左邊生病，右邊意外，中間豁免</h2></div>
+<p>先記一個分法就好：出事的原因，不是<strong>疾病</strong>就是<strong>意外</strong>。保險上的「意外」有固定說法，指的是「非由疾病引起之外來突發事故」。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006854" target="_blank" rel="noopener noreferrer" aria-label="資料來源 1：壽險公會：傷害保險單示範條款" title="壽險公會：傷害保險單示範條款">[1]</a></sup> 跌倒骨折算意外，中風跌倒就要看是先中風還是先跌倒，這種界線之爭，是常見的理賠爭議之一。</p>
+<p>圓餅的右半邊管意外，左半邊管疾病，正中間那顆「豁免」管的是保費本身。每一塊都是一種「出事後需要錢」的情境，點一下就會跳到下面的說明。</p>
+<figure class="diagram diagram--fit" role="group" aria-labelledby="pie-cap">
+<svg viewBox="0 0 620 640" role="img" aria-labelledby="pie-title pie-desc">
+<title id="pie-title">保險圓餅圖：人身保險的十塊保障</title>
+<desc id="pie-desc">圓餅左半邊是疾病，右半邊是意外，中心是豁免保費。右半邊依序為身故（一般與意外）、意外失能 1 至 11 級、意外住院與骨折未住院、意外醫療實支實付；左半邊依序為住院醫療實支實付、定額給付住院日額、定額給付終身住院醫療、癌症醫療、重大疾病、長期看護與失能給付。點選任一塊可跳到下方說明。</desc>
+<g font-family="var(--font-body)" text-anchor="middle">
+<text x="52" y="46" font-size="34" font-weight="800" fill="var(--text)">疾病</text>
+<text x="568" y="46" font-size="34" font-weight="800" fill="var(--text)">意外</text>
+<a href="#type-life" class="pie-slice" aria-label="身故：一般身故與意外身故，看壽險"><title>身故：一般身故與意外身故，看壽險</title>
+<path d="M310 345L310.0 60.0A285 285 0 0 1 511.5 143.5Z" fill="#9b3b2f" stroke="var(--surface)" stroke-width="3"/>
+<text x="380.8" y="170.1" font-size="23" font-weight="800" fill="#ffffff">身故</text>
+<text x="380.8" y="194.1" font-size="17" font-weight="600" fill="#ffffff">一般／意外</text>
+</a>
+<a href="#type-accident" class="pie-slice" aria-label="意外失能：失能等級 1 至 11 級，看意外險"><title>意外失能：失能等級 1 至 11 級，看意外險</title>
+<path d="M310 345L511.5 143.5A285 285 0 0 1 595.0 345.0Z" fill="#4a7a4a" stroke="var(--surface)" stroke-width="3"/>
+<text x="480.9" y="270.2" font-size="23" font-weight="800" fill="#ffffff">意外失能</text>
+<text x="480.9" y="294.2" font-size="17" font-weight="600" fill="#ffffff">1 至 11 級</text>
+</a>
+<a href="#type-accident" class="pie-slice" aria-label="意外住院與骨折未住院，看意外險"><title>意外住院與骨折未住院，看意外險</title>
+<path d="M310 345L595.0 345.0A285 285 0 0 1 511.5 546.5Z" fill="#4a7a4a" stroke="var(--surface)" stroke-width="3"/>
+<text x="480.9" y="411.8" font-size="23" font-weight="800" fill="#ffffff">意外住院</text>
+<text x="480.9" y="435.8" font-size="17" font-weight="600" fill="#ffffff">骨折未住院</text>
+</a>
+<a href="#type-accident" class="pie-slice" aria-label="意外醫療實支實付，看意外險"><title>意外醫療實支實付，看意外險</title>
+<path d="M310 345L511.5 546.5A285 285 0 0 1 310.0 630.0Z" fill="#4a7a4a" stroke="var(--surface)" stroke-width="3"/>
+<text x="380.8" y="511.9" font-size="23" font-weight="800" fill="#ffffff">意外醫療</text>
+<text x="380.8" y="535.9" font-size="17" font-weight="600" fill="#ffffff">實支實付</text>
+</a>
+<a href="#type-medical" class="pie-slice" aria-label="住院醫療實支實付，看醫療三險"><title>住院醫療實支實付，看醫療三險</title>
+<path d="M310 345L310.0 630.0A285 285 0 0 1 167.5 591.8Z" fill="#2e6f8e" stroke="var(--surface)" stroke-width="3"/>
+<text x="260.3" y="526.5" font-size="23" font-weight="800" fill="#ffffff">住院醫療</text>
+<text x="260.3" y="550.5" font-size="17" font-weight="600" fill="#ffffff">實支實付</text>
+</a>
+<a href="#type-medical" class="pie-slice" aria-label="定額給付住院日額，看醫療三險"><title>定額給付住院日額，看醫療三險</title>
+<path d="M310 345L167.5 591.8A285 285 0 0 1 63.2 487.5Z" fill="#c9702e" stroke="var(--surface)" stroke-width="3"/>
+<text x="174.2" y="476.8" font-size="23" font-weight="800" fill="#ffffff">住院日額</text>
+<text x="174.2" y="500.8" font-size="17" font-weight="600" fill="#ffffff">定額給付</text>
+</a>
+<a href="#type-medical" class="pie-slice" aria-label="定額給付終身住院醫療，看醫療三險"><title>定額給付終身住院醫療，看醫療三險</title>
+<path d="M310 345L63.2 487.5A285 285 0 0 1 25.0 345.0Z" fill="#c9702e" stroke="var(--surface)" stroke-width="3"/>
+<text x="124.5" y="390.7" font-size="23" font-weight="800" fill="#ffffff">終身住院</text>
+<text x="124.5" y="414.7" font-size="17" font-weight="600" fill="#ffffff">定額給付</text>
+</a>
+<a href="#type-cancer" class="pie-slice" aria-label="癌症醫療，看癌症險"><title>癌症醫療，看癌症險</title>
+<path d="M310 345L25.0 345.0A285 285 0 0 1 63.2 202.5Z" fill="#c9a227" stroke="var(--surface)" stroke-width="3"/>
+<text x="124.5" y="291.3" font-size="23" font-weight="800" fill="#2b241e">癌症</text>
+<text x="124.5" y="315.3" font-size="17" font-weight="600" fill="#2b241e">醫療</text>
+</a>
+<a href="#type-critical" class="pie-slice" aria-label="重大疾病與重大傷病，看重大傷病險"><title>重大疾病與重大傷病，看重大傷病險</title>
+<path d="M310 345L63.2 202.5A285 285 0 0 1 167.5 98.2Z" fill="#6a4c93" stroke="var(--surface)" stroke-width="3"/>
+<text x="174.2" y="205.2" font-size="23" font-weight="800" fill="#ffffff">重大</text>
+<text x="174.2" y="229.2" font-size="17" font-weight="600" fill="#ffffff">疾病</text>
+</a>
+<a href="#type-ltc" class="pie-slice" aria-label="長期看護與失能給付，看長照與失能險"><title>長期看護與失能給付，看長照與失能險</title>
+<path d="M310 345L167.5 98.2A285 285 0 0 1 310.0 60.0Z" fill="#b5486a" stroke="var(--surface)" stroke-width="3"/>
+<text x="260.3" y="155.5" font-size="23" font-weight="800" fill="#ffffff">長照</text>
+<text x="260.3" y="179.5" font-size="17" font-weight="600" fill="#ffffff">失能</text>
+</a>
+<path d="M310 60V630" stroke="var(--text)" stroke-width="3"/>
+<circle cx="310" cy="345" r="285" fill="none" stroke="var(--text)" stroke-width="6"/>
+<a href="#type-waiver" class="pie-slice" aria-label="豁免保費：中心那一顆"><title>豁免保費</title>
+<circle cx="310" cy="345" r="58" fill="var(--surface)" stroke="var(--primary)" stroke-width="5"/>
+<text x="310" y="354" font-size="27" font-weight="800" fill="var(--text)">豁免</text></a>
+</g></svg>
+<figcaption id="pie-cap">保險圓餅圖。右上角的「身故」橫跨兩邊：一般壽險的身故原則上不分疾病或意外（除外責任依條款），意外險只管意外。點任一塊，會跳到下方對應的說明。</figcaption>
+</figure>
+<ul class="pie-legend">
+<li><a href="#type-life"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#9b3b2f"/></svg>身故：壽險</a></li>
+<li><a href="#type-accident"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#4a7a4a"/></svg>意外失能、住院、醫療：意外險</a></li>
+<li><a href="#type-medical"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#2e6f8e"/></svg>實支實付</a>、<a href="#type-medical"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#c9702e"/></svg>日額與手術：醫療三險</a></li>
+<li><a href="#type-cancer"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#c9a227"/></svg>癌症險</a></li>
+<li><a href="#type-critical"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#6a4c93"/></svg>重大傷病／重大疾病險</a></li>
+<li><a href="#type-ltc"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="7" fill="#b5486a"/></svg>長照與失能險</a></li>
+<li><a href="#type-waiver"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg>豁免保費</a></li>
+</ul>
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body"><p><strong>圓餅圖不是要你每塊都買滿。</strong>它的用處是盤點：把手上的保單一張張放上去，就看得出哪塊空著、哪塊重複。空著的不一定要補，重複的也不一定要退，但至少你知道自己在扛什麼。</p></div></div>
+</div></section>
+
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">賠法差在哪</span><h2>同樣叫「醫療險」，給錢的方式有三種</h2></div>
+<p>圓餅上的顏色，其實也透露了賠法。看懂這三種，比背商品名稱有用得多：</p>
+<div class="table-wrap" role="region" aria-label="三種給付方式比較表格" tabindex="0"><table>
+<thead><tr><th>給付方式</th><th>代表險種</th><th>怎麼算</th><th>擅長解決</th></tr></thead>
+<tbody>
+<tr><td>看收據賠</td><td>住院醫療實支實付、意外醫療實支實付</td><td>在各項限額內，依實際自付的醫療費用給付（健保已給付部分不賠）</td><td>健保不給付的自費項目，例如自費手術、特材、藥品</td></tr>
+<tr><td>按天數、次數賠</td><td>住院日額、手術險、意外住院日額</td><td>住幾天乘以日額，或依條款的手術項目表給一筆</td><td>住院期間的薪水損失、看護費等「收據報不了」的開銷</td></tr>
+<tr><td>符合定義給一筆＊</td><td>重大傷病、重大疾病、癌症一次金、失能一次金</td><td>符合條款定義就給付約定金額，用途自己決定</td><td>長期收入中斷、門診自費新療法、家人請假照顧</td></tr>
+</tbody>
+</table></div>
+<p><small>＊符合條款定義就給一筆，多有等待期，部分商品對原位癌、初期癌症等給付較低。</small></p>
+<p>「實支實付型」和「日額型」住院醫療險，都有經金管會核定的示範條款，各家商品會以此為基礎再設計。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Search/ClauseList" target="_blank" rel="noopener noreferrer" aria-label="資料來源 5：壽險公會：示範條款清單" title="壽險公會：示範條款清單">[5]</a></sup> 名字相同的商品，細節仍可能不同，實際理賠以你手上的條款為準。</p>
+</div></section>
+
+<section class="section alt"><div class="narrow prose"><div class="section-head"><span class="kicker">第二層地圖</span><h2>醫療前、中、後：錢在哪個時間點不夠？</h2></div>
+<p>圓餅圖回答「有哪些保障」，醫療前中後回答的是另一個問題：<strong>同樣是生病，錢在哪個時間點最缺？</strong></p>
+<p>一場大病的「療養」，其實等於「治療」加「安養」。很多人只想到住院開刀那一段，卻忘了確診當下要決定治療方式，出院後還有好長一段復健、照顧、沒有收入的日子。只買一張實支實付，等於只顧了中間那一段。</p>
+<figure class="diagram" tabindex="0" role="region" aria-label="醫療前中後圖解，可左右滑動">
+<svg viewBox="0 0 860 520" role="img" aria-labelledby="tl-title tl-desc">
+<title id="tl-title">醫療前、中、後，各階段缺的錢與對應險種</title>
+<desc id="tl-desc">療養等於治療加安養。醫療前（罹病、決定治療方式）缺收入與特殊治療費，對應重大傷病或重大疾病險一次給付、癌症險一次給付；醫療中（住院治療期）缺病房費、看護費、自費藥品與手術材料，對應住院醫療實支實付、健康險日額與手術險、意外險日額與骨折傷害醫療、癌症治療型保單；醫療後（出院照護期）缺收入、復健、營養與看護費，對應重大傷病一次金、意外失能一次金、失能扶助與長期看護。</desc>
+<g font-family="var(--font-body)" text-anchor="middle">
+<rect x="130" y="14" width="600" height="56" rx="12" fill="var(--surface-2)" stroke="var(--border)"/>
+<text x="430" y="52" font-size="26" font-weight="800" fill="var(--text)">療養 ＝ 治療 ＋ 安養</text>
+<path d="M20 112H800" stroke="var(--primary)" stroke-width="4"/><path d="M796 102L816 112L796 122" fill="none" stroke="var(--primary)" stroke-width="4"/>
+<circle cx="150.0" cy="112" r="9" fill="var(--surface)" stroke="var(--primary)" stroke-width="4"/>
+<rect x="20" y="138" width="260" height="72" rx="12" fill="var(--primary-hi)" stroke="var(--primary)"/>
+<text x="150.0" y="170" font-size="24" font-weight="800" fill="var(--primary)">醫療前</text>
+<text x="150.0" y="196" font-size="14" font-weight="600" fill="var(--text)">罹病，決定治療方式</text>
+<text x="150.0" y="236" font-size="13" fill="var(--muted)">缺什麼：收入中斷、特殊治療方式</text>
+<rect x="30" y="256" width="240" height="52" rx="8" fill="#6a4c93"/><text x="150.0" y="278" font-size="15" font-weight="800" fill="#ffffff">重大傷病／重大疾病險</text><text x="150.0" y="298" font-size="13" font-weight="600" fill="#ffffff">一次給付型</text>
+<rect x="30" y="318" width="240" height="52" rx="8" fill="#c9a227"/><text x="150.0" y="340" font-size="15" font-weight="800" fill="#2b241e">癌症險</text><text x="150.0" y="360" font-size="13" font-weight="600" fill="#2b241e">一次給付型</text>
+<text x="150.0" y="398" font-size="14" font-weight="800" fill="var(--warning)">↑ 一筆給付，用途自己決定</text>
+<circle cx="430.0" cy="112" r="9" fill="var(--surface)" stroke="var(--primary)" stroke-width="4"/>
+<rect x="300" y="138" width="260" height="72" rx="12" fill="var(--primary-hi)" stroke="var(--primary)"/>
+<text x="430.0" y="170" font-size="24" font-weight="800" fill="var(--primary)">醫療中</text>
+<text x="430.0" y="196" font-size="14" font-weight="600" fill="var(--text)">住院治療期</text>
+<text x="430.0" y="236" font-size="13" fill="var(--muted)">缺什麼：病房費、看護費、自費藥材</text>
+<rect x="310" y="256" width="240" height="52" rx="8" fill="#2e6f8e"/><text x="430.0" y="278" font-size="15" font-weight="800" fill="#ffffff">住院醫療</text><text x="430.0" y="298" font-size="13" font-weight="600" fill="#ffffff">實支實付</text>
+<rect x="310" y="318" width="240" height="52" rx="8" fill="#c9702e"/><text x="430.0" y="340" font-size="15" font-weight="800" fill="#ffffff">健康險</text><text x="430.0" y="360" font-size="13" font-weight="600" fill="#ffffff">日額、手術險</text>
+<rect x="310" y="380" width="240" height="52" rx="8" fill="#4a7a4a"/><text x="430.0" y="402" font-size="15" font-weight="800" fill="#ffffff">意外險</text><text x="430.0" y="422" font-size="13" font-weight="600" fill="#ffffff">日額、骨折、傷害醫療</text>
+<rect x="310" y="442" width="240" height="52" rx="8" fill="#c9a227"/><text x="430.0" y="464" font-size="15" font-weight="800" fill="#2b241e">癌症險</text><text x="430.0" y="484" font-size="13" font-weight="600" fill="#2b241e">治療型（療程型）</text>
+<circle cx="710.0" cy="112" r="9" fill="var(--surface)" stroke="var(--primary)" stroke-width="4"/>
+<rect x="580" y="138" width="260" height="72" rx="12" fill="var(--primary-hi)" stroke="var(--primary)"/>
+<text x="710.0" y="170" font-size="24" font-weight="800" fill="var(--primary)">醫療後</text>
+<text x="710.0" y="196" font-size="14" font-weight="600" fill="var(--text)">出院照護期</text>
+<text x="710.0" y="236" font-size="13" fill="var(--muted)">缺什麼：收入中斷、復健、營養、看護費</text>
+<rect x="590" y="256" width="240" height="52" rx="8" fill="#6a4c93"/><text x="710.0" y="278" font-size="15" font-weight="800" fill="#ffffff">重大傷病／重大疾病險</text><text x="710.0" y="298" font-size="13" font-weight="600" fill="#ffffff">一次給付型</text>
+<rect x="590" y="318" width="240" height="52" rx="8" fill="#4a7a4a"/><text x="710.0" y="340" font-size="15" font-weight="800" fill="#ffffff">意外險</text><text x="710.0" y="360" font-size="13" font-weight="600" fill="#ffffff">失能一次金</text>
+<rect x="590" y="380" width="240" height="52" rx="8" fill="#b5486a"/><text x="710.0" y="402" font-size="15" font-weight="800" fill="#ffffff">失能扶助／長期看護</text><text x="710.0" y="422" font-size="13" font-weight="600" fill="#ffffff">補薪資、看護費用</text>
+<text x="710.0" y="460" font-size="14" font-weight="800" fill="var(--warning)">↑ 一筆給付，用途自己決定</text>
+<path d="M290 138V510M570 138V510" stroke="var(--divider)" stroke-width="2" stroke-dasharray="5 6"/>
+</g></svg>
+<figcaption>醫療中多半是「看收據」或「按天數」賠；醫療前、後多半是「一筆給付」。手機可左右滑動查看完整圖解。</figcaption>
+</figure>
+<p>這張圖之後會有一篇專文，細講每個階段怎麼估金額、怎麼搭配。<span class="tag soon">專文建置中</span></p>
+</div></section>
+
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">各險種重點</span><h2>每一塊在槓桿什麼？什麼時候可以自己扛？</h2><p>每個險種都用同一個節奏看：它用小錢撬動的是哪一種大損失，以及什麼情況下可以不再交給保險公司。每一塊之後都會有自己的專文。</p></div>
+
+<h3 id="type-life"><svg class="type-dot" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#9b3b2f"/></svg> 壽險：錢是留給家人的 <span class="tag soon">專文建置中</span></h3>
+<ul>
+<li><strong>槓桿什麼</strong>：壽險跟其他險種最大的不同，是理賠金不是給自己用的。它要接住的是你突然不在之後的四件事：房貸車貸等負債、孩子的教育費、家人幾年的生活費，以及身後事。一句話：留愛不留債。</li>
+<li><strong>什麼時候可以自留</strong>：家庭責任是階段性的，而且會遞減。沒有人要你養、也沒有負債的人，其實不需要高額壽險；等房貸繳完、孩子獨立、存下來的資產夠家人過渡，就可以逐步把這塊收回來自己扛。所以在預算有限時，常會先考慮用保費較低的定期壽險，蓋住「責任最重的那些年」。</li>
+</ul>
+
+<h3 id="type-accident"><svg class="type-dot" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#4a7a4a"/></svg> 意外險：最怕的不是走了，是傷了 <span class="tag soon">專文建置中</span></h3>
+<ul>
+<li><strong>槓桿什麼</strong>：意外險保費低，常是剛出社會可以優先考慮的防護網。最核心的是<strong>意外失能</strong>：傷害險用「失能程度與保險金給付表」，分成 1 到 11 級，第 1 級給付保額的 100%，第 2 級 90%，之後每級少 10%，到第 10 級 10%，第 11 級 5%。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/GetFile/0000273428" target="_blank" rel="noopener noreferrer" aria-label="資料來源 2：壽險公會：傷害保險單示範條款附表 失能程度與保險金給付表" title="壽險公會：傷害保險單示範條款附表 失能程度與保險金給付表">[2]</a> <a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006854" target="_blank" rel="noopener noreferrer" aria-label="資料來源 1：壽險公會：傷害保險單示範條款" title="壽險公會：傷害保險單示範條款">[1]</a></sup> 嚴重車禍後的輔具、無障礙改建、長期照顧，可以靠這筆錢支應。（2020 年起，條款裡的「殘廢」都改叫「失能」，指的是同一件事。）</li>
+<li><strong>小傷和休養</strong>：意外醫療實支實付補不用住院的小傷自費（換藥、護具）；日額型的傷害醫療按住院日數給付日額；骨折未住院另有補足規定（見下）。<strong>骨折未住院</strong>只有日額型傷害醫療才有，示範條款的算法是「骨折部位約定日數 × 日額 × 1/2」，約定日數從 14 天到 60 天（大腿骨頸），住院日數加上補足的日數，合計不超過約定日數。舉例：日額 1,000 元、鎖骨完全骨折約定 28 天，完全沒住院可領 28 × 1,000 × 1/2 ＝ 14,000 元；住院 10 天，則是 10 × 1,000 ＋ 18 × 1,000 × 1/2 ＝ 19,000 元。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/GetFile/0000372774" target="_blank" rel="noopener noreferrer" aria-label="資料來源 9：壽險公會：傷害醫療保險給付附加條款（示範條款）" title="壽險公會：傷害醫療保險給付附加條款（示範條款）">[9]</a></sup> 示範條款只是範本，實際以你的保單條款為準；實支實付型沒有這一項。</li>
+<li><strong>什麼時候可以自留</strong>：如果你已經有壽險、一般失能險和實支實付這張「疾病和意外都賠」的大網，意外險就從必需品變成加強版。預算有限時，新規劃可以先把預算放在真正會拖垮家庭的意外失能與身故，金額小的意外醫療與日額視預算再加；已有的保單不建議因此急著解約。</li>
+</ul>
+
+<h3 id="type-medical"><svg class="type-dot" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#2e6f8e"/></svg> 醫療三險：實支實付、住院日額、手術 <span class="tag soon">專文建置中</span></h3>
+<ul>
+<li><strong>槓桿什麼</strong>：<strong>實支實付</strong>常被當作醫療規劃的地基，依收據補健保沒涵蓋的自費，在限額內分擔足以掏空存款的大帳單。<strong>住院日額</strong>是定額給付，可用來補住院期間的薪水損失和看護費。<strong>手術險</strong>依條款的手術項目給一筆，當作術後營養、輔具、復健的療養補貼。</li>
+<li><strong>多張實支實付怎麼賠</strong>：2024 年 7 月 1 日起新投保的實支實付型保單（含實支實付型傷害醫療），回到「損害填補原則」：同一次就醫，各家合計最多賠到你實際自付的費用。改的是「怎麼賠」，不是限制只能買幾張，但各保險公司仍會依核保規定訂定可投保的張數或額度。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Article?lawno=21&amp;lsid=FL037628" target="_blank" rel="noopener noreferrer" aria-label="資料來源 15：壽險公會：保險業招攬及核保作業控管自律規範第21條" title="壽險公會：保險業招攬及核保作業控管自律規範第21條">[15]</a></sup>示範條款要求附收據正本，依金管會說明，第一家可以自己選；第一家賠完會開證明，讓你拿去第二家補差額：同類型開「理賠差額證明」，不同類型（例如住院醫療加傷害醫療）開「醫療費用收據正本留存證明」並附影本。<sup class="source-ref"><a href="https://law.fsc.gov.tw/LawContent.aspx?id=GL003903" target="_blank" rel="noopener noreferrer" aria-label="資料來源 6：金管會113年6月27日函：人身保險商品審查應注意事項部分規定修正" title="金管會113年6月27日函：人身保險商品審查應注意事項部分規定修正">[6]</a> <a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006848" target="_blank" rel="noopener noreferrer" aria-label="資料來源 7：壽險公會：住院醫療費用保險單示範條款（實支實付型）" title="壽險公會：住院醫療費用保險單示範條款（實支實付型）">[7]</a> <a href="https://law.lia-roc.org.tw/Law/Source?lsid=FL006848" target="_blank" rel="noopener noreferrer" aria-label="資料來源 8：壽險公會：住院醫療費用保險單示範條款（實支實付型）法規沿革" title="壽險公會：住院醫療費用保險單示範條款（實支實付型）法規沿革">[8]</a> <a href="https://www.cna.com.tw/news/afe/202410010473.aspx" target="_blank" rel="noopener noreferrer" aria-label="資料來源 12：中央社2024年10月1日：實支實付新制上路 金管會釋疑理賠流程注意2種證明" title="中央社2024年10月1日：實支實付新制上路 金管會釋疑理賠流程注意2種證明">[12]</a> <a href="https://www.cna.com.tw/news/afe/202407020381.aspx" target="_blank" rel="noopener noreferrer" aria-label="資料來源 13：中央社2024年7月2日：實支實付正本理賠新制上路 金管會：業者不得推託理賠" title="中央社2024年7月2日：實支實付正本理賠新制上路 金管會：業者不得推託理賠">[13]</a></sup> 2024 年 7 月 1 日前生效的舊保單，仍依原條款理賠；保證續保的續保時也照原條款，非保證續保的則要保險公司同意續保才延續；日額型、定額型也不適用這套規則。</li>
+<li><strong>另外要知道</strong>：固定金額的終身日額會被通膨慢慢吃掉，舊條款也可能跟不上「住院天數變短、門診手術變多」的醫療趨勢。</li>
+<li><strong>能不能自留</strong>：醫療風險會隨年齡上升，年紀越大越可能用到，不建議全部自留。資產變多後，可以考慮自己扛小額、高頻的部分，大額醫療仍交給保險。選定期醫療險時，先看是不是「保證續保」（下面「最後一塊拼圖」有說明）。</li>
+</ul>
+
+<h3 id="type-critical"><svg class="type-dot" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#6a4c93"/></svg> 重大傷病／重大疾病險：保護全家的現金流 <span class="tag soon">專文建置中</span></h3>
+<ul>
+<li><strong>槓桿什麼</strong>：一次金不只是醫藥費，而是讓家裡現金流不要斷：補上自己和照顧者的收入中斷、撐住房貸和學費、支付門診自費新藥，也避免急著用錢時被迫賤賣股票或房子。</li>
+<li><strong>名字很像，範圍不同</strong>：重大傷病險多半以全民健保公告的「重大傷病」項目為範圍，再排除部分項目，細節看各商品條款；<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060015" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：全國法規資料庫：全民健康保險保險對象免自行負擔費用辦法" title="全國法規資料庫：全民健康保險保險對象免自行負擔費用辦法">[3]</a></sup> 重大疾病險則依條款列出的特定疾病和定義理賠。一字之差，賠的範圍可能差很多。</li>
+<li><strong>能不能自留</strong>：存款和容易變現的資產越多，需要的保額可以越少；但重病機率會隨年齡上升，不建議一下子全部收回來自己扛。</li>
+</ul>
+
+<h3 id="type-cancer"><svg class="type-dot" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#c9a227"/></svg> 癌症險：現金比條款跑得快 <span class="tag soon">專文建置中</span></h3>
+<ul>
+<li><strong>槓桿什麼</strong>：住院開刀的部分，實支實付可以在限額內分擔一部分。癌症險要防的是另外三件事：不一定要住院的門診新型療法（例如標靶、免疫治療）、長期治療期間的收入中斷，以及營養品、交通這些收據報不了的開銷。</li>
+<li><strong>一次給付和療程型</strong>：療程型依住院、手術、化療、放療等項目給付，遇到新療法或併發症是否算「治療癌症」，容易有爭議；一次給付型符合條款定義就給一筆（多有等待期，部分商品對原位癌、初期癌症等給付較低），用在哪裡自己決定。所以規劃時常以一次給付為主要考量。</li>
+<li><strong>能不能自留</strong>：年輕資產少時，定期一次金可以用較低保費買到足夠保障；但罹癌機率隨年齡上升，定期險到期後想再買，要重新核保，不一定買得到。不建議為了省保費而全部自留。</li>
+</ul>
+
+<h3 id="type-ltc"><svg class="type-dot" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#b5486a"/></svg> 長照與失能險：活得久，也是一種風險 <span class="tag soon">專文建置中</span></h3>
+<ul>
+<li><strong>長照險看「長期照顧狀態」</strong>：依長期照顧保險單示範條款第 2 條，是指被保險人「經專科醫師診斷判定」，符合下列其中一種：<strong>生理功能障礙</strong>：經專科醫師依巴氏量表或其它臨床專業評量表「診斷判定達○個月以上（不得高於六個月）」，進食、移位、如廁、沐浴、平地行動及更衣六項日常生活自理能力「持續存有三項（含）以上之障礙」；<strong>認知功能障礙</strong>：經專科醫師「診斷判定達○個月以上（不得高於六個月），仍為持續失智狀態」，且臨床失智量表（CDR）「評估達中度（含）以上（即 CDR 大於或等於 2 分，非各分項總和）」。條文裡的「○個月」由各商品自己填，最長不得超過六個月；經專科醫師診斷判定為「終身無法治癒者」，不受這個期間限制。給付可以是一次金，也可以分期給付。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL077956" target="_blank" rel="noopener noreferrer" aria-label="資料來源 4：壽險公會：長期照顧保險單示範條款" title="壽險公會：長期照顧保險單示範條款">[4]</a></sup></li>
+<li><strong>失能險看「失能等級」，但範圍各家自訂</strong>：1 到 11 級那張表是傷害險（意外失能）用的。人壽保險單示範條款只認「完全失能」7 款，大約對應第 1 級；<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006853" target="_blank" rel="noopener noreferrer" aria-label="資料來源 10：壽險公會：人壽保險單示範條款" title="壽險公會：人壽保險單示範條款">[10]</a></sup> 疾病失能險、失能扶助金保哪幾級由各商品自訂，例如只保 1 到 6 級。買之前先看清楚保的是意外還是疾病、哪幾級。</li>
+<li><strong>槓桿什麼</strong>：對應醫療後那一段：出院後的看護、復健，以及再也回不去職場的收入缺口。</li>
+</ul>
+
+<h3 id="type-waiver"><svg class="type-dot" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="2"/></svg> 豁免保費：替保費買的保險 <span class="tag soon">專文建置中</span></h3>
+<ul>
+<li><strong>它在做什麼</strong>：發生條款約定的事故後，之後的保費不用再繳，保障照樣有效。常見的觸發條件是特定失能等級或重大疾病，但每張保單約定不同。</li>
+<li><strong>要看清楚</strong>：是「要保人」出事才豁免，還是「被保險人」出事才豁免？父母幫孩子買保單時，這個差別特別重要。</li>
+</ul>
+</div></section>
+
+<section class="section alt"><div class="narrow prose"><div class="section-head"><span class="kicker">最後一塊拼圖</span><h2>保險，是保護「尚未累積完成的資產」</h2></div>
+<p>看完整張圓餅圖，最容易冒出來的念頭是：「那我全部都買。」先別急。</p>
+<p>保險是用少少的錢，去平衡那些會打斷資產累積的意外；但保費本身，也是一個會拖慢資產累積的因子。重點在找到平衡點，而不是買越多越好。這個「買定期、慢慢走向自留」的想法，比較適合用在<strong>壽險</strong>：</p>
+<ol class="steps">
+<li><h3>責任重、資產少的時候，用定期壽險換大保障</h3><p>背房貸、孩子還小，是「責任最重、資產最少」的階段。定期壽險用較低保費，蓋住家人最需要錢的那些年。</p></li>
+<li><h3>把省下的保費拿去累積</h3><p>終身壽險保障不會到期、保費固定、有保單價值，但保費較高；預算有限時，可以先評估用定期壽險把保額拉夠，把保費差額留作儲蓄。若拿去投資，可能虧損，報酬不保證，要量力而為。</p></li>
+<li><h3>責任減輕、資產夠了，壽險可以慢慢收回來</h3><p>房貸繳完、孩子獨立、存款足以讓家人過渡，可以評估逐步降低壽險保額；已有的保單，調整前同樣先做完整評估。</p></li>
+</ol>
+<p><strong>醫療和長照不一樣</strong>：這兩塊風險會隨年齡上升，越老越可能用到，不建議全部自留。</p>
+<h3>選定期險前，先看懂這幾件事</h3>
+<ul>
+<li><strong>保證續保</strong>：保險公司不得拒絕續保，也不會因為你個人的健康狀況調高保費；但保費仍會隨年齡和費率調整上升<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006848" target="_blank" rel="noopener noreferrer" aria-label="資料來源 7：壽險公會：住院醫療費用保險單示範條款（實支實付型）" title="壽險公會：住院醫療費用保險單示範條款（實支實付型）">[7]</a></sup>；續保通常也有年齡上限，依各商品約定。</li>
+<li><strong>非保證續保</strong>：每次續保都要保險公司同意。生病後還想續保（帶病續保），只有保證續保才有保障；非保證續保要看保險公司是否同意。</li>
+<li><strong>到期再買新約要重新核保</strong>：依保險法第 64 條要重新據實告知，結果可能是加費、除外，甚至拒保。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390002&flno=64" target="_blank" rel="noopener noreferrer" aria-label="資料來源 11：全國法規資料庫：保險法第64條" title="全國法規資料庫：保險法第64條">[11]</a></sup></li>
+<li><strong>定期險不是存錢</strong>：期滿沒出事就沒有給付，解約金通常很少或沒有。</li>
+<li><strong>不要急著解約轉保</strong>：想把終身改成定期，一定要先投保新約、確認承保生效，再處理舊保單。解約舊保單可能拿回比已繳保費少、年齡變大保費更高、新約等待期與告知義務重新起算；是否調整應先做完整評估。</li>
+</ul>
+<p>想更完整看懂保險在理財工具裡的位置，可以接著讀<a href="../risk-financing/">保險在財務工具裡的位置</a>。</p>
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><p><strong>本文為觀念說明，不構成個別投保或投資建議。</strong>實際規劃應依個人財務、健康與需求做適合度評估。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380226&amp;flno=9" target="_blank" rel="noopener noreferrer" aria-label="資料來源 14：全國法規資料庫：金融消費者保護法第9條" title="全國法規資料庫：金融消費者保護法第9條">[14]</a></sup> 每張保單的給付條件、除外責任與等待期都以條款為準。</p></div></div>
+</div></section>
+
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">資料來源</span><h2>可查證的出處</h2></div>
+<ol class="source-list">
+<li><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006854" target="_blank" rel="noopener noreferrer">壽險公會保險相關法規查詢系統：傷害保險單示範條款</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/GetFile/0000273428" target="_blank" rel="noopener noreferrer">壽險公會：傷害保險單示範條款附表「失能程度與保險金給付表」</a>。</li>
+<li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060015" target="_blank" rel="noopener noreferrer">全國法規資料庫：全民健康保險保險對象免自行負擔費用辦法（附表一：重大傷病項目）</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL077956" target="_blank" rel="noopener noreferrer">壽險公會保險相關法規查詢系統：長期照顧保險單示範條款第2、10、11條</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Search/ClauseList" target="_blank" rel="noopener noreferrer">壽險公會保險相關法規查詢系統：示範條款清單（住院醫療費用保險單示範條款實支實付型、日額型）</a>。</li>
+<li><a href="https://law.fsc.gov.tw/LawContent.aspx?id=GL003903" target="_blank" rel="noopener noreferrer">金管會113年6月27日金管保壽字第11304921175號函：人身保險商品審查應注意事項部分規定修正（2024年7月1日起適用）</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006848" target="_blank" rel="noopener noreferrer">壽險公會保險相關法規查詢系統：住院醫療費用保險單示範條款（實支實付型），含第13條保證續保</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/Source?lsid=FL006848" target="_blank" rel="noopener noreferrer">壽險公會保險相關法規查詢系統：住院醫療費用保險單示範條款（實支實付型）法規沿革（新版2024年10月1日實施）</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/GetFile/0000372774" target="_blank" rel="noopener noreferrer">壽險公會：傷害醫療保險給付附加條款（含骨折未住院日數表）</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006853" target="_blank" rel="noopener noreferrer">壽險公會保險相關法規查詢系統：人壽保險單示範條款（完全失能）</a>。</li>
+<li><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390002&amp;flno=64" target="_blank" rel="noopener noreferrer">全國法規資料庫：保險法第64條（據實說明義務）</a>。</li>
+<li><a href="https://www.cna.com.tw/news/afe/202410010473.aspx" target="_blank" rel="noopener noreferrer">中央社2024年10月1日：實支實付新制上路 金管會釋疑理賠流程注意2種證明</a>。</li>
+<li><a href="https://www.cna.com.tw/news/afe/202407020381.aspx" target="_blank" rel="noopener noreferrer">中央社2024年7月2日：實支實付正本理賠新制上路 金管會：業者不得推託理賠</a>。</li>
+<li><a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0380226&amp;flno=9" target="_blank" rel="noopener noreferrer">全國法規資料庫：金融消費者保護法第9條</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/Article?lawno=21&amp;lsid=FL037628" target="_blank" rel="noopener noreferrer">壽險公會：保險業招攬及核保作業控管自律規範第21條</a>。</li>
+</ol>
+</div></section>
+</main>
+{% include "partials/related.njk" %}
+{% include "partials/footer.njk" %}

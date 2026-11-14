@@ -96,6 +96,19 @@ table caption{caption-side:top;text-align:left;padding:1rem 1rem .5rem;font-weig
 .diagram{margin:1.5rem 0;padding:1.25rem 1rem;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface);overflow-x:auto}
 .diagram svg{width:100%;height:auto;display:block;min-width:520px}
 .diagram figcaption{margin-top:.75rem;font-size:.85rem;color:var(--muted);line-height:1.6}
+/* 可縮放圖解（圓餅圖等）：手機不橫向捲動，桌面限制最大寬度 */
+.diagram--fit svg{min-width:0;max-width:640px;margin-inline:auto}
+/* 圖解內可點擊的區塊（例：圓餅圖跳到下方段落） */
+.diagram a.pie-slice{cursor:pointer}
+.diagram a.pie-slice path,.diagram a.pie-slice circle{transition:opacity .15s}
+.diagram a.pie-slice:hover path,.diagram a.pie-slice:hover circle{opacity:.82}
+.diagram a.pie-slice:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+/* 圖例清單（色點＋連結） */
+.prose > ul.pie-legend{list-style:none;padding-inline-start:0;display:flex;flex-wrap:wrap;gap:.5rem .9rem;font-size:.95rem}
+.pie-legend a{display:inline-flex;align-items:center;gap:.4rem}
+.pie-legend svg{flex:none}
+/* 標題前的險種色點 */
+svg.type-dot{display:inline-block;vertical-align:-.08em;margin-inline-end:.3rem}
 
 /* —— 長文閱讀（沿用全站字級與色票） —— */
 .prose > p + p,.prose > ul + p,.prose > ol + p{margin-top:1rem}
