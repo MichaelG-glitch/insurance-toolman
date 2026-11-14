@@ -98,10 +98,11 @@ table caption{caption-side:top;text-align:left;padding:1rem 1rem .5rem;font-weig
 .diagram figcaption{margin-top:.75rem;font-size:.85rem;color:var(--muted);line-height:1.6}
 /* 可縮放圖解（圓餅圖等）：手機不橫向捲動，桌面限制最大寬度 */
 .diagram--fit svg{min-width:0;max-width:640px;margin-inline:auto}
+.diagram--wide svg{min-width:680px}
 /* 圖解內可點擊的區塊（例：圓餅圖跳到下方段落） */
 .diagram a.pie-slice{cursor:pointer}
-.diagram a.pie-slice path,.diagram a.pie-slice circle{transition:opacity .15s}
-.diagram a.pie-slice:hover path,.diagram a.pie-slice:hover circle{opacity:.82}
+.diagram a.pie-slice path,.diagram a.pie-slice circle,.diagram a.pie-slice rect{transition:opacity .15s}
+.diagram a.pie-slice:hover path,.diagram a.pie-slice:hover circle,.diagram a.pie-slice:hover rect{opacity:.82}
 .diagram a.pie-slice:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
 /* 圖例清單（色點＋連結） */
 .prose > ul.pie-legend{list-style:none;padding-inline-start:0;display:flex;flex-wrap:wrap;gap:.5rem .9rem;font-size:.95rem}
@@ -119,3 +120,6 @@ svg.type-dot{display:inline-block;vertical-align:-.08em;margin-inline-end:.3rem}
 .source-list{font-size:.95rem;line-height:1.75}
 .source-list li + li{margin-top:.7rem}
 .prose > h3{margin-top:2.25rem;margin-bottom:.6rem}
+.prose > h4{margin-top:1.75rem;margin-bottom:.5rem;font-size:1.05rem}
+.prose li > ul,.prose li > ol{padding-inline-start:1.25rem;margin-block:.35rem}
+.prose > h3[id]{scroll-margin-top:5rem}
