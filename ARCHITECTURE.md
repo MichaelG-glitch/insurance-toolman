@@ -2,7 +2,9 @@
 
 本文件的「真相」是這個 Git 儲存庫。當 AI 技能、文件或對話與本檔不一致時，以本檔與實際程式碼為準。
 
-## 網站地圖（22 頁）
+## 網站地圖（30 頁）
+
+統計：首頁、關於、問答、3 個分類頁、8 個工具、9 個車禍實務、7 個觀念，共 30 頁 HTML。
 
 ```
 保險工具人 insurance-toolman
@@ -15,7 +17,9 @@
 │   ├── /tools/compulsory-insurance/         強制險申請不求人    〔art-directed〕
 │   ├── /tools/mobile-scan/                  手機掃描不求人      〔art-directed〕
 │   ├── /tools/mobile-pdf-sign/              手機 PDF 簽名不求人 〔元件頁〕
-│   └── /tools/ios-signature/                iPhone 建立簽名檔   〔元件頁〕
+│   ├── /tools/ios-signature/                iPhone 建立簽名檔   〔元件頁〕
+│   ├── /tools/insurance-age/                保險年齡計算器      〔art-directed〕
+│   └── /tools/refund-calculator/            車險退保保費計算器  〔art-directed〕
 │
 ├── /accident/                               車禍實務分類（自動收集）
 │   ├── /accident/car-accident/              車禍現場處理 SOP     〔art-directed〕
@@ -33,7 +37,9 @@
 │   ├── /learn/car-damage-premium/           車體險保費為何沒降   〔元件頁〕
 │   ├── /learn/premium-increase-no-claim/    沒出險保費為何漲     〔元件頁〕
 │   ├── /learn/liability-claim-grade/        責任險肇事等級       〔元件頁〕
-│   └── /learn/compulsory-insurance-rating/  強制險從人係數       〔元件頁〕
+│   ├── /learn/compulsory-insurance-rating/  強制險從人係數       〔元件頁〕
+│   ├── /learn/refund-premium/               車險退保，保費能退多少 〔元件頁〕
+│   └── /learn/underwriting-outcomes/        核保結果，五種結局怎麼看 〔元件頁〕
 │
 ├── /qa/                                     常見問答            〔純文字 + 手風琴〕
 │
@@ -45,10 +51,10 @@
 ```mermaid
 flowchart TB
   subgraph src["src/ —— 唯一手動編輯處"]
-    content["內容頁（22 頁）<br/>*/index.njk ＋ front matter"]
+    content["內容頁（30 頁）<br/>*/index.njk ＋ front matter"]
     tmpl["模板與共用片段<br/>_includes/layouts/base.njk（骨架）<br/>_includes/partials/（頂欄·頁尾·Logo·4 種頂欄）"]
     css["全域樣式（單一來源）<br/>theme.css 色票 · site.css 排版<br/>brand.css 品牌 · components.css 元件"]
-    pagecss["複雜頁獨立資源<br/>assets/pages/*.css/.js（4 頁）"]
+    pagecss["複雜頁獨立資源<br/>assets/pages/*.css/.js（6 頁）＋ related.css"]
     js["assets/site.js（明暗·年份）"]
   end
   build["Eleventy<br/>npm run build"]
@@ -94,7 +100,9 @@ src/
     ├── brand.css                  品牌
     ├── components.css             可重用元件（警示框、步驟、檢核清單）
     ├── site.js                    明暗切換 + 年份
-    └── pages/                     複雜頁的獨立 CSS/JS（4 頁）
+    ├── thumbs/                    分類與延伸閱讀縮圖，統一 512×512 WebP
+    ├── illustrations/             內文情境圖，統一約 1400×788（16:9）WebP
+    └── pages/                     複雜頁獨立 CSS/JS（6 頁：car-accident、compulsory-insurance、road-rescue、mobile-scan、insurance-age、refund-calculator；另含 related.css）
 ```
 
 ## 頁面分級（新增頁面時先選等級）
@@ -112,7 +120,7 @@ src/
 | 欄位 | 必要 | 說明 |
 |---|---|---|
 | `layout: base.njk` | 是 | 一律這支骨架 |
-| `title` | 是 | 標題＋`｜保險工具人` |
+| `title` | 是 | 標題＋`｜保險工具人`（首頁、關於頁可用「｜Insurance Toolman」作為品牌例外） |
 | `description` | 是 | meta description |
 | `ogUrl` | 建議 | 加 og:url，提升分享預覽 |
 | `activeNav` | 是 | `tools`／`accident`／`learn`／`qa`／`home` |
@@ -143,6 +151,7 @@ src/
 - 這個區塊由 `_includes/partials/related.njk` 產生，樣式在 `assets/pages/related.css`（在 `base.njk` 依 `related` 是否存在而載入），卡片依 `order` 順序、用 `thumb` 縮圖（無則退回 `icon`）呈現。
 - 因為卡片靠 `collections` 抓取其他頁面的 front matter（`cardTitle`、`cardBlurb`、`thumb`、`icon`），新增或改成對方頁面時，連結會自動更新，不需手動改每一處。
 - 縮圖請用「卡通手繪、線條簡單」的 AI 生成圖，統一放在 `src/assets/thumbs/`、`src/assets/illustrations/`，尺寸縮小後存成 `.webp`。
+- 尺寸規範：`thumbs/` 為 512×512；`illustrations/` 為 16:9、約 1400×788。現況已對齊此規範，包含 2026-11-14 新增的 `risk-financing.webp`（illustrations 與 thumbs），以及由 1200×800 中央裁切為 1400×788 的 `accident-evidence-trio.webp`、`consultation-evidence.webp`。
 
 ## 命名與授權規則
 
