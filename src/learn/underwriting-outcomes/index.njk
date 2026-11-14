@@ -1,0 +1,247 @@
+---
+layout: base.njk
+title: 核保五種結果：標準體、加費、除外、延期、拒保｜保險工具人
+description: 投保人壽保險後收到加費、批註除外、延期或拒保通知怎麼辦？用白話看懂核保五種結果的意思、對保戶與保險公司的利弊、保險公司怎麼算風險，以及事後申請取消加費、除外或重新評估的步驟。
+ogUrl: https://michaelg-glitch.github.io/insurance-toolman/learn/underwriting-outcomes/
+activeNav: learn
+components: true
+reviewed: "2026-11-14"
+tags: learnItem
+order: 7
+thumb: assets/thumbs/underwriting-outcomes.webp
+cardTitle: 核保結果，五種結局怎麼看？
+cardBlurb: 標準體、加費、除外、延期、拒保，不是好壞評分，而是保險公司對風險的五種回答。看懂原因，才知道下一步怎麼爭取。
+icon: life
+cardCta: 看懂核保結果
+related:
+  - risk-financing
+  - insurance-age
+---
+<main>
+<section class="hero"><div class="container"><span class="eyebrow">Learn · 人壽保險核保</span><h1>核保結果出爐，不是成績單，是報價單。</h1><p class="lead">送出要保書後，保險公司會給你五種回答之一：標準體、加費、批註除外、延期，或拒絕承保。很多人收到加費或除外通知，第一個反應是「我是不是被嫌棄了」。其實核保在做的事很單純：估算你的風險，再決定用什麼價格、什麼範圍承接。看懂它怎麼算，才知道哪裡還有機會爭取。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a> <a href="https://ods.foi.org.tw/download.aspx?article=1060013558" target="_blank" rel="noopener noreferrer" aria-label="資料來源 4：金融消費評議中心：106年評字第1435號評議書" title="金融消費評議中心：106年評字第1435號評議書">[4]</a></sup></p>
+<figure class="figure"><img src="{{ page.url | relbase }}assets/illustrations/underwriting-outcomes.webp" width="1400" height="788" alt="核保人員拿著放大鏡檢視健康報告，對面的投保人抱著病歷資料夾等待結果，桌上排著五個不同顏色的印章" loading="eager" decoding="async"><figcaption>核保人員看的不是你這個人好不好，而是資料能不能讓風險「算得出來」。情境插圖。</figcaption></figure>
+</div></section>
+<section class="section alt"><div class="narrow prose"><div class="section-head"><span class="kicker">先看結論</span><h2>五種結果，其實是同一把尺</h2></div>
+<p>壽險公會的核保準則把邏輯寫得很直白：死亡率符合商品預定死亡率的，以標準體承保；不符合的，用加費或除外責任承保；危險不明確或嚴重超過的，就延期或拒保。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a></sup></p>
+<p>換成生活語言：標準體是「原價成交」，加費是「加價成交」，批註除外是「原價但少賣一塊」，延期是「現在看不清楚，晚點再談」，拒保是「這筆生意我接不起」。</p>
+<figure class="diagram" tabindex="0" role="region" aria-label="核保五種結果光譜圖解，可左右滑動">
+<svg viewBox="0 0 860 300" role="img" aria-labelledby="uw-spec-title uw-spec-desc">
+<title id="uw-spec-title">核保五種結果與額外死亡率的對應</title>
+<desc id="uw-spec-desc">額外死亡率為零或少許為標準體，達正五十以上多以加費或批註除外承保，超過正三百多屬拒保；延期則是風險暫時無法估計，不在這條尺上。</desc>
+<g font-family="var(--font-body)" text-anchor="middle">
+<text x="430" y="26" font-size="17" font-weight="800" fill="var(--text)">風險越高，條件越多（常見作法，非法定標準）</text>
+<rect x="20" y="50" width="200" height="110" rx="12" fill="var(--success-hi)" stroke="var(--success)"/>
+<text x="120" y="88" font-size="20" font-weight="800" fill="var(--success)">標準體</text>
+<text x="120" y="118" font-size="14" fill="var(--text)">額外死亡率 0 或少許</text>
+<text x="120" y="142" font-size="13" fill="var(--muted)">標準費率、保障完整</text>
+<rect x="230" y="50" width="400" height="110" rx="12" fill="var(--gold-soft)" stroke="var(--gold)"/>
+<text x="430" y="82" font-size="20" font-weight="800" fill="var(--gold)">次標準體</text>
+<text x="430" y="110" font-size="14" fill="var(--text)">額外死亡率約 +50 以上</text>
+<line x1="430" y1="122" x2="430" y2="152" stroke="var(--gold)" stroke-dasharray="4 4"/>
+<text x="330" y="144" font-size="15" font-weight="700" fill="var(--text)">加費：多付錢，保障完整</text>
+<text x="540" y="144" font-size="15" font-weight="700" fill="var(--text)">除外：不加錢，少保一塊</text>
+<rect x="640" y="50" width="200" height="110" rx="12" fill="var(--warning-hi)" stroke="var(--warning)"/>
+<text x="740" y="88" font-size="20" font-weight="800" fill="var(--warning)">拒絕承保</text>
+<text x="740" y="118" font-size="14" fill="var(--text)">額外死亡率逾 +300</text>
+<text x="740" y="142" font-size="13" fill="var(--muted)">風險過高或無法定價</text>
+<path d="M30 185H830" stroke="var(--muted)" stroke-width="2"/><path d="M820 178L832 185L820 192" fill="none" stroke="var(--muted)" stroke-width="2"/>
+<text x="430" y="210" font-size="13" fill="var(--muted)">額外死亡率（以標準體為 0）</text>
+<rect x="150" y="232" width="560" height="52" rx="12" fill="var(--surface-2)" stroke="var(--border)" stroke-dasharray="6 5"/>
+<text x="430" y="256" font-size="16" font-weight="800" fill="var(--primary)">延期：不在這條尺上</text>
+<text x="430" y="276" font-size="13" fill="var(--text)">風險還「量不出來」，先觀察 3 個月到 2 年再重新評估</text>
+</g></svg>
+<figcaption>門檻數字引自評議書中專業顧問對業界常見作法的說明，各公司實際標準不同。手機可左右滑動查看完整圖解。</figcaption>
+</figure>
+<div class="callout callout--info"><span class="co-icon">i</span><div class="co-body"><p><strong>這些門檻不是法律規定。</strong>評議中心一件評議書中，專業顧問說明業界常見作法：額外死亡率 0 為標準體，少許額外死亡率仍以標準費率承保者為臨界標準體；額外死亡率達 +50 以上多以加費或批註除外承保；超過 +300 多屬拒保。<sup class="source-ref"><a href="https://ods.foi.org.tw/download.aspx?article=1060013558" target="_blank" rel="noopener noreferrer" aria-label="資料來源 4：金融消費評議中心：106年評字第1435號評議書" title="金融消費評議中心：106年評字第1435號評議書">[4]</a></sup></p></div></div>
+</div></section>
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">遊戲規則</span><h2>保險公司可以挑客人，但不能亂挑</h2></div>
+<p>先講一個常讓人意外的事實：保險契約成立前，保險公司有「要不要接」的自由。法院在一件投保人主張保險公司應該承保的案件中認為，商業保險不是水電那種民生必需品，保險公司沒有強制締約義務。<sup class="source-ref"><a href="https://www.nlia.org.tw/wp-content/uploads/doc/auto/%E4%BF%9D%E9%9A%AA%E5%A4%A7%E9%81%9386%E6%9C%9F3.%E5%A5%91%E7%B4%84%E8%87%AA%E7%94%B1%E5%8E%9F%E5%89%87-%E8%87%BA%E7%81%A3%E9%AB%98%E7%AD%89%E6%B3%95%E9%99%A2.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 12：保險大道第86期：臺灣高等法院112年度保險上字第3號民事判決評析" title="保險大道第86期：臺灣高等法院112年度保險上字第3號民事判決評析">[12]</a></sup> 評議中心也說明，是否承保、以什麼費率承保，屬於保險契約對價衡平的特性。<sup class="source-ref"><a href="https://www.foi.org.tw/Article.aspx?Arti=1665&amp;Lang=1&amp;p=4" target="_blank" rel="noopener noreferrer" aria-label="資料來源 20：金融消費評議中心：保險類常見問答" title="金融消費評議中心：保險類常見問答">[20]</a></sup></p>
+<p>不過「可以挑」不等於「隨便挑」，法規畫了幾條線：</p>
+<ul class="checklist">
+<li><strong>要有精算根據</strong>：評估風險與計收保費，應以保險精算及統計資料為基礎，且不得對特定對象或僅因身心障礙而有不公平待遇。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390042" target="_blank" rel="noopener noreferrer" aria-label="資料來源 1：全國法規資料庫：保險業招攬及核保理賠辦法第7條" title="全國法規資料庫：保險業招攬及核保理賠辦法第7條">[1]</a></sup></li>
+<li><strong>不能拿沒根據的手冊當擋箭牌</strong>：金管會曾函示，不得援引沒有精算統計資料支持的再保公司核保手冊，作為對身心障礙者加費或謝絕承保的依據。<sup class="source-ref"><a href="https://law.fsc.gov.tw/LawContent.aspx?id=GL001647" target="_blank" rel="noopener noreferrer" aria-label="資料來源 10：金管會104年8月20日金管保壽字第10400060970號函" title="金管會104年8月20日金管保壽字第10400060970號函">[10]</a></sup></li>
+<li><strong>同樣情況同樣處理</strong>：核保準則要求相同情況應一致公平；多種疾病同時存在時，要考量彼此加乘的影響。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a></sup></li>
+<li><strong>拒保要說理由</strong>：因核保因素拒保，應敘明理由告知保戶及保險經紀人。<sup class="source-ref"><a href="https://law.fsc.gov.tw/LawContent.aspx?id=GL000952" target="_blank" rel="noopener noreferrer" aria-label="資料來源 11：金管會102年12月2日金管保綜字第10202574670號函" title="金管會102年12月2日金管保綜字第10202574670號函">[11]</a></sup></li>
+<li><strong>附加條件要你點頭</strong>：附加條件承保應說明審查結果並取得保戶簽名同意；未承保應以書面敘明理由。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006807" target="_blank" rel="noopener noreferrer" aria-label="資料來源 9：保險業承保身心障礙者處理原則" title="保險業承保身心障礙者處理原則">[9]</a></sup></li>
+</ul>
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><p><strong>告知不實的代價很大。</strong>要保人對保險公司的書面詢問應據實說明；違反且足以影響風險估計的，保險公司得解除契約，解除權自知悉後 1 個月內、契約訂立後 2 年內行使。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390002" target="_blank" rel="noopener noreferrer" aria-label="資料來源 2：保險法第64條" title="保險法第64條">[2]</a></sup> 為了拿到標準體而少寫病史，等於把一顆未爆彈放進保單裡。</p></div></div>
+</div></section>
+<section class="section alt"><div class="narrow prose"><div class="section-head"><span class="kicker">核保怎麼算</span><h2>把你的體況翻譯成一個數字</h2></div>
+<p>核保人員手上的問題只有一個：「這個人的死亡率，比商品定價時假設的高多少？」高出來的部分，就叫額外死亡率。高血壓加一點、血糖控制不好再加一點、運動習慣好或追蹤規律可能扣一點，最後得出一個總分，再對照公司的分級表。</p>
+<p>真實的評議案例裡就有這種分數：一位有地中海型貧血與乳房纖維囊腫病史的被保險人，核保欄記載「壽險 150 點承保」，但公司仍以標準費率承保。<sup class="source-ref"><a href="https://ods.foi.org.tw/download.aspx?article=1060013558" target="_blank" rel="noopener noreferrer" aria-label="資料來源 4：金融消費評議中心：106年評字第1435號評議書" title="金融消費評議中心：106年評字第1435號評議書">[4]</a></sup> 這說明「有病史」不等於「一定加費」，臨界標準體的界線也是公司可以依商品調整的。</p>
+<h3>額外死亡率到底有多嚴重？</h3>
+<p>用金管會公布的第六回經驗生命表做個直觀換算：40 歲男性的年死亡率是 0.001528。<sup class="source-ref"><a href="https://law.fsc.gov.tw/Download.ashx?FileID=20054&amp;id=8447&amp;type=ANN" target="_blank" rel="noopener noreferrer" aria-label="資料來源 14：金管會：臺灣壽險業第六回經驗生命表" title="金管會：臺灣壽險業第六回經驗生命表">[14]</a></sup> 如果額外死亡率是 +300，等於死亡率乘以 4：</p>
+<div class="table-wrap" role="region" aria-label="額外死亡率直觀換算表格" tabindex="0"><table>
+<thead><tr><th>額外死亡率</th><th>計算</th><th>換算後年死亡率</th><th>大約相當於</th></tr></thead>
+<tbody>
+<tr><td>0（標準體）</td><td>0.001528 × 1.0</td><td>0.001528</td><td>40 歲男性</td></tr>
+<tr><td>+50</td><td>0.001528 × 1.5</td><td>0.002292</td><td>接近 45 歲（0.002417）</td></tr>
+<tr><td>+100</td><td>0.001528 × 2.0</td><td>0.003056</td><td>47 歲（0.002809）到 50 歲（0.003462）之間</td></tr>
+<tr><td>+300</td><td>0.001528 × 4.0</td><td>0.006112</td><td>55 歲（0.005060）到 60 歲（0.007461）之間</td></tr>
+</tbody>
+</table></div>
+<p>換句話說，+300 的 40 歲投保人，在風險上已經接近一位 55 到 60 歲的人。這也是為什麼這個區間常被畫進拒保：費率表很難再往上加，統計資料也越來越少。上表為單一年度死亡率的示意計算，不是保費試算。</p>
+<h3>加費有長有短</h3>
+<p>保發中心教材說明，次標準體的加費分兩種：長期加費是整個繳費期間都加；短期加費只加一段，例如繳費 20 年只加前 5 年。加費通知在法律上是保險公司提出的新條件，你同意了才成立。<sup class="source-ref"><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051220qIRTHNF6kE35.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 5：保險事業發展中心教材：核保須知" title="保險事業發展中心教材：核保須知">[5]</a></sup></p>
+<h3>不只看身體</h3>
+<ul>
+<li><strong>財務核保</strong>：同一被保險人累積同業壽險保額達 1,001 萬元以上、傷害險 2,001 萬元以上，或壽險加傷害險達 2,501 萬元以上，就要進行財務核保。<sup class="source-ref"><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051220qIRTHNF6kE35.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 5：保險事業發展中心教材：核保須知" title="保險事業發展中心教材：核保須知">[5]</a></sup></li>
+<li><strong>同業資料</strong>：保險公司在受理要保、同意承保及契約異動時會通報資料，核保時也會查詢。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390042" target="_blank" rel="noopener noreferrer" aria-label="資料來源 1：全國法規資料庫：保險業招攬及核保理賠辦法第7條" title="全國法規資料庫：保險業招攬及核保理賠辦法第7條">[1]</a></sup> 核保準則另載可詢問同業有無附加條件承保或未承保紀錄。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a></sup></li>
+<li><strong>再保公司</strong>：體況超過自動再保合約能承受的等級，要另外安排臨時再保。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a></sup> 所以高保額或複雜體況的最後條件，常常是再保公司點頭的結果。</li>
+</ul>
+</div></section>
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">逐項拆解</span><h2>五種結果，雙方各打什麼算盤</h2></div>
+<h3>1. 標準體（含臨界標準體、優體）</h3>
+<p>以標準費率、沒有附加條件承保。部分商品另有優體：以吸菸與非吸菸為主要分類，被保險人須年滿 18 歲、符合標準體並通過優體核保程序。<sup class="source-ref"><a href="https://law.fsc.gov.tw/LawContent.aspx?id=FE060906" target="_blank" rel="noopener noreferrer" aria-label="資料來源 15：金管會：人身保險業辦理優體壽險業務應注意事項" title="金管會：人身保險業辦理優體壽險業務應注意事項">[15]</a></sup></p>
+<div class="table-wrap" role="region" aria-label="1. 標準體（含臨界標準體、優體）利弊表格" tabindex="0"><table>
+<thead><tr><th>對誰</th><th>好處</th><th>要注意的地方</th></tr></thead>
+<tbody>
+<tr><td>保戶</td><td>保費最低、保障完整；日後加保或保額增加權利，常以標準體為前提。</td><td>若是少告知換來的標準體，2 年內可能被解除契約。</td></tr>
+<tr><td>公司</td><td>符合定價假設，作業成本最低。</td><td>沒告知清楚的風險，最容易藏在這一群。</td></tr>
+</tbody>
+</table></div>
+<p><strong>保險公司的盤算：</strong>有評議案例中，公司以標準費率承保，事後卻主張被保險人「其實是次標準體」而拒絕增加保額；評議中心認為既然沒加費、沒批註、也沒通知，就應認定為標準體。<sup class="source-ref"><a href="https://ods.foi.org.tw/download.aspx?article=1060013558" target="_blank" rel="noopener noreferrer" aria-label="資料來源 4：金融消費評議中心：106年評字第1435號評議書" title="金融消費評議中心：106年評字第1435號評議書">[4]</a></sup> 用標準價格成交，就要給標準的權利。</p><h3>2. 加費承保</h3>
+<p>風險偏高但算得出來，公司同意承保、加收保費，分長期與短期加費。<sup class="source-ref"><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051220qIRTHNF6kE35.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 5：保險事業發展中心教材：核保須知" title="保險事業發展中心教材：核保須知">[5]</a></sup></p>
+<div class="table-wrap" role="region" aria-label="2. 加費承保利弊表格" tabindex="0"><table>
+<thead><tr><th>對誰</th><th>好處</th><th>要注意的地方</th></tr></thead>
+<tbody>
+<tr><td>保戶</td><td>保障完整，既往疾病相關的事故也在範圍內；體況改善後有機會申請降低。</td><td>總保費增加；短期加費通常無法申請取消。</td></tr>
+<tr><td>公司</td><td>收到與風險相當的保費，比拒保多保留一筆業務。</td><td>保戶不接受而沒成交的比例高；風險估計有誤差。</td></tr>
+</tbody>
+</table></div>
+<p><strong>保險公司的盤算：</strong>加費適合「風險一直存在、而且能量化」的體況，例如會隨年齡惡化的慢性病。風險會隨時間消退的，傾向用短期加費。<sup class="source-ref"><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051220qIRTHNF6kE35.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 5：保險事業發展中心教材：核保須知" title="保險事業發展中心教材：核保須知">[5]</a></sup></p><h3>3. 批註除外</h3>
+<p>保費不加，但用批註條款把特定疾病、器官或部位排除在給付之外。核保準則把除外責任與加費並列為次標準體的兩種承保方式。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a></sup></p>
+<div class="table-wrap" role="region" aria-label="3. 批註除外利弊表格" tabindex="0"><table>
+<thead><tr><th>對誰</th><th>好處</th><th>要注意的地方</th></tr></thead>
+<tbody>
+<tr><td>保戶</td><td>不必多付錢；除外以外的部分保障完整。</td><td>最可能出事的部位反而不保；批註文字太寬時，理賠容易吵因果關係。</td></tr>
+<tr><td>公司</td><td>直接切掉已知、可界定的風險，不用估算加費。</td><td>除外範圍與其他疾病的因果關係難以釐清，可能衍生理賠爭議。</td></tr>
+</tbody>
+</table></div>
+<p><strong>保險公司的盤算：</strong>除外常用在醫療、失能這類「看罹病率」的給付，因為死亡給付很難切成一塊一塊。監察院報告所列身心障礙者有效契約中，非標準體 53,980 件，批註除外占 43,103 件、加費 9,081 件，可見除外是最常用的附加條件。<sup class="source-ref"><a href="https://cybsbox.cy.gov.tw/CYBSBoxSSL/edoc/download/32221" target="_blank" rel="noopener noreferrer" aria-label="資料來源 13：監察院：身心障礙者投保權益調查報告" title="監察院：身心障礙者投保權益調查報告">[13]</a></sup> 該統計母體是身心障礙者，不能直接代表全體保戶。</p><h3>4. 延期承保</h3>
+<p>風險的影響還很不確定，要觀察一段時間再評估，常見為 3 個月、6 個月、1 年或 2 年。<sup class="source-ref"><a href="https://ods.foi.org.tw/download.aspx?article=1060013558" target="_blank" rel="noopener noreferrer" aria-label="資料來源 4：金融消費評議中心：106年評字第1435號評議書" title="金融消費評議中心：106年評字第1435號評議書">[4]</a></sup></p>
+<div class="table-wrap" role="region" aria-label="4. 延期承保利弊表格" tabindex="0"><table>
+<thead><tr><th>對誰</th><th>好處</th><th>要注意的地方</th></tr></thead>
+<tbody>
+<tr><td>保戶</td><td>不是否定，只是時機未到；觀察後穩定，條件可能比現在勉強承保更好。</td><td>觀察期間沒有保障；年齡會增加，病情也可能變化。</td></tr>
+<tr><td>公司</td><td>避免在資訊不足時定錯價。</td><td>客戶可能轉投其他公司。</td></tr>
+</tbody>
+</table></div>
+<p><strong>保險公司的盤算：</strong>延期處理的是「不確定」，不是「很嚴重」。典型情境是剛發病、剛手術、診斷未明或檢查異常還在追蹤。另外，若同意承保前已預收第一期保費，公司在表示同意與否之前發生保險事故仍要負責。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006853" target="_blank" rel="noopener noreferrer" aria-label="資料來源 8：人壽保險單示範條款第3條" title="人壽保險單示範條款第3條">[8]</a></sup></p><h3>5. 拒絕承保</h3>
+<p>風險過高而無法承保，常見作法是額外死亡率超過 +300。<sup class="source-ref"><a href="https://ods.foi.org.tw/download.aspx?article=1060013558" target="_blank" rel="noopener noreferrer" aria-label="資料來源 4：金融消費評議中心：106年評字第1435號評議書" title="金融消費評議中心：106年評字第1435號評議書">[4]</a></sup></p>
+<div class="table-wrap" role="region" aria-label="5. 拒絕承保利弊表格" tabindex="0"><table>
+<thead><tr><th>對誰</th><th>好處</th><th>要注意的地方</th></tr></thead>
+<tbody>
+<tr><td>保戶</td><td>不會買到一張繳很貴、理賠又容易吵的保單；可以早點改規劃其他保障。</td><td>沒有這張保障；同業可能查得紀錄；容易誤以為終身不能保。</td></tr>
+<tr><td>公司</td><td>保護整個保險團體，避免逆選擇。</td><td>失去業務；要負說明理由的義務，涉及身心障礙者時還有法遵與申訴風險。</td></tr>
+</tbody>
+</table></div>
+<p><strong>保險公司的盤算：</strong>拒保不一定是因為身體。法院案例中，公司第一次拒保的理由是「同業保障已足夠」。<sup class="source-ref"><a href="https://www.nlia.org.tw/wp-content/uploads/doc/auto/%E4%BF%9D%E9%9A%AA%E5%A4%A7%E9%81%9386%E6%9C%9F3.%E5%A5%91%E7%B4%84%E8%87%AA%E7%94%B1%E5%8E%9F%E5%89%87-%E8%87%BA%E7%81%A3%E9%AB%98%E7%AD%89%E6%B3%95%E9%99%A2.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 12：保險大道第86期：臺灣高等法院112年度保險上字第3號民事判決評析" title="保險大道第86期：臺灣高等法院112年度保險上字第3號民事判決評析">[12]</a></sup> 此外，未承保件的個資保存期間不得超過未承保確定之日起 5 年。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390042" target="_blank" rel="noopener noreferrer" aria-label="資料來源 1：全國法規資料庫：保險業招攬及核保理賠辦法第7條" title="全國法規資料庫：保險業招攬及核保理賠辦法第7條">[1]</a></sup></p>
+</div></section>
+<section class="section alt"><div class="narrow prose"><div class="section-head"><span class="kicker">一張表看完</span><h2>五種結果比較表</h2></div>
+<div class="table-wrap" role="region" aria-label="五種結果比較表格" tabindex="0"><table>
+<thead><tr><th>項目</th><th>標準體</th><th>加費</th><th>批註除外</th><th>延期</th><th>拒保</th></tr></thead>
+<tbody>
+<tr><td>風險判斷</td><td>符合預定死亡率</td><td>偏高但可量化</td><td>集中在特定部位</td><td>暫時量不出來</td><td>過高或無法定價</td></tr>
+<tr><td>保費</td><td>標準</td><td>標準＋加費</td><td>標準</td><td>無契約</td><td>無契約</td></tr>
+<tr><td>保障範圍</td><td>完整</td><td>完整</td><td>少一塊</td><td>無</td><td>無</td></tr>
+<tr><td>要你簽同意</td><td>不用</td><td>要</td><td>要</td><td>不用</td><td>不用</td></tr>
+<tr><td>之後還能調整嗎</td><td>不需要</td><td>長期加費可申請降低</td><td>可申請取消</td><td>觀察期滿重送</td><td>條件改變後重送</td></tr>
+</tbody>
+</table></div>
+<p>同意欄依身心障礙者承保處理原則與保發中心教材整理；調整欄依保發中心保全須知教材整理。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006807" target="_blank" rel="noopener noreferrer" aria-label="資料來源 9：保險業承保身心障礙者處理原則" title="保險業承保身心障礙者處理原則">[9]</a> <a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051220qIRTHNF6kE35.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 5：保險事業發展中心教材：核保須知" title="保險事業發展中心教材：核保須知">[5]</a> <a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051221IJLs3AkVgpXD.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 6：保險事業發展中心教材：保全須知" title="保險事業發展中心教材：保全須知">[6]</a></sup></p>
+</div></section>
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">哪些體況會觸發</span><h2>同一個病，壽險和醫療險答案可能不同</h2></div>
+<p>要保書示範內容把要問的事情列得很清楚：職業、身高體重、過去 2 年健檢異常、最近 2 個月就醫、過去 5 年是否因高血壓、心臟病、中風、肝炎、腎臟病、癌症、糖尿病等疾病就醫，以及過去 1 年是否因潰瘍、肝炎病毒帶原、氣喘、痛風、高血脂、白內障等就醫。<sup class="source-ref"><a href="https://law.fsc.gov.tw/LawContent.aspx?id=FL006767" target="_blank" rel="noopener noreferrer" aria-label="資料來源 7：金管會：人身保險要保書示範內容，113年7月1日修正" title="金管會：人身保險要保書示範內容，113年7月1日修正">[7]</a></sup> 這些問題問到的，就是最常觸發加費、除外或延期的體況。</p>
+<div class="table-wrap" role="region" aria-label="常見體況方向表格" tabindex="0"><table>
+<thead><tr><th>體況類型</th><th>常見方向</th><th>為什麼</th></tr></thead>
+<tbody>
+<tr><td>剛手術、剛住院、檢查異常還在追蹤、懷孕中</td><td>延期</td><td>結果還沒出來，現在定價等於猜</td></tr>
+<tr><td>高血壓、糖尿病、高血脂等慢性病</td><td>控制良好可能標準或輕度加費；控制差加費加重</td><td>風險持續存在且隨年齡上升，適合用加費反映</td></tr>
+<tr><td>白內障、痛風、結石、椎間盤突出等局部問題</td><td>壽險常不受影響；醫療附約較常除外</td><td>不太影響死亡率，但會增加特定部位的就醫</td></tr>
+<tr><td>癌症治療後</td><td>依癌別、期別與治療結束時間，從延期、加費到拒保</td><td>剛治療完不確定性最高，穩定越久條件越好</td></tr>
+<tr><td>肝硬化、尿毒等重度器官疾病</td><td>多為拒保方向</td><td>額外死亡率過高、統計資料少</td></tr>
+<tr><td>多種疾病同時存在</td><td>條件比單一疾病更嚴格</td><td>核保準則要求考量疾病之間的加乘影響</td></tr>
+</tbody>
+</table></div>
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><p>上表是依核保準則的分類邏輯整理的<strong>常見方向</strong>，不是任何一家公司的核保標準。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a></sup> 同一個體況，結果會因病程、控制數值、追蹤紀錄、投保險種與公司而不同；而且壽險看死亡率、醫療險看就醫機率，所以常會出現「主約標準體、醫療附約除外」的組合。</p></div></div>
+<p>核保人員實際在看的，大致是這五件事：<strong>距離發病或治療多久、目前數值控制得如何、有沒有併發症、有沒有規律追蹤、是不是好幾種問題疊在一起。</strong>這五件事，剛好也是後面申覆時可以補資料的地方。</p>
+</div></section>
+<section class="section alt"><div class="narrow prose"><div class="section-head"><span class="kicker">怎麼爭取</span><h2>申覆不是吵架，是補資料</h2></div>
+<p>先講結論：因為保險公司有締約自由，「我覺得不公平」很難改變核保結果；真正有用的，是補上能讓分數重算的醫療證據。<sup class="source-ref"><a href="https://www.nlia.org.tw/wp-content/uploads/doc/auto/%E4%BF%9D%E9%9A%AA%E5%A4%A7%E9%81%9386%E6%9C%9F3.%E5%A5%91%E7%B4%84%E8%87%AA%E7%94%B1%E5%8E%9F%E5%89%87-%E8%87%BA%E7%81%A3%E9%AB%98%E7%AD%89%E6%B3%95%E9%99%A2.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 12：保險大道第86期：臺灣高等法院112年度保險上字第3號民事判決評析" title="保險大道第86期：臺灣高等法院112年度保險上字第3號民事判決評析">[12]</a></sup></p>
+<figure class="diagram" tabindex="0" role="region" aria-label="申覆與重新評估時間軸圖解，可左右滑動">
+<svg viewBox="0 0 860 230" role="img" aria-labelledby="uw-time-title uw-time-desc">
+<title id="uw-time-title">爭取更好核保條件的五個時間點</title>
+<desc id="uw-time-desc">送件前整理資料、照會時補齊病歷、收到條件時先問清楚再簽、承保後於週年日前申請取消或降低、延期或拒保後觀察期滿重新送件。</desc>
+<g font-family="var(--font-body)" text-anchor="middle">
+<line x1="60" y1="70" x2="800" y2="70" stroke="var(--border)" stroke-width="4"/>
+<g><circle cx="90" cy="70" r="20" fill="var(--surface)" stroke="var(--primary)" stroke-width="3"/><text x="90" y="77" font-size="17" font-weight="800" fill="var(--primary)">1</text><text x="90" y="122" font-size="16" font-weight="800" fill="var(--text)">送件前</text><text x="90" y="148" font-size="13" fill="var(--muted)">盤點病歷</text><text x="90" y="168" font-size="13" fill="var(--muted)">挑對時機</text></g>
+<g><circle cx="260" cy="70" r="20" fill="var(--surface)" stroke="var(--primary)" stroke-width="3"/><text x="260" y="77" font-size="17" font-weight="800" fill="var(--primary)">2</text><text x="260" y="122" font-size="16" font-weight="800" fill="var(--text)">照會中</text><text x="260" y="148" font-size="13" fill="var(--muted)">期限內補件</text><text x="260" y="168" font-size="13" fill="var(--muted)">附穩定證明</text></g>
+<g><circle cx="430" cy="70" r="20" fill="var(--surface)" stroke="var(--primary)" stroke-width="3"/><text x="430" y="77" font-size="17" font-weight="800" fill="var(--primary)">3</text><text x="430" y="122" font-size="16" font-weight="800" fill="var(--text)">收到條件</text><text x="430" y="148" font-size="13" fill="var(--muted)">先問依據</text><text x="430" y="168" font-size="13" fill="var(--muted)">再決定簽不簽</text></g>
+<g><circle cx="600" cy="70" r="20" fill="var(--surface)" stroke="var(--primary)" stroke-width="3"/><text x="600" y="77" font-size="17" font-weight="800" fill="var(--primary)">4</text><text x="600" y="122" font-size="16" font-weight="800" fill="var(--text)">承保之後</text><text x="600" y="148" font-size="13" fill="var(--muted)">週年日前 30 日</text><text x="600" y="168" font-size="13" fill="var(--muted)">申請取消或降低</text></g>
+<g><circle cx="770" cy="70" r="20" fill="var(--surface)" stroke="var(--primary)" stroke-width="3"/><text x="770" y="77" font-size="17" font-weight="800" fill="var(--primary)">5</text><text x="770" y="122" font-size="16" font-weight="800" fill="var(--text)">延期或拒保</text><text x="770" y="148" font-size="13" fill="var(--muted)">觀察期滿</text><text x="770" y="168" font-size="13" fill="var(--muted)">帶新證據重送</text></g>
+<text x="430" y="212" font-size="14" font-weight="700" fill="var(--text)">每一步的關鍵都一樣：給核保人員「新的、可量化的」醫療資料</text>
+</g></svg>
+<figcaption>週年日前 30 日為保發中心教材所載的通常作法，實際以各公司保全規定為準。</figcaption>
+</figure>
+<ol class="steps">
+<li><h3>送件前：先整理，再送件</h3><p>對照要保書的詢問期間，把近 5 年的就醫與健檢紀錄整理好，避免漏寫。<sup class="source-ref"><a href="https://law.fsc.gov.tw/LawContent.aspx?id=FL006767" target="_blank" rel="noopener noreferrer" aria-label="資料來源 7：金管會：人身保險要保書示範內容，113年7月1日修正" title="金管會：人身保險要保書示範內容，113年7月1日修正">[7]</a></sup> 有體況的話，把專科病歷摘要、最近的檢驗與影像報告一起準備。剛手術、剛換藥或數值正在波動時送件，容易拿到延期或較重的加費，能等穩定再送通常比較划算；但也要權衡等待期間病情變化的風險。</p></li>
+<li><h3>照會中：在期限內補齊</h3><p>保險公司要求體檢時，費用依法由保險公司負擔。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390002" target="_blank" rel="noopener noreferrer" aria-label="資料來源 2：保險法第126條" title="保險法第126條">[2]</a></sup> 請醫師在診斷證明寫清楚診斷、治療經過、目前用藥、最近數值與追蹤情形，比只寫一個病名有用得多。</p></li>
+<li><h3>收到加費或除外：先問清楚再簽</h3><p>附加條件要你簽名同意才成立。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006807" target="_blank" rel="noopener noreferrer" aria-label="資料來源 9：保險業承保身心障礙者處理原則" title="保險業承保身心障礙者處理原則">[9]</a></sup> 簽之前可以請公司說明是哪項體況、依據哪些資料；你也可以依個資法請求查詢或閱覽自己的個人資料，但法律另有但書限制。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021" target="_blank" rel="noopener noreferrer" aria-label="資料來源 19：全國法規資料庫：個人資料保護法第3、10條" title="全國法規資料庫：個人資料保護法第3、10條">[19]</a></sup> 另外可以詢問能否改用其他條件，例如縮小除外範圍、長期加費改短期、調整保額、年期或商品。保發中心教材就列有以契約內容變更通知書更改商品、年期或保額的作法。<sup class="source-ref"><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051220qIRTHNF6kE35.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 5：保險事業發展中心教材：核保須知" title="保險事業發展中心教材：核保須知">[5]</a></sup></p></li>
+<li><h3>承保之後：體況變好，就申請重新核保</h3><p>保險法規定，危險減少時，被保險人得請求保險人重新核定保費；保費因特別危險而增加者，該情形消滅時得請求比例減少。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390002" target="_blank" rel="noopener noreferrer" aria-label="資料來源 2：保險法第26條、第59條" title="保險法第26條、第59條">[2]</a></sup> 實務上屬保全變更、等同重新核保：體況顯著改善可申請取消批註或降低加費等級，通常在保單週年日前 30 日提出；通常只受理長期加費，短期加費不受理；吸菸體也可申請改為非吸菸體。<sup class="source-ref"><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051221IJLs3AkVgpXD.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 6：保險事業發展中心教材：保全須知" title="保險事業發展中心教材：保全須知">[6]</a></sup></p></li>
+<li><h3>延期或拒保：觀察期滿，帶新證據重送</h3><p>先拿到書面通知與理由，觀察期間持續規律追蹤，保留每一次數值，重送時才有完整紀錄。也可以評估其他公司或其他險種，但要記得：保險公司核保時會查詢通報資料。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390042" target="_blank" rel="noopener noreferrer" aria-label="資料來源 1：全國法規資料庫：保險業招攬及核保理賠辦法第7條" title="全國法規資料庫：保險業招攬及核保理賠辦法第7條">[1]</a></sup> 要保書如果問到過去是否曾被延期、加費或拒保，一定要據實回答。</p></li>
+</ol>
+<div class="callout"><span class="co-icon">歪</span><div class="co-body"><p><strong>先保再爭取，常比空窗等待安全。</strong>如果保障缺口很急，先接受加費或除外拿到保障，等體況穩定再申請取消，通常比完全沒保、等一年再說來得穩。另外，手上已經有的保單千萬別讓它停效：停效超過 6 個月後申請復效，公司得要求可保證明，危險程度達拒保程度的可以拒絕復效。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006853" target="_blank" rel="noopener noreferrer" aria-label="資料來源 8：人壽保險單示範條款第7條" title="人壽保險單示範條款第7條">[8]</a></sup></p></div></div>
+<div class="callout callout--warn"><span class="co-icon">!</span><div class="co-body"><p><strong>重新核保是雙面刃。</strong>申請取消加費或除外時，公司會看你申請當時的整體體況；如果期間多了新的病，原條件未必能改善。過去漏告知的事項補上，仍可能依保險法第 64 條處理。<sup class="source-ref"><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051221IJLs3AkVgpXD.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 6：保險事業發展中心教材：保全須知" title="保險事業發展中心教材：保全須知">[6]</a></sup></p></div></div>
+</div></section>
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">真的不服</span><h2>申訴管道與合理期待</h2></div>
+<div class="table-wrap" role="region" aria-label="申訴管道表格" tabindex="0"><table>
+<thead><tr><th>管道</th><th>什麼時候用</th><th>重點</th></tr></thead>
+<tbody>
+<tr><td>保險公司客服或申訴窗口</td><td>所有核保爭議的第一步</td><td>公司應於 30 日內處理並回覆<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226" target="_blank" rel="noopener noreferrer" aria-label="資料來源 16：金融消費者保護法第13條" title="金融消費者保護法第13條">[16]</a></sup></td></tr>
+<tr><td>金融消費評議中心</td><td>不接受公司處理結果，或公司逾期沒處理</td><td>收到處理結果或期限屆滿起 60 日內申請；沒先向公司申訴的不受理<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226" target="_blank" rel="noopener noreferrer" aria-label="資料來源 16：金融消費者保護法第13、24條" title="金融消費者保護法第13、24條">[16]</a></sup></td></tr>
+<tr><td>金管會 1998 專線、壽險公會 0800-221-348</td><td>身心障礙者被業務員拒收、勸退，或僅因身心障礙被拒保</td><td>金管會已要求公會與會員公司建立處理窗口<sup class="source-ref"><a href="https://www.fsc.gov.tw/ch/home.jsp?id=96&amp;parentpath=0,2,8&amp;mcustomize=news_view.jsp&amp;dataserno=202610290001&amp;dtable=News" target="_blank" rel="noopener noreferrer" aria-label="資料來源 18：金管會2026年10月29日新聞稿：身心障礙者投保權益保障措施" title="金管會2026年10月29日新聞稿：身心障礙者投保權益保障措施">[18]</a></sup></td></tr>
+</tbody>
+</table></div>
+<p>也要有合理期待。評議中心統計中，2026 年第 2 季壽險非理賠類申訴共 469 件，「拒保或加費承保爭議」15 件，占 3.20%。<sup class="source-ref"><a href="https://www.foi.org.tw/download.ashx?id=5715&amp;lang=1" target="_blank" rel="noopener noreferrer" aria-label="資料來源 17：金融消費評議中心：壽險非理賠申訴統計（2026年第2季）" title="金融消費評議中心：壽險非理賠申訴統計（2026年第2季）">[17]</a></sup> 因為保險公司有締約自由，申訴比較有機會成功的，通常不是「我覺得太貴」，而是程序或公平性出了問題，例如：</p>
+<ul>
+<li>拒保沒有說明理由，或只有業務員口頭說「不用送了」。</li>
+<li>核保依據的事實有誤，例如把別人的紀錄或已痊癒的舊病當成現況。</li>
+<li>只因身心障礙身分就拒保，沒有做個別的風險評估。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390042" target="_blank" rel="noopener noreferrer" aria-label="資料來源 1：全國法規資料庫：保險業招攬及核保理賠辦法第7條" title="全國法規資料庫：保險業招攬及核保理賠辦法第7條">[1]</a> <a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006807" target="_blank" rel="noopener noreferrer" aria-label="資料來源 9：保險業承保身心障礙者處理原則" title="保險業承保身心障礙者處理原則">[9]</a></sup></li>
+<li>已經用標準費率承保，事後才主張你不是標準體。<sup class="source-ref"><a href="https://ods.foi.org.tw/download.aspx?article=1060013558" target="_blank" rel="noopener noreferrer" aria-label="資料來源 4：金融消費評議中心：106年評字第1435號評議書" title="金融消費評議中心：106年評字第1435號評議書">[4]</a></sup></li>
+</ul>
+</div></section>
+<section class="section alt"><div class="narrow prose"><div class="section-head"><span class="kicker">常見問題</span><h2>你可能正在想的事</h2></div>
+<details><summary>加費和除外，選哪個比較好？</summary><div class="a"><p>看體況影響的範圍。會影響全身、可能惡化的慢性病，接受加費換完整保障通常比較合理；侷限在單一部位、穩定且不太會復發的問題，除外的成本比較低。若公司只給一種，可以詢問能不能改另一種，但公司沒有義務同意。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a></sup></p></div></details><details><summary>被 A 公司拒保，B 公司一定也會拒保嗎？</summary><div class="a"><p>不一定。核保準則是各公司自行訂定，再保安排也不同。但核保時會查詢同業通報資料，也可能詢問同業有無附加條件或未承保紀錄，所以「換一家就沒人知道」並不成立。<sup class="source-ref"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390042" target="_blank" rel="noopener noreferrer" aria-label="資料來源 1：全國法規資料庫：保險業招攬及核保理賠辦法第7條" title="全國法規資料庫：保險業招攬及核保理賠辦法第7條">[1]</a> <a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer" aria-label="資料來源 3：壽險公會：人身保險核保實務處理準則及職業道德規範" title="壽險公會：人身保險核保實務處理準則及職業道德規範">[3]</a></sup></p></div></details><details><summary>延期期間發生事故怎麼辦？</summary><div class="a"><p>延期代表契約沒有成立，原則上不在保障內。若同意承保前已預收第一期保費，在公司表示同意與否之前發生的事故，公司仍要負責。<sup class="source-ref"><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006853" target="_blank" rel="noopener noreferrer" aria-label="資料來源 8：人壽保險單示範條款第3條" title="人壽保險單示範條款第3條">[8]</a></sup> 收到延期通知後，記得確認保費是否已退還。</p></div></details><details><summary>短期加費可以申請提早取消嗎？</summary><div class="a"><p>保發中心教材指出，申請降低加費通常只受理長期加費，不受理短期加費。<sup class="source-ref"><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051221IJLs3AkVgpXD.pdf" target="_blank" rel="noopener noreferrer" aria-label="資料來源 6：保險事業發展中心教材：保全須知" title="保險事業發展中心教材：保全須知">[6]</a></sup> 短期加費本來就是設計成「時間到就自動結束」。</p></div></details>
+</div></section>
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">收尾提醒</span><h2>記住這一句就好</h2></div>
+<p>核保結果不是在評價你，而是保險公司對「現有資料能不能算出風險」的回答。<strong>資料不夠就延期、風險集中就除外、風險偏高就加費、算不出來就拒保。</strong>想翻盤，就給它新的、可量化的資料，並且在對的時間點提出。</p>
+<p>本頁為一般資訊整理，各保險公司核保手冊並未公開，文中門檻與體況方向僅供理解原則，不代表任何公司的核保標準，也不代替個案的核保或法律意見。</p>
+</div></section>
+<section class="section"><div class="narrow prose"><div class="section-head"><span class="kicker">資料來源</span><h2>資料來源與使用說明</h2></div>
+<ol class="source-list">
+<li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390042" target="_blank" rel="noopener noreferrer">全國法規資料庫：保險業招攬及核保理賠辦法第7條</a>。</li>
+<li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390002" target="_blank" rel="noopener noreferrer">全國法規資料庫：保險法第25、26、59、64、126、127條</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL040402" target="_blank" rel="noopener noreferrer">壽險公會：人身保險核保實務處理準則及職業道德規範</a>。</li>
+<li><a href="https://ods.foi.org.tw/download.aspx?article=1060013558" target="_blank" rel="noopener noreferrer">金融消費評議中心：106年評字第1435號評議書</a>。</li>
+<li><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051220qIRTHNF6kE35.pdf" target="_blank" rel="noopener noreferrer">保險事業發展中心教材：核保須知</a>。</li>
+<li><a href="https://edu.tii.org.tw/bookstores/media/product/download/202207051221IJLs3AkVgpXD.pdf" target="_blank" rel="noopener noreferrer">保險事業發展中心教材：保全須知</a>。</li>
+<li><a href="https://law.fsc.gov.tw/LawContent.aspx?id=FL006767" target="_blank" rel="noopener noreferrer">金管會：人身保險要保書示範內容，113年7月1日修正</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006853" target="_blank" rel="noopener noreferrer">人壽保險單示範條款，113年9月23日修正</a>。</li>
+<li><a href="https://law.lia-roc.org.tw/Law/Content?lsid=FL006807" target="_blank" rel="noopener noreferrer">保險業承保身心障礙者處理原則</a>。</li>
+<li><a href="https://law.fsc.gov.tw/LawContent.aspx?id=GL001647" target="_blank" rel="noopener noreferrer">金管會104年8月20日金管保壽字第10400060970號函</a>。</li>
+<li><a href="https://law.fsc.gov.tw/LawContent.aspx?id=GL000952" target="_blank" rel="noopener noreferrer">金管會102年12月2日金管保綜字第10202574670號函</a>。</li>
+<li><a href="https://www.nlia.org.tw/wp-content/uploads/doc/auto/%E4%BF%9D%E9%9A%AA%E5%A4%A7%E9%81%9386%E6%9C%9F3.%E5%A5%91%E7%B4%84%E8%87%AA%E7%94%B1%E5%8E%9F%E5%89%87-%E8%87%BA%E7%81%A3%E9%AB%98%E7%AD%89%E6%B3%95%E9%99%A2.pdf" target="_blank" rel="noopener noreferrer">保險大道第86期：臺灣高等法院112年度保險上字第3號民事判決評析</a>。</li>
+<li><a href="https://cybsbox.cy.gov.tw/CYBSBoxSSL/edoc/download/32221" target="_blank" rel="noopener noreferrer">監察院：身心障礙者投保權益調查報告</a>。</li>
+<li><a href="https://law.fsc.gov.tw/Download.ashx?FileID=20054&amp;id=8447&amp;type=ANN" target="_blank" rel="noopener noreferrer">金管會：臺灣壽險業第六回經驗生命表</a>。</li>
+<li><a href="https://law.fsc.gov.tw/LawContent.aspx?id=FE060906" target="_blank" rel="noopener noreferrer">金管會：人身保險業辦理優體壽險業務應注意事項</a>。</li>
+<li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226" target="_blank" rel="noopener noreferrer">全國法規資料庫：金融消費者保護法第13、24條</a>。</li>
+<li><a href="https://www.foi.org.tw/download.ashx?id=5715&amp;lang=1" target="_blank" rel="noopener noreferrer">金融消費評議中心：壽險非理賠申訴統計（2026年第2季）</a>。</li>
+<li><a href="https://www.fsc.gov.tw/ch/home.jsp?id=96&amp;parentpath=0,2,8&amp;mcustomize=news_view.jsp&amp;dataserno=202610290001&amp;dtable=News" target="_blank" rel="noopener noreferrer">金管會2026年10月29日新聞稿：身心障礙者投保權益保障措施</a>。</li>
+<li><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021" target="_blank" rel="noopener noreferrer">全國法規資料庫：個人資料保護法第3、10條</a>。</li>
+<li><a href="https://www.foi.org.tw/Article.aspx?Arti=1665&amp;Lang=1&amp;p=4" target="_blank" rel="noopener noreferrer">金融消費評議中心：保險類常見問答</a>。</li>
+</ol>
+</div></section>
+</main>
+{% include "partials/related.njk" %}
+{% include "partials/footer.njk" %}
