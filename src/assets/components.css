@@ -81,6 +81,29 @@ th.num,td.num{text-align:right;white-space:nowrap}
 td.em{font-weight:800;color:var(--primary)}
 table caption{caption-side:top;text-align:left;padding:1rem 1rem .5rem;font-weight:800;font-family:var(--font-display);font-size:1.06rem;color:var(--text)}
 @media(max-width:560px){.table-wrap::after{display:block}}
+/* —— 比較表（窄類型欄＋寬說明欄＋重點標籤；≤640px 改為堆疊卡片） —— */
+.table-wrap--compare table{min-width:0;table-layout:fixed}
+.table-wrap--compare col.ct-col-type{width:8.5rem}
+.table-wrap--compare col.ct-col-tag{width:13rem}
+.compare-table th[scope="row"]{font-weight:400;white-space:normal}
+.compare-table .ct-label{display:block;font-weight:800;font-size:1.02rem;color:var(--primary);line-height:1.4}
+.compare-table .ct-formal{display:block;margin-top:.3rem;font-size:.78rem;line-height:1.55;color:var(--muted)}
+.compare-table td.ct-cover{line-height:1.75}
+.compare-table .ct-tag{display:inline-block;padding:.25rem .7rem;border-radius:999px;background:var(--gold-soft);color:var(--text);border:1px solid var(--border);font-size:.86rem;font-weight:700;line-height:1.5}
+@media(max-width:640px){
+.table-wrap--compare{overflow:visible;border:0;background:none;border-radius:0}
+.table-wrap--compare::after{display:none}
+.table-wrap--compare table,.table-wrap--compare tbody{display:block}
+.table-wrap--compare colgroup{display:none}
+.table-wrap--compare thead{display:none}
+.table-wrap--compare tbody tr{display:flex;flex-direction:column;gap:.6rem;padding:1rem 1.1rem;margin-bottom:.8rem;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface)}
+.table-wrap--compare tbody tr:last-child{margin-bottom:0}
+.table-wrap--compare th,.table-wrap--compare td{display:block;padding:0;border:0;background:none}
+.table-wrap--compare th[scope="row"]{order:1}
+.table-wrap--compare td.ct-tag-cell{order:2}
+.table-wrap--compare td.ct-cover{order:3}
+.table-wrap--compare td.ct-cover::before{content:"管哪些事故";display:block;margin-bottom:.15rem;font-size:.78rem;font-weight:700;color:var(--muted)}
+}
 
 /* —— 公式框（重點算式） —— */
 .formula{background:var(--surface);border:1px solid var(--border);border-inline-start:.35rem solid var(--primary);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin:1.25rem 0}
