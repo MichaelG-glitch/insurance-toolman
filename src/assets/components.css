@@ -105,6 +105,23 @@ table caption{caption-side:top;text-align:left;padding:1rem 1rem .5rem;font-weig
 .table-wrap--compare td.ct-cover::before{content:"管哪些事故";display:block;margin-bottom:.15rem;font-size:.78rem;font-weight:700;color:var(--muted)}
 }
 
+/* —— 多欄說明表：桌面為一般表格，≤640px 每列改為卡片，欄名取自 td 的 data-label —— */
+.table-wrap--cards table{min-width:0}
+.table-wrap--cards th{white-space:normal}
+.table-wrap--cards tbody th[scope="row"]{font-weight:700}
+.table-wrap--cards::after{display:none}
+@media(max-width:640px){
+.table-wrap--cards{overflow:visible;border:0;background:none;border-radius:0}
+.table-wrap--cards table,.table-wrap--cards tbody,.table-wrap--cards tr,.table-wrap--cards th,.table-wrap--cards td{display:block;width:auto}
+.table-wrap--cards thead{display:none}
+.table-wrap--cards tbody tr{padding:1rem 1.1rem;margin-bottom:.8rem;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface)}
+.table-wrap--cards tbody tr:last-child{margin-bottom:0}
+.table-wrap--cards th[scope="row"],.table-wrap--cards td{padding:0;border:0;background:none}
+.table-wrap--cards th[scope="row"]{font-size:1.02rem;line-height:1.45;color:var(--primary)}
+.table-wrap--cards td{margin-top:.6rem;line-height:1.7}
+.table-wrap--cards td[data-label]::before{content:attr(data-label);display:block;margin-bottom:.1rem;font-size:.78rem;font-weight:700;color:var(--muted)}
+}
+
 /* —— 公式框（重點算式） —— */
 .formula{background:var(--surface);border:1px solid var(--border);border-inline-start:.35rem solid var(--primary);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin:1.25rem 0}
 .formula .line{font-family:var(--font-display);font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:800;line-height:1.6}
