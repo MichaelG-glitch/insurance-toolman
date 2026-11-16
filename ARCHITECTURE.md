@@ -2,9 +2,9 @@
 
 本文件的「真相」是這個 Git 儲存庫。當 AI 技能、文件或對話與本檔不一致時，以本檔與實際程式碼為準。
 
-## 網站地圖（32 頁）
+## 網站地圖（33 頁）
 
-統計：首頁、關於、問答、3 個分類頁、8 個工具、9 個車禍實務、9 個觀念，共 32 頁 HTML。
+統計：首頁、關於、問答、3 個分類頁、8 個工具、9 個車禍實務、10 個觀念，共 33 頁 HTML。
 
 ```
 保險工具人 insurance-toolman
@@ -41,7 +41,8 @@
 │   ├── /learn/refund-premium/               車險退保，保費能退多少 〔元件頁〕
 │   ├── /learn/underwriting-outcomes/        核保結果，五種結局怎麼看 〔元件頁〕
 │   ├── /learn/life-insurance-overview/      人壽保險總覽（保險圓餅圖） 〔元件頁〕
-│   └── /learn/car-insurance-overview/       汽車保險總覽（五個抽屜） 〔元件頁〕
+│   ├── /learn/car-insurance-overview/       汽車保險總覽（五個抽屜） 〔元件頁〕
+│   └── /learn/car-insurance-compulsory/     強制險：法定抽屜     〔元件頁〕
 │
 ├── /qa/                                     常見問答            〔純文字 + 手風琴〕
 │
@@ -53,7 +54,7 @@
 ```mermaid
 flowchart TB
   subgraph src["src/ —— 唯一手動編輯處"]
-    content["內容頁（32 頁）<br/>*/index.njk ＋ front matter"]
+    content["內容頁（33 頁）<br/>*/index.njk ＋ front matter"]
     tmpl["模板與共用片段<br/>_includes/layouts/base.njk（骨架）<br/>_includes/partials/（頂欄·頁尾·Logo·4 種頂欄）"]
     css["全域樣式（單一來源）<br/>theme.css 色票 · site.css 排版<br/>brand.css 品牌 · components.css 元件"]
     pagecss["複雜頁獨立資源<br/>assets/pages/*.css/.js（6 頁）＋ related.css"]
@@ -100,7 +101,7 @@ src/
     ├── theme.css                  色票（明暗）
     ├── site.css                   全域排版
     ├── brand.css                  品牌
-    ├── components.css             可重用元件（警示框、步驟、檢核清單、圖解、可縮放圖解 .diagram--fit、加寬圖解 .diagram--wide）
+    ├── components.css             可重用元件（警示框、步驟、檢核清單、圖解、可縮放圖解 .diagram--fit、加寬圖解 .diagram--wide、比較表 .table-wrap--compare、窄表 .table-wrap--fit、堆疊表 .table-wrap--stack）
     ├── site.js                    明暗切換 + 年份
     ├── thumbs/                    分類與延伸閱讀縮圖，統一 512×512 WebP
     ├── illustrations/             內文情境圖，統一約 1400×788（16:9）WebP
@@ -153,7 +154,7 @@ src/
 - 這個區塊由 `_includes/partials/related.njk` 產生，樣式在 `assets/pages/related.css`（在 `base.njk` 依 `related` 是否存在而載入），卡片依 `order` 順序、用 `thumb` 縮圖（無則退回 `icon`）呈現。
 - 因為卡片靠 `collections` 抓取其他頁面的 front matter（`cardTitle`、`cardBlurb`、`thumb`、`icon`），新增或改成對方頁面時，連結會自動更新，不需手動改每一處。
 - 縮圖請用「卡通手繪、線條簡單」的 AI 生成圖，統一放在 `src/assets/thumbs/`、`src/assets/illustrations/`，尺寸縮小後存成 `.webp`。
-- 尺寸規範：`thumbs/` 為 512×512；`illustrations/` 為 16:9、約 1400×788。現況已對齊此規範，包含 2026-11-14 新增的 `risk-financing.webp`（illustrations 與 thumbs），以及由 1200×800 中央裁切為 1400×788 的 `accident-evidence-trio.webp`、`consultation-evidence.webp`，以及 2026-11-14 新增的 `life-insurance-overview.webp`、`car-insurance-overview.webp`（皆含 illustrations 與 thumbs）。
+- 尺寸規範：`thumbs/` 為 512×512；`illustrations/` 為 16:9、約 1400×788。現況已對齊此規範，包含 2026-11-14 新增的 `risk-financing.webp`（illustrations 與 thumbs），以及由 1200×800 中央裁切為 1400×788 的 `accident-evidence-trio.webp`、`consultation-evidence.webp`，以及 2026-11-14 新增的 `life-insurance-overview.webp`、`car-insurance-overview.webp`，以及 2026-11-16 新增的 `car-insurance-compulsory.webp`（皆含 illustrations 與 thumbs）。
 
 ## 命名與授權規則
 

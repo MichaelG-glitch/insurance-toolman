@@ -146,3 +146,23 @@ svg.type-dot{display:inline-block;vertical-align:-.08em;margin-inline-end:.3rem}
 .prose > h4{margin-top:1.75rem;margin-bottom:.5rem;font-size:1.05rem}
 .prose li > ul,.prose li > ol{padding-inline-start:1.25rem;margin-block:.35rem}
 .prose > h3[id]{scroll-margin-top:5rem}
+.section-head h2[id]{scroll-margin-top:7rem} /* 連 kicker 一起露出來 */
+.prose > p.table-source{margin-top:-.6rem;font-size:.82rem;color:var(--muted)}
+
+/* —— 窄表：欄位短的表格（例如等級＋金額），手機不需左右滑動 —— */
+.table-wrap--fit table{min-width:0}
+.table-wrap--fit th{white-space:normal}
+.table-wrap--fit tbody th[scope="row"]{white-space:nowrap}
+.table-wrap--fit::after{display:none}
+/* —— 項目／上限表：桌面兩欄，≤640px 每列堆疊成「項目→上限」 —— */
+.table-wrap--stack table{min-width:0}
+.table-wrap--stack th[scope="row"]{white-space:normal;font-weight:700;width:58%}
+.table-wrap--stack::after{display:none}
+@media(max-width:640px){
+.table-wrap--stack table,.table-wrap--stack tbody,.table-wrap--stack tr,.table-wrap--stack th,.table-wrap--stack td{display:block;width:auto}
+.table-wrap--stack thead{display:none}
+.table-wrap--stack tbody tr{padding:.75rem 1rem;border-bottom:1px solid var(--divider)}
+.table-wrap--stack tbody tr:last-child{border-bottom:0}
+.table-wrap--stack th[scope="row"],.table-wrap--stack td{width:auto;padding:0;border:0;background:none}
+.table-wrap--stack td{margin-top:.3rem;color:var(--primary);font-weight:700}
+}
