@@ -28,7 +28,7 @@
 .site-footer-copy{font-weight:700;color:var(--text,#2B241E)}
 .site-footer-quip{color:var(--muted,#6E6257)}
 .site-footer a{color:var(--primary,#6B4A2F);text-underline-offset:.18em}
-.site-footer-license,.site-footer-disclaimer{max-width:72ch}
+.site-footer-license,.site-footer-disclaimer,.site-footer-privacy{max-width:72ch}
 .site-footer-meta{font-size:.78rem;color:var(--faint,#8A7C6E)}
 .site-footer-meta a{font-weight:700}
 
