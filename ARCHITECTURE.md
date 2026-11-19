@@ -44,7 +44,8 @@
 │   ├── /learn/car-insurance-overview/       汽車保險總覽（五個抽屜） 〔元件頁〕
 │   ├── /learn/car-insurance-compulsory/     強制險：法定抽屜     〔元件頁〕
 │   ├── /learn/car-insurance-liability/      第三人責任險：賠對方抽屜 〔元件頁〕
-│   └── /learn/car-insurance-own-damage/     車體損失險：賠自己的車抽屜 〔元件頁〕
+│   ├── /learn/car-insurance-own-damage/     車體損失險：賠自己的車抽屜 〔元件頁〕
+│   └── /learn/car-insurance-driver-injury/  駕駛人傷害險：保駕駛自己抽屜 〔元件頁〕
 │
 ├── /qa/                                     常見問答            〔純文字 + 手風琴〕
 │
@@ -156,7 +157,7 @@ src/
 - 這個區塊由 `_includes/partials/related.njk` 產生，樣式在 `assets/pages/related.css`（在 `base.njk` 依 `related` 是否存在而載入），卡片依 `order` 順序、用 `thumb` 縮圖（無則退回 `icon`）呈現。
 - 因為卡片靠 `collections` 抓取其他頁面的 front matter（`cardTitle`、`cardBlurb`、`thumb`、`icon`），新增或改成對方頁面時，連結會自動更新，不需手動改每一處。
 - 縮圖請用「卡通手繪、線條簡單」的 AI 生成圖，統一放在 `src/assets/thumbs/`、`src/assets/illustrations/`，尺寸縮小後存成 `.webp`。
-- 尺寸規範：`thumbs/` 為 512×512；`illustrations/` 為 16:9、約 1400×788。現況已對齊此規範，包含 2026-11-14 新增的 `risk-financing.webp`（illustrations 與 thumbs），以及由 1200×800 中央裁切為 1400×788 的 `accident-evidence-trio.webp`、`consultation-evidence.webp`，以及 2026-11-14 新增的 `life-insurance-overview.webp`、`car-insurance-overview.webp`，以及 2026-11-16 新增的 `car-insurance-compulsory.webp`、`car-insurance-liability.webp`（皆含 illustrations 與 thumbs）。
+- 尺寸規範：`thumbs/` 為 512×512；`illustrations/` 為 16:9、約 1400×788。現況已對齊此規範，包含 2026-11-14 新增的 `risk-financing.webp`（illustrations 與 thumbs），以及由 1200×800 中央裁切為 1400×788 的 `accident-evidence-trio.webp`、`consultation-evidence.webp`，以及 2026-11-14 新增的 `life-insurance-overview.webp`、`car-insurance-overview.webp`，以及 2026-11-16 新增的 `car-insurance-compulsory.webp`、`car-insurance-liability.webp`（皆含 illustrations 與 thumbs），以及 2026-11-19 新增的 `car-insurance-driver-injury.webp`（illustrations 與 thumbs）。
 
 ## 命名與授權規則
 
